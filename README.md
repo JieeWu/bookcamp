@@ -3,8 +3,8 @@
 主要功能：基本CRUD、RWD 及透過 ngrok & socket.io 實作線上即時聊天
 
 # 執行專案
-Windows用戶：npm i  --安裝套件
-Mac用戶: sudo npm i --安裝套件
+Windows用戶：npm i 
+Mac用戶: sudo npm i 
 資料夾 front.end & back.end 皆要做此動作
 npm run dev --啟動伺服器
 # 建立.env檔
