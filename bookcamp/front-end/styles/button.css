@@ -1,0 +1,346 @@
+/* 基本按鈕 */
+.main-btn {
+  padding-inline: 20px;
+  white-space: nowrap;
+  padding-block: 7px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main-btn .header-member-avatar {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3px;
+  /* border: 2px solid var(--black); */
+  border-radius: 5px;
+}
+
+.header-member-avatar img {
+  width: 100%;
+  height: auto;
+}
+
+/* 會員頭像按鈕 */
+.round-avatar {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid var(--main-yellow);
+  overflow: hidden;
+}
+
+/* 前進後退按鈕 */
+.next-btn {
+  background-color: transparent;
+  right: 0;
+  top: 30%;
+  padding-inline: 0.75rem;
+  animation: Xslide 0.5s steps(1) infinite;
+  transition: 0.4s;
+}
+
+.next-btn img {
+  height: 40px;
+  width: 26px;
+}
+
+.next-btn:hover,
+.back-btn:hover {
+  animation-play-state: paused;
+  scale: 0.9;
+  filter: hue-rotate(150deg);
+}
+
+.back-btn {
+  background-color: transparent;
+  left: 0;
+  top: 30%;
+  padding-inline: 0.75rem;
+  animation: Xslide 0.5s steps(1) infinite reverse;
+  transition: 0.4s;
+}
+
+.back-btn img {
+  transform: rotate(180deg);
+  height: 40px;
+  width: 26px;
+}
+
+/* 回到頂部按鈕 */
+.top-btn {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 7%;
+  right: 2%;
+  width: 100%;
+  max-width: 60px;
+  height: 100%;
+  max-height: 60px;
+  transition: 0.4s;
+  filter: drop-shadow(0 5px 0 var(--main-darkpurple));
+  z-index: 80;
+}
+
+.top-btn:hover {
+  scale: 1.15;
+}
+
+.top-btn:hover img {
+  filter: hue-rotate(80deg);
+}
+
+.top-btn img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  animation: topbtnshake 0.5s steps(1) infinite;
+}
+
+@keyframes topbtnshake {
+  0%,
+  100% {
+    transform: translateY(-2px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+.top-btn span {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-shadow:
+    0 2px 0 var(--black),
+    0 -2px 0 var(--black),
+    -2px 0 0 var(--black),
+    2px 0 0 var(--black);
+  margin-top: 0.25rem;
+}
+
+@keyframes Xslide {
+  0%,
+  100% {
+    transform: translateX(1.5px);
+  }
+  50% {
+    transform: translateX(-1.5px);
+  }
+}
+
+/* 首頁查看更多按鈕 */
+.more-btn {
+  position: absolute;
+  z-index: 3;
+  animation: shake3856 1s linear infinite both;
+}
+
+.more-btn:hover {
+  filter: hue-rotate(180deg);
+  animation: shake3856 0.25s linear infinite both;
+}
+
+@keyframes shake3856 {
+  0% {
+    transform: translate(0px, 1px);
+  }
+  49% {
+    transform: translate(0px, 1px);
+  }
+  50% {
+    transform: translate(0px, -1px);
+  }
+  99% {
+    transform: translate(0px, -1px);
+  }
+  100% {
+    transform: translate(0px, 1px);
+  }
+}
+
+.more-btn button {
+  position: relative;
+  width: 130px;
+  padding-block: 0.5rem;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-orange) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-orange) 0) top right,
+    linear-gradient(-45deg, transparent 5px, var(--main-orange) 0) bottom right,
+    linear-gradient(45deg, transparent 5px, var(--main-orange) 0) bottom left;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(4px 4px 0 var(--main-yellow));
+}
+
+.more-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 18px solid transparent;
+  border-top-color: var(--main-orange);
+  border-bottom: 0;
+  border-left: 0;
+  margin-left: -7px;
+  margin-bottom: -16px;
+}
+
+/* 收藏按鈕 */
+.collectbtn {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
+  background-color: rgb(228, 218, 219);
+  color: white;
+  border-radius: 50%;
+}
+.collectbtn9 {
+  width: 100%;
+  height: 100%;
+  max-width: 30px;
+  max-height: 30px;
+  background-color: rgb(255, 29, 51);
+  color: white;
+  border-radius: 50%;
+}
+
+/*------------------- 自定義共用區 ---------------------*/
+
+/* 紫色線的陰影 + 無 */
+.frame-line-purple {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow:
+    0 5px 0 var(--main-brightpurple),
+    0 -5px 0 var(--main-brightpurple),
+    5px 0 0 var(--main-brightpurple),
+    -5px 0 0 var(--main-brightpurple);
+  padding-inline: 0.5%;
+  padding-block: 5px;
+}
+
+/* 黑色線的陰影 + 無 */
+.frame-line-black {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow:
+    0 5px 0 var(--black),
+    0 -5px 0 var(--black),
+    5px 0 0 var(--black),
+    -5px 0 0 var(--black);
+  padding-inline: 0.5%;
+  padding-block: 5px;
+}
+
+/*黑色線的陰影 + 愛心*/
+.frame-line-black-heart {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow:
+  /* 黑色外延伸 */
+    0 8px 0 var(--black),
+    0 -8px 0 var(--black),
+    8px 0 0 var(--black),
+    -8px 0 0 var(--black),
+    /* 黑色愛心 */ 0 -3px 0 3px var(--black),
+    0 3px 0 3px var(--black),
+    3px 0 0 3px var(--black),
+    -3px 0 0 3px var(--black);
+}
+
+/* 紫色線的陰影 + 全滿 */
+.frame-line-purple-fill {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow:
+    8px 0 0 var(--main-colorpurple),
+    -8px 0 0 var(--main-colorpurple),
+    0 8px 0 var(--main-colorpurple),
+    0 -8px 0 var(--main-colorpurple),
+    5px 0 0 4px var(--main-colorpurple),
+    -5px 0 0 4px var(--main-colorpurple),
+    0 5px 0 4px var(--main-colorpurple),
+    0 -5px 0 4px var(--main-colorpurple);
+}
+
+/* 跳轉頁面的所有按鈕 */
+.btn-jump-page {
+  background: #ffe34e;
+  padding: 1% 15px;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px #ffe34e,
+    0 5px 0 -1px #ffe34e,
+    4px 0 0 -1px #ffe34e,
+    0 0 0 1px #ffe34e,
+    0 -5px 0 -1px #ffe34e,
+    -4px 0 0 -1px #ffe34e,
+    0 0 0 3px var(--main-yellow),
+    0 6px 0 0 var(--main-yellow),
+    0 -6px 0 0 var(--main-yellow),
+    5px 0 0 0 var(--main-yellow),
+    -5px 0 0 0 var(--main-yellow);
+}
+
+.btn-jump-page:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.btn-jump-page-orange {
+  background: var(--main-orange);
+  padding: 1% 15px;
+  text-align: center;
+  box-shadow:
+    0 0 0 1px var(--main-orange),
+    0 5px 0 -1px var(--main-orange),
+    4px 0 0 -1px var(--main-orange),
+    0 0 0 1px var(--main-orange),
+    0 -5px 0 -1px var(--main-orange),
+    -4px 0 0 -1px var(--main-orange),
+    0 0 0 3px #ce5900,
+    0 6px 0 0 #ce5900,
+    0 -6px 0 0 #ce5900,
+    5px 0 0 0 #ce5900,
+    -5px 0 0 0 #ce5900;
+}
+
+/* 增加減少商品數的按鈕 */
+.btn-addAndsub-item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--main-brightpurple);
+  color: var(--white);
+  box-shadow:
+    0 0 0 1px var(--main-brightpurple),
+    0 5px 0 -1px var(--main-brightpurple),
+    4px 0 0 -1px var(--main-brightpurple),
+    0 0 0 1px var(--main-brightpurple),
+    0 -5px 0 -1px var(--main-brightpurple),
+    -4px 0 0 -1px var(--main-brightpurple),
+    0 0 0 3px var(--main-darkpurple),
+    0 6px 0 0 var(--main-darkpurple),
+    0 -6px 0 0 var(--main-darkpurple),
+    5px 0 0 0 var(--main-darkpurple),
+    -5px 0 0 0 var(--main-darkpurple);
+}
+
+@media screen and (max-width: 768px) {
+  .top-btn {
+    bottom: 13%;
+    right: 4%;
+  }
+}

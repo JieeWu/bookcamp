@@ -1,0 +1,310 @@
+/*賣場賣家介紹的背景*/
+.Personal {
+  max-width: 1200px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background: #f3d52e;
+  box-shadow:
+  10px -10px 0 0 #f3d52e,
+  0px -10px 0 0 #f3d52e,
+  0px -15px 0 0 black,
+  -5px -10px 0 0 black,
+  15px 0px 0 0 #b6a022,
+  15px -10px 0 0 #b6a022,
+  20px -10px 0 0 black,
+  15px -15px 0 0 black,
+  0px 5px 0 0 #b6a022,
+  -5px 5px 0 0 black,
+  15px 5px 0 0 #b6a022,
+  20px 5px 0 0 black,
+  0px 10px 0 0 black,
+  15px 10px 0 0 black;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  }
+  /*圖片位置大小*/
+  .image-container {
+  grid-row: 1/4;
+  grid-column: 1/2;
+  margin-left: 10px;
+  position: relative;
+  top: -50px;
+  }
+
+
+  
+  
+  
+  /* 這會讓圖片保持比例並填滿容器 */
+  .image-container img {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #0d0733;
+  border-radius: 50%;
+  object-fit: cover;
+  }
+  /*賣家的開通日期*/
+  .opened {
+  grid-row: 4/5;
+  grid-column: 1/2;
+  }
+  
+  /*簡介 名字..等*/
+  .man {
+  background-color: #ff9900;
+  grid-row: 1;
+  grid-column: 2/6;
+  display: flex;
+  margin: 10px;
+  background:
+  linear-gradient(135deg, transparent 5px, #ff9900 0) top left,
+  linear-gradient(-135deg, transparent 5px, #ff9900 0) top right,
+  linear-gradient(-45deg, transparent 5px, #ff9900 0) bottom right,
+  linear-gradient(45deg, transparent 5px, #ff9900 0) bottom left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0px 3px 0 rgb(0, 0, 0))
+  drop-shadow(0px -3px 0 rgb(0, 0, 0)) drop-shadow(3px 0px 0 rgb(0, 0, 0))
+  drop-shadow(-3px 0px 0 rgb(0, 0, 0));
+  }
+  
+  /*關於賣家一點訊息*/
+  .about {
+  grid-row: 2/5;
+  grid-column: 2/5;
+  margin: 10px;
+  color: white;
+  background: #0d0733;
+  -webkit-filter: drop-shadow(0px 4px 0 rgb(0, 0, 0))
+  drop-shadow(0px -4px 0 rgb(0, 0, 0)) drop-shadow(4px 0px 0 rgb(0, 0, 0))
+  drop-shadow(-4px 0px 0 rgb(0, 0, 0));
+  box-shadow: -2px -2px 0 #3d395c;
+  }
+  /*賣家訊息裡面的排版 顏色*/
+  .aboutcontent {
+  display: grid;
+  color: #ffffff;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  justify-items: center;
+  padding-top: 20px;
+  }
+  /*按鈕位置*/
+  .buttons {
+  grid-row: 3/5;
+  grid-column: 5/6;
+  margin: 10px;
+  margin-left: 30px;
+  margin-top: -20px;
+  }
+  
+  /*按鈕a樣式和距離*/
+  .sellerbutton {
+  width: 160px;
+  height: 30px;
+  padding-left: 10px;
+  color: #ffffff;
+  background-color: #9b6cff;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow:
+  10px -10px 0 0 #9b6cff,
+  0px -10px 0 0 #9b6cff,
+  0 -13px 0 0 black,
+  -2px -9px 0 0 black,
+  15px 0px 0 0 #9b6cff,
+  15px -10px 0 0 #9b6cff,
+  17px -10px 0 0 black,
+  15px -13px 0 0 black,
+  0px 5px 0 0 #9b6cff,
+  -2px 5px 0 0 black,
+  15px 5px 0 0 #9b6cff,
+  17px 5px 0 0 black,
+  0px 8px 0 0 black,
+  15px 8px 0 0 black;
+  }
+  /*按鈕b樣式和距離*/
+  .sellerbutton2 {
+  width: 160px;
+  height: 30px;
+  padding-left: 10px;
+  color: #ffffff;
+  background-color: #ff6161;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow:
+  10px -10px 0 0 #ff6161,
+  0px -10px 0 0 #ff6161,
+  0 -13px 0 0 black,
+  -2px -9px 0 0 black,
+  15px 0px 0 0 #ff6161,
+  15px -10px 0 0 #ff6161,
+  17px -10px 0 0 black,
+  15px -13px 0 0 black,
+  0px 5px 0 0 #ff6161,
+  -2px 5px 0 0 black,
+  15px 5px 0 0 #ff6161,
+  17px 5px 0 0 black,
+  0px 8px 0 0 black,
+  15px 8px 0 0 black;
+  }
+  
+  /*文字顏色*/
+  .bigStore {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 30px;
+  }
+  
+  /*商品排序*/
+  .productsorting {
+  max-width: 1200px;
+  height: 80px;
+  padding: 1px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background: #7817f3;
+  box-shadow:
+  15px -10px 0 0 #7817f3,
+  0px -10px 0 0 #7817f3,
+  0px -15px 0 0 black,
+  -5px -10px 0 0 black,
+  10px 0px 0 0 #7817f3,
+  15px -10px 0 0 #7817f3,
+  20px -10px 0 0 black,
+  15px -15px 0 0 black,
+  0px 5px 0 0 #7817f3,
+  -5px 5px 0 0 black,
+  15px 5px 0 0 #7817f3,
+  20px 5px 0 0 black,
+  0px 10px 0 0 black,
+  15px 10px 0 0 black;
+  }
+  /*商品排序 顏色 下拉選單的位置*/
+  .productsorting1 {
+  color: #ffffff;
+  margin: 20px;
+  }
+  
+  /*下拉選單*/
+  .select1 {
+  width: 150px;
+  height: 40px;
+  margin-left: 10px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #0d0733;
+  }
+  /*商品水平排列*/
+  .booklist {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 20px;
+  }
+  /*商品的背景和彼此的距離*/
+  .oldbook {
+  max-width: 130px;
+  height: 220px;
+  padding: 17px;
+  margin: 10px; /*彼此的距離*/
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+  background-color: #ffffff;
+  }
+  /*商品圖片的大小*/
+  .oldbook img {
+  }
+  /*金額欄的背景和文字顏色*/
+  .money {
+  max-width: 110px;
+  height: 30px;
+  color: #f3d52e;
+  background-color: #0d0733;
+  }
+  /*定義*/
+  
+  /*特殊按鈕*/
+  .oldbookadd {
+  height: 25px;
+  background: var(--main-brightpurple);
+  color: var(--white);
+  box-shadow:
+  0 0 0 1px var(--main-brightpurple),
+  0 5px 0 -1px var(--main-brightpurple),
+  4px 0 0 -1px var(--main-brightpurple),
+  0 0 0 1px var(--main-brightpurple),
+  0 -5px 0 -1px var(--main-brightpurple),
+  -4px 0 0 -1px var(--main-brightpurple),
+  0 0 0 3px var(--main-darkpurple),
+  0 6px 0 0 var(--main-darkpurple),
+  0 -6px 0 0 var(--main-darkpurple),
+  5px 0 0 0 var(--main-darkpurple),
+  -5px 0 0 0 var(--main-darkpurple);
+  position: relative;
+  left: 30px;
+  }
+  
+  /* 隱藏RWD文字 */
+  .opened1{
+  display: none;
+  }
+  
+  
+  @media screen and (max-width: 800px) {
+  .Personal {
+  max-width: 465px;
+  height: 450px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  }
+  .image-container{
+  grid-column: 3;
+  grid-row: 1/3;
+  margin-top: -50px;
+  }
+  .man{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column: 1/6;
+  grid-row: 3/4;
+  }
+  .about{
+  grid-column: 1/6;
+  grid-row: 4/5;
+  }
+  .buttons{
+  display: flex;
+  grid-row: 6;
+  grid-column: 2/5;
+  padding: 10px;
+  display: flex;
+  margin: -13px;
+  gap: 50px;
+  }
+  .opened{
+  display: none;
+  }
+  .opened1{
+  display: block;
+  }
+  /* .booklist{
+padding: 30px;
+  } */
+
+  }

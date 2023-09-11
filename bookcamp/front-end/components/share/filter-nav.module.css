@@ -1,0 +1,42 @@
+.filterNav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  box-shadow:
+    0 -3px 0 var(--main-brightpurple),
+    -3px 0 0 var(--main-brightpurple),
+    0 3px 0 var(--main-colorpurple),
+    3px 0 0 var(--main-colorpurple),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+  margin-bottom: 1rem;
+}
+
+.formSelect {
+  width: auto;
+  background-color: var(--main-darkpurple);
+  color: white;
+  border: 0;
+  padding: 0.5rem 1rem;
+}
+
+.filterBtn {
+  color: white;
+  background-color: var(--main-brightpurple);
+  box-shadow:
+    3px 0 0 #b593ff,
+    -3px 0 0 #b593ff,
+    0 -3px 0 #b593ff,
+    0 3px 0 #b593ff;
+  padding: 0.5rem 1.5rem;
+  margin-left: 1rem;
+  transition: 0.4s;
+}
+
+.filterBtn:hover {
+  background-color: var(--main-colorpurple);
+}

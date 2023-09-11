@@ -1,0 +1,21 @@
+.pagination {
+  --bs-pagination-bg: transparent;
+  --bs-pagination-color: white;
+  --bs-pagination-border-width: 0;
+  --bs-pagination-border-radius: 0;
+}
+
+.PageInationBlock {
+  box-shadow:
+    0 -3px 0 var(--main-brightpurple),
+    -3px 0 0 var(--main-brightpurple),
+    0 3px 0 var(--main-colorpurple),
+    3px 0 0 var(--main-colorpurple),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+
+  margin-block: 1rem 2rem;
+}

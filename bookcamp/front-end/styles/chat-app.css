@@ -1,0 +1,115 @@
+
+  
+  /* 將原來不能改的字隱藏 */
+  .react-chatbot-kit-chat-header {
+  visibility: hidden;
+  }
+  
+  /*加上我原本想要加的字*/
+  .react-chatbot-kit-chat-header::after {
+  content: '書營客服系統';
+  visibility: visible;
+  position: absolute;
+  left: 96px;
+  }
+  .react-chatbot-kit-chat-bot-avatar-container {
+  font-size: 0;
+  background-color: transparent !important;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(../public/img/logo.jpg) !important;
+  }
+  /*使用者的文字訊息長度 */
+  .react-chatbot-kit-user-chat-message {
+  max-width: 100px; /*最大的長度*/
+  word-wrap: break-word; /*換行*/
+  }
+  /*客服的文字訊息長度 */
+  .react-chatbot-kit-chat-bot-message {
+  word-wrap: break-word; /*換行*/
+  margin-left:0 !important;
+  color: black !important ;
+  }
+  /*使用者沒有頭像*/
+  .react-chatbot-kit-user-avatar-container {
+  display: none !important;
+  }
+  
+  /* ------------------------------------------------ */
+  /* 機器人訊息框 */
+  /* .react-chatbot-kit-chat-bot-message { */
+  /* background-color: rgb(221, 214, 214) !important; */
+  /* color: black !important ;
+  } */
+  /*輸入框的顏色*/
+  .react-chatbot-kit-chat-input {
+  background-color: #383838;
+  border: 0;
+  }
+  /* ------------------------------------------------ */
+  
+  /*讓input placeholder消失 */
+  .react-chatbot-kit-chat-input::placeholder {
+  color: transparent !important;
+  }
+  
+  /*客服樣式*/
+  .customerservice {
+  background-image: url('/img/BOOKCAMP.svg');
+  /* 為此類別設置背景圖像 */
+  background-repeat: no-repeat;
+  /* 設置背景圖像不重複 */
+  background-size: cover;
+  /* 使背景圖像完全覆蓋元素的區域 */
+  width: 100px;
+  /* 設置按鈕的寬度 */
+  height: 100px;
+  /* 設置按鈕的高度 */
+  border: none;
+  /* 移除按鈕的邊框 */
+  color: transparent;
+  /* 將按鈕文字設為透明，使之不可見 */
+  cursor: pointer;
+  /* 當滑鼠移到按鈕上時，將滑鼠指標變為手指形狀 */
+  background-color: transparent;
+  /* 不要背景 */
+  }
+  /* ------------------------------------------------ */
+  
+  /* 聊天室窗的背景 */
+  .react-chatbot-kit-chat-message-container {
+  background-color: #0e0e32;
+  overflow-x: hidden;
+  /* 讓左右卷軸消失 */
+  }
+  
+  .react-chatbot-kit-chat-bot-message-arrow {
+  border-right-color: rgb(221, 214, 214) !important;
+  }
+  /* 紙飛機 */
+  .react-chatbot-kit-chat-btn-send {
+  background-color: #ea5e55 !important;
+  }
+  
+  
+  
+  
+  /* 使用者訊息框 */
+  .react-chatbot-kit-user-chat-message {
+  background-color: white;
+  }
+  .react-chatbot-kit-user-chat-message-arrow {
+  border-left-color: white;
+  }
+
+
+  .react-chatbot-kit-chat-inner-container {
+    max-height: 550px;
+    overflow-y: auto; /* 允許上下滾動 */
+}
+
+.react-chatbot-kit-chat-container {
+  width: 333px !important;
+}
+

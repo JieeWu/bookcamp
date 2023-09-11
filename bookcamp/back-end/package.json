@@ -1,0 +1,64 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "sessions/*",
+      "node_modules/*"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bcrypt": "^5.1.0",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "cipherdata": "^1.0.1",
+    "color": "^4.2.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "dayjs": "^1.11.9",
+    "debug": "^4.3.4",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "ejs-lint": "^2.0.0",
+    "express": "^4.18.2",
+    "express-mysql-session": "^3.0.0",
+    "express-session": "^1.17.3",
+    "http": "^0.0.1-security",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^9.0.1",
+    "moment-timezone": "^0.5.43",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.0",
+    "node-ecpay-aio": "^0.2.3",
+    "nodemailer": "^6.9.4",
+    "otp": "^1.1.0",
+    "otpauth": "^9.1.4",
+    "path": "^0.12.7",
+    "prettier-plugin-ejs": "^0.0.11",
+    "querystring": "^0.2.1",
+    "request": "^2.88.2",
+    "secure-compare": "^3.0.1",
+    "session-file-store": "^1.5.0",
+    "socket.io": "^4.7.2",
+    "url": "^0.11.1",
+    "uuid": "^9.0.0",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

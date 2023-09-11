@@ -1,0 +1,55 @@
+.rankBlock {
+  height: auto;
+  box-shadow: inset -6px -6px 0 rgba(24, 24, 24, 0.403);
+  flex-wrap: nowrap;
+  padding: 1.5rem 1rem 1rem;
+}
+
+.rankTitle {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.rankIcon {
+  background-color: red;
+  margin-right: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.formSelect {
+  width: 100%;
+  background-color: var(--main-darkpurple);
+  color: white;
+  border: 0;
+}
+
+.rankCommodityBlock {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0.5rem 0.5rem;
+  border-radius: 8px;
+}
+
+.ranking {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  top: -5%;
+  z-index: 30;
+}
+
+.ranking div {
+  background-color: var(--main-darkpink);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 3rem;
+  border-radius: 50px;
+  border: 3px solid var(--main-orange);
+  box-shadow: inset 4px 4px 0 rgba(35, 20, 0, 0.144);
+}

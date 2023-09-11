@@ -1,0 +1,122 @@
+.offset {
+  margin-inline: -2rem;
+}
+
+.colHeader {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  margin-bottom: 2px;
+  background-color: var(--main-darkpurple);
+  color: white;
+  padding: 0.8rem 1.5rem;
+}
+
+.colHeaderGrid {
+  text-align: center;
+}
+
+.colProductGrid {
+  padding: 5px;
+}
+
+.colProduct {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  /* min-height: 140px; */
+  margin-bottom: 1.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.colProductImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.colProductImg img {
+  width: 100%;
+  max-width: 120px;
+}
+
+.colProductDate {
+  word-break: keep-all;
+  text-align: center;
+}
+
+.colProductName,
+.colProductDate,
+.colProductClick,
+.colProductPublish {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.titleType {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+@media screen and (max-width: 768px) {
+  .offset {
+    margin-inline: 0;
+  }
+
+  .colHeader {
+    display: none;
+  }
+
+  .colProduct {
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'title title'
+      'img quantity'
+      'total pub';
+  }
+
+  .titleType {
+    color: white;
+    background-color: var(--main-darkpurple);
+    width: 100%;
+    height: 100%;
+    padding-block: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .colProductImg {
+    grid-area: img;
+  }
+
+  .colProductName,
+  .colProductDate,
+  .colProductClick,
+  .colProductPublish {
+    line-height: initial;
+  }
+
+  .colProductName {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .colProductDate {
+    grid-area: quantity;
+    font-size: 14px;
+  }
+
+  .colProductClick {
+    grid-area: total;
+    text-align: center;
+  }
+
+  .colProductPublish {
+    grid-area: pub;
+    text-align: center;
+  }
+}

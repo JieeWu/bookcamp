@@ -1,0 +1,338 @@
+.offset {
+  margin-inline: -2rem;
+}
+
+.textLayout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.illustrateTitle {
+  font-size: 1.2rem;
+  white-space: nowrap;
+  margin-right: 1rem;
+}
+
+.uploadImgBlock {
+  display: flex;
+  padding: 1.5rem 2rem;
+  margin-inline: -2rem;
+  min-height: 350px;
+  color: var(--white);
+}
+
+.uploadImgBox {
+  min-height: 300px;
+  width: 100%;
+  justify-content: center;
+}
+
+.uploadBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  border: 2px solid white;
+  border-radius: 5px;
+  height: 100%;
+}
+
+.addFile {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* top: 10%; */
+  /* left: 35%; */
+}
+
+.addFile input {
+  opacity: 0;
+}
+
+.moreBook {
+  color: white;
+  background-color: var(--main-colorpurple);
+  margin-right: auto;
+}
+
+.bState {
+  display: none;
+}
+
+.bState:checked + .toggle {
+  width: 100%;
+  background-color: var(--main-darkpurple);
+  border-radius: 5px;
+  padding: 0.25rem 0.5rem;
+}
+
+.adInformation {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+.adInformation li {
+  display: flex;
+  align-items: center;
+  margin-block: 0.25rem;
+}
+
+.paymentConfirmation {
+  display: flex;
+  max-width: 700px;
+  color: black;
+  margin-block: auto;
+}
+
+.totalBox {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+  margin: 0 0.5rem 0 0;
+}
+
+.totalBox img {
+  width: 90%;
+}
+
+.paymentConfirmation .closebtn {
+  color: var(--white);
+  font-size: 1.5rem;
+  background-color: transparent;
+  position: absolute;
+  right: 2%;
+  top: 31%;
+}
+
+/* 當前廣告區塊 */
+.mainAd {
+  height: 54vh;
+  margin-block: 1rem;
+  padding: 0.25rem;
+  overflow: auto;
+}
+
+.adHeader {
+  display: flex;
+  gap: 220px;
+  background-color: var(--main-darkpurple);
+  color: white;
+  padding: 0.8rem 3.5rem;
+}
+
+.adHeaderGrid {
+  text-align: center;
+}
+
+.adProductGrid {
+  padding: 5px;
+}
+
+.adProduct {
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr;
+  grid-gap: 2px;
+  margin-bottom: 1.5rem;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+.adProductImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adProductDate {
+  word-break: keep-all;
+}
+
+.adProductName,
+.adProductDate,
+.adProductState {
+  text-align: center;
+  margin: auto;
+}
+
+.titleType {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.addBtn {
+  display: none;
+  position: absolute;
+  right: 3%;
+  bottom: 4%;
+}
+
+/* 狀態切換按鈕 */
+.switchod {
+  font-size: 0.6rem;
+  position: relative;
+  display: inline-block;
+  border: 1px solid black;
+  width: 3.5em;
+  height: 2em;
+}
+
+/* 隱藏複選框 */
+.switchod input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #310080;
+  border: 1px solid transparent;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 1.5em;
+  width: 1.5em;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: rgb(255, 255, 255);
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #0095ff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.5em);
+}
+
+/* 未開放狀態特效 */
+.closeState {
+  transition: 0.4s;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 768px) {
+  .offset {
+    margin-inline: 0;
+  }
+
+  .textLayout {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .illustrateTitle {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .mainAd {
+    height: 100%;
+    overflow: none;
+  }
+
+  .uploadImgBlock {
+    flex-direction: column;
+    margin-inline: -1rem;
+    padding: 0 0.5rem 1.5rem;
+  }
+
+  .uploadImgBox {
+    width: auto;
+  }
+
+  .paymentConfirmation {
+    flex-direction: column;
+    margin: 7rem 3rem 0;
+  }
+
+  .adInformation {
+    font-size: 14px;
+  }
+
+  .totalBox {
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .paymentConfirmation .closebtn {
+    color: black;
+    right: 2%;
+    top: 1%;
+  }
+
+  .adHeader {
+    display: none;
+  }
+
+  .adProduct {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-areas:
+      'title title title title title'
+      'img img img quantity quantity'
+      'img img img total total';
+  }
+
+  .titleType {
+    color: white;
+    background-color: var(--main-darkpurple);
+    width: 100%;
+    height: 100%;
+    padding-block: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .adProductImg {
+    grid-area: img;
+  }
+
+  .adProductName,
+  .adProductDate,
+  .adProductState {
+    line-height: initial;
+  }
+
+  .adProductName {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .adProductDate {
+    grid-area: quantity;
+    font-size: 14px;
+  }
+
+  .adProductState {
+    grid-area: total;
+    text-align: center;
+  }
+}
+
+/* ---------------------------- */

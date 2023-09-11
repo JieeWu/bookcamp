@@ -1,0 +1,103 @@
+/* 簡介*/
+/* textarea {
+  resize: none;
+  padding: 3px 20px;
+  box-shadow:
+  0 0 0 1px var(--black),
+  0 5px 0 -1px var(--black),
+  4px 0 0 -1px var(--black),
+  0 0 0 1px var(--black),
+  0 -5px 0 -1px var(--black),
+  -4px 0 0 -1px var(--black),
+  0 0 0 3px var(--black),
+  0 6px 0 0 var(--black),
+  0 -6px 0 0 var(--black),
+  5px 0 0 0 var(--black),
+  -5px 0 0 0 var(--black);
+  } */
+  
+  /*新增商品文字*/
+  .addname {
+  color: #ffffff;
+  text-align: center;
+  /* margin-top: 50px; */
+  }
+  /*表單裡面的樣式*/
+  .add {
+  max-width: 700px;
+  height: 1200px;
+  background-color: #512893;
+  margin: 0 auto;
+  border: 3px solid #9b6cff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  }
+  /*儲存按鈕*/
+  .addstore {
+  color: #0d0733;
+  display: flex;
+  background: var(--main-yellow);
+  padding: 3px 20px;
+  margin:auto;
+  margin-top: 30px;
+  box-shadow:
+  0 2px 0 var(--main-yellow),
+  5px 0 0 var(--main-yellow),
+  0 1px 0 var(--main-yellow),
+  5px 0 0 var(--main-yellow),
+  0 1px 0 var(--main-yellow),
+  0 5px 0 var(--main-yellow),
+  0 5px 0 0 var(--main-yellow),
+  5px 0 0 0 var(--main-yellow),
+  0 -5px 0 0 var(--main-yellow),
+  -5px 0 0 0 var(--main-yellow),
+  0 -8px 0 var(--black),
+  0 8px 0 var(--black),
+  -8px 0 0 var(--black),
+  8px 0 0 var(--black),
+  3px 0 0 3px var(--black),
+  -3px 0 0 3px var(--black),
+  0 3px 0 3px var(--black),
+  0 -3px 0 3px var(--black);
+  }
+  .obp::-webkit-outer-spin-button,
+  .obp::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  /* 裡面的距離*/
+  .add2 {
+  margin: 20px;
+  }
+  
+  /*預覽圖的大小 彼此的距離*/
+  /* .image {
+  font-size: 100px;
+  margin-left: 120px;
+  } */
+  
+  /*點擊圖片有效果 */
+  /* .clickimg {
+  transform: transform 3s ease-in-out;
+  cursor: pointer;
+  color: #ccc;
+  } */
+  /*點擊圖片有效果 */
+  /* .clickimg:hover {
+  transform: scale(1.2);
+  width: 100px;
+  color: black;
+  } */
+  /* 預覽圖片 */
+  /* .img-wrap {
+  display: flex;
+  margin-left: -50px;
+  } */
+  .addodboookname{
+    color: #ffffff;
+  }
+  .errorname{
+    color: red;
+  }

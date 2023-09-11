@@ -1,0 +1,546 @@
+/* 容器內的切版大小 */
+.oldbookimg {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto auto auto;
+  background-color: #512893;
+  /* width: 100%;
+  max-width: 1000px; */
+  height: 600px;
+  /* margin-left: 200px; */
+  position: relative; /* 將容器設定為相對定位，以便絕對定位 */
+  margin-bottom: 10px;
+  }
+  
+  /* 圖片的位置 */
+  .imagecontainer1 {
+  margin: auto 0;
+  width: 100%;
+  /* height: 100%; */
+  max-width: 480px; /* 這是最大寬度，你可以調整或完全省略 */
+  /* max-height: 250px; */
+  /* overflow: hidden; */
+  position:absolute;
+  z-index: 5;
+  left: 175px;
+  top: 250px;
+  
+  }
+  
+  /* 圖片的大小 */
+  .imagecontainer1 img {
+  max-width: 100%;
+  height: 100%;
+  max-width: 450px;
+  /* max-height: 600px; */
+  /* margin:40px; */
+  /* margin-top: 70px; */
+  
+  }
+  
+  /* 圖片佔據的 */
+  .oldbookname3 {
+  display: flex;
+  /* background-color: #512893; */
+  /* margin-top: 70px; */
+  /* padding: 1.5rem; */
+  height: 88%;
+  }
+  
+  /* 內容佔據的 在對裡面grid */
+  .oldbookmain {
+  grid-column: 1 / 6;
+  grid-row: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  padding: 50px;
+  
+  /* grid-gap: 10px; */
+  }
+  
+  /* 書名寬度 */
+  .a1 {
+  background-color: #9b6cff;
+  color: white;
+  grid-column: 2/8;
+  grid-row: 1;
+  position: relative;
+  left: -20px;
+  padding: 0.5rem;
+  display: flex;
+justify-content: space-between;
+align-items: center;
+
+  box-shadow:
+  3px 0 0 #9b6cff,
+  -1px 3px 0 #9b6cff,
+  2px 6px 0 #7451bf,
+  0 1px 0 #7451bf,
+  0 5px 0 #7451bf,
+  0 2px 0 0 #7451bf,
+  6px 0 0 0 #7451bf,
+  -1px -6px 0 0 #9b6cff,
+  -6px 1px 0 0 #9b6cff,
+  1px -6px 0 0 #9b6cff,
+  0 -6px 0 0 #9b6cff,
+  -6px -2px 0 0 #9b6cff,
+  -1px 6px 0 0 #7451bf,
+  6px 2px 0 0 #7451bf,
+  0 -8px 0 var(--black),
+  3px 8px 0 var(--black),
+  -8px -3px 0 var(--black),
+  8px 3px 0 var(--black),
+  5px 0px 0 5px var(--black),
+  0 -5px 0 5px var(--black),
+  -5px 0 0 5px var(--black),
+  0 5px 0 5px var(--black),
+  -3px 0 5px var(--black);
+  }
+  /* 分類...有的沒的 */
+  .a2 {
+  background-color: #9b6cff;
+  box-shadow:
+  2px -2px 0 0 #9b6cff,
+  -2px -2px 0 0 #9b6cff,
+  -2px -4px 0 0 black,
+  -4px -2px 0 0 black,
+  2px 0px 0 0 #6b4cb3,
+  2px -2px 0 0 #6b4cb3,
+  4px -2px 0 0 black,
+  2px -4px 0 0 black,
+  -2px 2px 0 0 #6b4cb3,
+  -4px 2px 0 0 black,
+  2px 2px 0 0 #6b4cb3,
+  4px 2px 0 0 black,
+  -2px 4px 0 0 black,
+  2px 4px 0 0 black;
+  grid-column: 2/6;
+  grid-row: 1/5;
+  position: relative;
+  left: -28px;
+  top: 112px;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+ padding: 1rem;
+  }
+  /*內容 */
+  .odbkcontent{
+  padding: 1rem;
+  color: #ffffff;
+  background-color: #0D0733;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  /* width: 400px; */
+  }
+  .odbkcontent1{
+    /* margin: auto; *
+
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  /* text-align: center;
+  justify-content: center;
+  align-items: center; */
+  padding: 5px;
+  background-color: #572893;
+  box-shadow:
+  0 2px 0 #572893,
+  5px 0 0 #572893,
+  0 2px 0 #572893,
+  5px 0 0 #572893,
+  0 2px 0 #572893,
+  0 5px 0 #572893,
+  0 5px 0 0 #572893,
+  5px 0 0 0 #572893,
+  0 -5px 0 0 #572893,
+  -5px 0 0 0 #572893,
+  0 -8px 0 #000000,
+  0 8px 0 #000000,
+  -8px 0 0 #000000,
+  8px 0 0 #000000,
+  3px 0 0 3px #000000,
+  -3px 0 0 3px #000000,
+  0 3px 0 3px #000000,
+  0 -3px 0 3px #000000;
+  }
+  
+  /* 數量 */
+  .a3 {
+  grid-column: 2 / 5;
+  grid-row: 6;
+  position: relative;
+  left: -20px;
+  top: 30px;
+  padding: 10px;
+  display: flex;
+  /* 添加此行，使其子元素沿水平轴布局 */
+  justify-content: space-between;
+  }
+  
+  /* +-按鈕樣式 */
+  .oldbookreduce {
+  height: 30px;
+  }
+  .a3 input {
+  background-color: #383838;
+  height: 30px;
+  box-shadow:
+  0 2px 0 #2a2a2a,
+  5px 0 0 #2a2a2a,
+  0 1px 0 #2a2a2a,
+  5px 0 0 #2a2a2a,
+  0 1px 0 #2a2a2a,
+  0 5px 0 #2a2a2a,
+  0 5px 0 0 #2a2a2a,
+  5px 0 0 0 #2a2a2a,
+  0 -5px 0 0 #2a2a2a,
+  -5px 0 0 0 #2a2a2a,
+  0 -8px 0 #000000,
+  0 8px 0 #000000,
+  -8px 0 0 #000000,
+  8px 0 0 #000000,
+  3px 0 0 3px #000000,
+  -3px 0 0 3px #000000,
+  0 3px 0 4px #000000,
+  0 -3px 0 4px #000000;
+  }
+  /* 作者 */
+  .a4 {
+  background-color: #9b6cff;
+  grid-column: 6/8;
+  grid-row: 2/4;
+  position: relative;
+  top: 50px;
+  padding: 10px;
+  box-shadow:
+  3px 0 0 #9b6cff,
+  -1px 3px 0 #9b6cff,
+  2px 6px 0 #7451bf,
+  0 1px 0 #7451bf,
+  0 5px 0 #7451bf,
+  0 2px 0 0 #7451bf,
+  6px 0 0 0 #7451bf,
+  -1px -6px 0 0 #9b6cff,
+  -6px 1px 0 0 #9b6cff,
+  1px -6px 0 0 #9b6cff,
+  0 -6px 0 0 #9b6cff,
+  -6px -2px 0 0 #9b6cff,
+  -1px 6px 0 0 #7451bf,
+  6px 2px 0 0 #7451bf,
+  0 -8px 0 var(--black),
+  3px 8px 0 var(--black),
+  -8px -3px 0 var(--black),
+  8px 3px 0 var(--black),
+  5px 0px 0 5px var(--black),
+  0 -5px 0 5px var(--black),
+  -5px 0 0 5px var(--black),
+  0 5px 0 5px var(--black),
+  -3px 0 5px var(--black);
+  }
+  .a4 h6 {
+  color: #ffffff;
+  margin:20px ;
+  }
+  .odbkauthor{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  
+  
+  /* 購物車 */
+  .a5 {
+  grid-column: 6/8;
+  grid-row: 4/8;
+  position: relative;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  }
+  .oldbookcar {
+  background-color: #ffa800;
+  color: #0d0733;
+  width: 150px;
+  box-shadow:
+  10px -10px 0 0 #ffa800,
+  0px -10px 0 0 #ffa800,
+  0px -15px 0 0 black,
+  -5px -10px 0 0 black,
+  15px 0px 0 0 #ffa800,
+  15px -10px 0 0 #ffa800,
+  20px -10px 0 0 black,
+  15px -15px 0 0 black,
+  0px 5px 0 0 #ffa800,
+  -5px 5px 0 0 black,
+  15px 5px 0 0 #ffa800,
+  20px 5px 0 0 black,
+  0px 10px 0 0 black,
+  15px 10px 0 0 black;
+  }
+  .oldbookpay {
+  background-color: #ff6161;
+  color: white;
+  width: 150px;
+  position: relative;
+  top: 10px;
+  box-shadow:
+  10px -10px 0 0 #ff6161,
+  0px -10px 0 0 #ff6161,
+  0px -15px 0 0 black,
+  -5px -10px 0 0 black,
+  15px 0px 0 0 #ff6161,
+  15px -10px 0 0 #ff6161,
+  20px -10px 0 0 black,
+  15px -15px 0 0 black,
+  0px 5px 0 0 #ff6161,
+  -5px 5px 0 0 black,
+  15px 5px 0 0 #ff6161,
+  20px 5px 0 0 black,
+  0px 10px 0 0 black,
+  15px 10px 0 0 black;
+  }
+  /* 書介紹樣式 */
+  .oldbookintroduce{
+  /* width: 640px;
+  height: 400px; */
+  grid-column: 2 / 6;
+  grid-row: 1/3;
+  position: relative;
+  left: -40px;
+  top: 40px;
+  padding: 3rem;
+  /* margin-left: 2.5rem; */
+  background-color: #0D0733;
+  color: #ffffff;
+  box-shadow: 0 0 0 1px var(--main-brightpurple), 0 5px 0 -1px
+  var(--main-brightpurple),
+  4px 0 0 -1px var(--main-brightpurple), 0 0 0 1px
+  var(--main-brightpurple), 0 -5px 0 -1px var(--main-brightpurple),
+  -4px 0 0 -1px var(--main-brightpurple), 0 0 0 3px var(--black),
+  0 6px 0 0 var(--black), 0 -6px 0 0 var(--black),
+  5px 0 0 0 var(--black), -5px 0 0 0 var(--black);
+  }
+  .bookblurd5{
+    margin-bottom: 10px;
+  }
+  /* 右邊欄位開始------------------ */
+  /* 作者框 */
+  
+  .sellerbox {
+  background-color: #f3d52e;
+  /* width: 100%; */
+  /* max-width: 280px; */
+  height: 300px;
+  /* padding: 10px; */
+  display: flex;
+  flex-direction: column;
+  /* 將元素垂直排列 */
+  gap: 30px;
+  }
+  /* 賣家頭貼訊息等等 */
+  .sellermain {
+  /* width: 240px; */
+  height: 150px;
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  }
+  /* 讓文字稍微靠右 */
+  .sellername {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  }
+  .sellername a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  
+  font-size: 20px;
+  }
+  /* 賣場超連結 */
+  /* .astore {
+  background: #0d0733;
+  box-shadow:
+  2px 0 0 #0d0733,
+  5px 0 0 #0a0526,
+  0 2px 0 #0d0733,
+  0 5px 0 #0a0526,
+  5px 0 0 #0d0733,
+  0 1px 0 #0d0733,
+  0 5px 0 #0d0733,
+  0 5px 0 0 #0d0733,
+  5px 0 0 0 #0d0733,
+  0 -5px 0 0 #0d0733,
+  -5px 0 0 0 #0d0733,
+  0 -8px 0 var(--black),
+  0 8px 0 var(--black),
+  -8px 0 0 var(--black),
+  8px 0 0 var(--black),
+  3px 0 0 3px var(--black),
+  -3px 0 0 3px var(--black),
+  0 3px 0 3px var(--black),
+  0 -3px 0 3px var(--black);
+  max-width: 60px;
+  margin: 12px;
+  text-align: center;
+  } */
+  .oldbookname{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  }
+  /* 圖片大小 */
+  .sellerimage img {
+  width: 130px;
+  height: 120px;
+  border-radius: 50%;
+  }
+  /* 賣家評分 */
+  .sellerstar {
+  display: flex;
+  font-size: 35px;
+  }
+  /* 星星大小 */
+  .star-icon {
+  font-size: 50px;
+  }
+  /* 評分數字大小 */
+  .star-icontext {
+  font-size: 30px;
+  }
+  /* 賣家的關注私訊按鈕 */
+  .sellertwobutton {
+  max-width:100%;
+  height: 50px;
+  display: flex;
+  gap: 30px;
+  margin: auto;
+  margin-top: -20px;
+  align-items: center;
+  }
+  .sellertwobutton a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  }
+  
+  .contact_button {
+  width: 80px;
+  height: 30px;
+  padding-left: 10px;
+  background-color: #ff6161;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  box-shadow:
+  10px -10px 0 0 #ff6161,
+  0px -10px 0 0 #ff6161,
+  0 -13px 0 0 black,
+  -2px -9px 0 0 black,
+  15px 0px 0 0 #ff6161,
+  15px -10px 0 0 #ff6161,
+  17px -10px 0 0 black,
+  15px -13px 0 0 black,
+  0px 5px 0 0 #ff6161,
+  -2px 5px 0 0 black,
+  15px 5px 0 0 #ff6161,
+  17px 5px 0 0 black,
+  0px 8px 0 0 black,
+  15px 8px 0 0 black;
+  }
+  
+  .follow_button {
+  width: 80px;
+  height: 30px;
+  padding-left: 10px;
+  background-color: #9b6cff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  box-shadow:
+  10px -10px 0 0 #9b6cff,
+  0px -10px 0 0 #9b6cff,
+  0 -13px 0 0 black,
+  -2px -9px 0 0 black,
+  15px 0px 0 0 #9b6cff,
+  15px -10px 0 0 #9b6cff,
+  17px -10px 0 0 black,
+  15px -13px 0 0 black,
+  0px 5px 0 0 #9b6cff,
+  -2px 5px 0 0 black,
+  15px 5px 0 0 #9b6cff,
+  17px 5px 0 0 black,
+  0px 8px 0 0 black,
+  15px 8px 0 0 black;
+  }
+  
+  /* 右邊欄位結束------------------ */
+  /* 上面列表 */
+  .oldlist {
+  display: flex;
+  list-style: none;
+  }
+  /* 列表的樣式 */
+  .oldlist li {
+  background-color: #7817f3;
+  box-shadow: 2px 2px 0 #5410ab;
+  text-align: center;
+  margin: 30px 0px 5px 12px;
+  }
+  
+  
+  /* 列表的超連結 */
+  .oldlist li button {
+  width: 180px;
+  height: 30px;
+  background-color: #7817f3;
+  color: #ffffff;
+  }
+
+  .oldlist li button.active {
+    background-color: #512893;
+    border-bottom:4px #7817f3 solid;
+  }
+
+
+  .hotBlock {
+    display: flex;
+    max-width: 100%;
+    box-shadow: inset 0 -20px 0 rgba(255, 255, 255, 0.082);
+    /* margin-top: 4rem; */
+    padding: 4rem 0 3rem 0;
+  }
+  
+  .CollectB{
+    left: 200px;
+  }
+  .slideshow123{
+    width: 200px;
+    height: 600px;
+    animation: changeImage 9s infinite; /* 3 張圖片，每張 3 秒，所以總時長為 9 秒 */
+    background-size: cover;
+    margin-top: 65px;
+  }
+
+  @keyframes changeImage {
+    0%, 33% {
+      background-image: url('http://localhost:3002/public/img/ad/200x600_ad_6.jpg');
+    }
+    34%, 66% {
+      background-image: url('http://localhost:3002/public/img/ad/200x600_ad_1.jpg');
+    }
+    67%, 100% {
+      background-image: url('http://localhost:3002/public/img/ad/200x600_ad_7.jpg');
+    }
+  }

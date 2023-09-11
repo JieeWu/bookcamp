@@ -1,0 +1,58 @@
+.gprompt-box {
+  color: white;
+  background: var(--black);
+  padding: 1rem 0 2rem;
+}
+
+.redtext{
+  color: red;
+}
+
+.cart_coupon_name {
+  color: yellow;
+}
+
+.cart_next {
+  position: fixed;
+  bottom: 0;
+  z-index: 101;
+  /* transition: bottom 0.3s ease-in-out; */
+}
+
+.paddingBlack{
+  padding-inline: 30px;
+  padding-top: 20px;
+}
+
+/* 進度條 */
+.progressBar {
+  height: 100%;
+  display: grid;
+  align-items: center;
+}
+
+.father {
+  background: #e0e0e0;
+  border-radius: 15px;
+}
+
+#Son {
+  background: #00a600;
+  border-radius: 10px;
+}
+
+
+
+@media screen and (max-width: 1380px) {
+  .cart_next {
+    position: static;
+    margin-top: 5%;
+    padding-inline:2.5% ;
+  }
+  
+  .progressBar {
+    border-bottom:3px double white ;
+    padding-inline: 30px;
+    padding-block: 20px;
+  }
+}

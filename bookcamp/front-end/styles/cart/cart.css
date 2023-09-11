@@ -1,0 +1,217 @@
+.part3-area {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 0.3fr;
+  grid-template-areas:
+    '. step .'
+    '. cart .'
+    '. information .'
+    '. point .'
+    '. go .';
+
+  grid-row-gap: 30px;
+}
+
+.cart-next-area {
+  grid-area: go;
+}
+
+.cart-step-area {
+  grid-area: step;
+}
+
+.cart-receipt-area {
+  grid-area: receipt;
+}
+
+.cart-delivery-area {
+  grid-area: delivery;
+}
+.cart-point-area {
+  grid-area: point;
+}
+
+.cart-pay-area {
+  grid-area: pay;
+}
+
+.cart-cart-area {
+  grid-area: cart;
+}
+
+.cart-coupon-area {
+  grid-area: coupon;
+}
+
+.cart-information-area {
+  grid-area: information;
+}
+
+/* 購買的產品列表 */
+.cart {
+  display: grid;
+  grid-template-columns: 0.3fr 1fr 3fr 1fr 1fr 1fr 0.3fr;
+  grid-template-areas: 'check img name type count price ashcan';
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.checkbox_HeaderGrid,
+.checkbox_BookGrid {
+  grid-area: check;
+}
+
+.bookImg_HeaderGrid,
+.bookImg_BookGrid {
+  width: 120px;
+  grid-area: img;
+}
+
+.bookName_HeaderGrid,
+.bookName_BookGrid {
+  grid-area: name;
+}
+
+.bookType_HeaderGrid,
+.bookType_BookGrid {
+  grid-area: type;
+}
+
+.bookCount_HeaderGrid,
+.bookCount_BookGrid {
+  grid-area: count;
+}
+
+.bookPrice_HeaderGrid,
+.bookPrice_BookGrid {
+  grid-area: price;
+}
+
+.ashcan_HeaderGrid,
+.ashcan_BookGrid {
+  grid-area: ashcan;
+}
+
+.bookImg_BookGrid {
+  width: 100px;
+  padding-block: 1rem;
+}
+
+.bookName_BookGrid {
+  text-align: start;
+}
+
+.bookCount_BookGrid {
+  margin-inline: auto;
+}
+
+.bookCount_BookGrid > div {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bookCount_BookGrid > div > .subButton {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+.bookCount_BookGrid > div > .addButton {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+.bookCount_BookGrid > .count-rwd {
+  display: none;
+}
+
+.ashcan_BookGrid {
+  position: relative;
+  height: 100%;
+}
+
+.ashcan_BookGrid > i {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.2;
+  padding: 1px 5px;
+  font-size: 30px;
+}
+
+.checkbox_HeaderGrid > label {
+  white-space: nowrap;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: rgba(58, 57, 57, 0.5);
+  padding-inline: 5px;
+  padding-block: 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.checkbox_HeaderGrid > label:hover {
+  color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+/* 結帳畫面 - 對話框 -按鈕 */
+.cart-next-btn {
+  display: grid;
+  grid-template-columns: 1fr 0.3fr 1fr ;
+  grid-template-areas: ' gobtn1 . gobtn2';
+  /* border-top: 2px dashed white; */
+  /* padding-top: 30px; */
+  margin-block: 1rem 1.5rem;
+}
+
+.cart-next-btn .gobtn1 {
+  grid-area: gobtn1;
+  /* width: 200px; */
+  color: var(--black);
+}
+
+.cart-next-btn .gobtn2 {
+  grid-area: gobtn2;
+  /* width: 200px; */
+  color: var(--black);
+}
+
+/* 不放全域吃不到樣式 checkout2的支付方式 */
+#pay-radio input:checked + .input-choose-style {
+  padding: 20px;
+  margin: auto;
+  border: 5px solid var(--main-brightpurple);
+  border-radius: 10%;
+}
+
+.imgBoxSize {
+  width: 200px;
+}
+
+/* 進度條 */
+.progressBar {
+  height: 100%;
+  display: grid;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.father {
+  background: #e0e0e0;
+  border-radius: 15px;
+}
+
+#Son {
+  background: #00a600;
+  border-radius: 10px;
+}
+
+.imgBox{
+  min-width: 100px;
+  max-width: 150px;
+}

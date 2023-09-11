@@ -1,0 +1,147 @@
+
+
+/*li不要點點*/
+.Management {
+  list-style: none;
+}
+/*li的距離和樣式*/
+.Management li {
+  width: 117px;
+  height: 45px;
+  display: inline-block;
+  margin: 20px 10px 1px 2px;
+  background-color: #ff93c7;
+  box-shadow: 3px 3px 0 #b3678c;
+  text-align: center;
+  line-height: 45px;
+}
+/*超連結不要底線 添加顏色 */
+.Management li a {
+  color: azure;
+  text-decoration: none;
+  display: block;
+  /*<a> 標籤就會填滿整個 <li> 元素，使整個列表項目都可以點擊 */
+}
+/*搜尋整欄的背景顏色*/
+.operatemenu {
+  background-color: #512893;
+  box-shadow: 5px 3px  #512893,3px 3px  #512893;
+
+  color: azure;
+}
+/*說明的背景樣式*/
+.Management2 {
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  background-color: #7817f3;
+}
+
+/*管理的背景顏色樣式和彼此距離*/
+.Management3 {
+  background-color: #ffffff;
+  color: #1e1e1e;
+  max-width: 1300px;
+  height: 150px;
+  margin-top: 20px;
+  box-shadow:
+    7px 0px 10px #000,
+    -7px 0px 10px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.Management3  img{
+  width: 115px;
+  height: 130px;
+}
+/*讓圖和文字可以水平排列*/
+.Management3 .col-4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+/*書名超出後會顯示...*/
+.book {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 搜尋框按鈕的css 很長到下面*/
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  margin-left: auto; /* 將容器對齊到右邊 */
+  max-width: 300px; /* 控制容器的最大寬度 */
+}
+
+.input-container input {
+  padding-left: 20px;
+  height: 50px;
+  flex-grow: 1;
+}
+
+
+
+.input-container input[type='text']::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+.input-container button {
+  background-color: #9b6cff;
+  color: azure;
+  width: 100px;
+  height: 10px;
+  height: 35px;
+  border-radius: 25px;
+  border-style: none;
+  position: absolute;
+  right: 10px;
+}
+/* 搜尋框按鈕的css 很長到這裡*/
+
+/*自定義按鈕*/
+.Lookorder {
+  height: 40px;
+  margin-top: 20px;
+  color: #0d0733;
+  background-color: #f3d52e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  box-shadow:
+    0 2px 0 #f3d52e,
+    5px 0 0 #f3d52e,
+    0 1px 0 #f3d52e,
+    5px 0 0 #f3d52e,
+    0 1px 0 #f3d52e,
+    0 5px 0 #f3d52e,
+    0 5px 0 0 #f3d52e,
+    5px 0 0 0 #f3d52e,
+    0 -5px 0 0 #f3d52e,
+    -5px 0 0 0 #f3d52e,
+    0 -8px 0 #000000,
+    0 8px 0 #000000,
+    -8px 0 0 #000000,
+    8px 0 0 #000000,
+    3px 0 0 3px #000000,
+    -3px 0 0 3px #000000,
+    0 3px 0 3px #000000,
+    0 -3px 0 3px #000000;
+}

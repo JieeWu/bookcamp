@@ -1,0 +1,469 @@
+.discussTitle {
+  display: flex;
+  width: 100%;
+}
+.postHeaderViews {
+  display: flex;
+}
+.landlordAvatar {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3px;
+  border-radius: 5px;
+}
+
+.landlordAvatar img {
+  width: 100%;
+  height: auto;
+}
+
+.landlordInformation {
+  color: var(--white);
+  width: 100%;
+  background-color: var(--main-colorpurple);
+  display: flex;
+  align-items: center;
+  padding-inline: 1rem;
+  margin-inline: 1rem;
+}
+
+.landlord {
+  grid-area: name;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-darkpurple);
+  color: white;
+  border-radius: 50px;
+  padding: 0.25rem 0.75rem;
+  font-size: 14px;
+  font-weight: bold;
+  margin-block: auto;
+}
+
+.floorOperation {
+  max-width: 60px;
+  color: white;
+  background-color: var(--main-purple);
+  box-shadow:
+    0 -3px 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-purple),
+    0 3px 0 var(--main-purple),
+    3px 0 0 var(--main-purple),
+    6px 0 0 var(--main-purple),
+    -6px 0 0 var(--main-colorpurple),
+    0 0 0 3px var(--main-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Author {
+  grid-area: author;
+}
+.landTime {
+  grid-area: landTime;
+}
+.floorOperationBtn {
+  background-color: var(--main-orange);
+  width: 100%;
+  color: white;
+  transition: 0.4s;
+}
+
+.floorOperationBtn:hover {
+  background-color: rgb(255, 111, 0);
+  scale: 0.95;
+}
+
+/* 文章區塊 */
+.postHeader {
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-shadow:
+    0 -3px 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-colorpurple),
+    3px 0 0 var(--main-colorpurple),
+    -3px -3px 0 var(--black),
+    3px -3px 0 var(--black),
+    0 -6px 0 var(--black),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black);
+  padding: 1.5rem;
+}
+
+.articleLike {
+  grid-area: test;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.textContent {
+  position: relative;
+  background-color: var(--white);
+  width: 100%;
+  height: 400px;
+  padding: 2rem 3.5rem 2rem 2rem;
+  overflow: hidden;
+  /* overflow-y: auto; */
+  box-shadow:
+    3px 0 0 var(--main-darkpurple),
+    -3px 0 0 #ccc,
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black);
+}
+.textArea {
+  overflow: auto;
+  height: 100%;
+}
+.textArea::-webkit-scrollbar {
+  width: 0; /* 宽度设置为0，即隐藏滚动条 */
+  background-color: transparent; /* 背景颜色设为透明 */
+}
+
+.messageBlock {
+  position: absolute;
+  top: 0;
+  color: white;
+  background-color: var(--main-darkpurple);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  display: flex;
+  transition: 0.5s;
+}
+
+.messageBlockClose {
+  right: -97%;
+}
+
+.messageBlockOpen {
+  right: -2%;
+}
+
+.messageBlock button:hover {
+  background-color: var(--main-colorpurple);
+}
+
+.messageBlock button .openbtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0.5rem;
+}
+
+.messageBlock button .openbtn i {
+  animation: slideLeftRight 0.5s steps(2) infinite;
+}
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(-1.5px);
+  }
+  100% {
+    transform: translateX(1.5px);
+  }
+}
+
+.userMessageBlock {
+  background-color: var(--main-purple);
+  color: white;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 7fr;
+  text-align: left;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.messageInputBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-brightpurple);
+  border-radius: 5px;
+  margin: 1.3rem 1.3rem 1.3rem 1rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+}
+
+.messageInputBlock input {
+  width: 85%;
+  height: 85%;
+  color: white;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+.messageInputBlock input:focus,
+.messageInputBlock input:active,
+.messageInputBlock input:focus-visible {
+  outline: none;
+  border: 0;
+}
+
+.messageInputBlock button:hover {
+  background-color: var(--main-orange);
+}
+
+/* 文章底部操作區塊 */
+.messageOperateBlock {
+  background-color: var(--main-orange);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:
+    inset 0 3px 0 rgb(255, 196, 87),
+    0 3px 0 rgb(250, 129, 0),
+    -3px 0 0 rgb(250, 129, 0),
+    3px 0 0 rgb(250, 129, 0),
+    -3px 3px 0 var(--black),
+    3px 3px 0 var(--black),
+    0 6px 0 var(--black),
+    -6px 0 0 var(--black),
+    6px 0 0 var(--black);
+  padding: 1.25rem 1rem 1rem;
+  margin-bottom: 13vh;
+}
+
+.likeBtn {
+  display: flex;
+}
+
+.likeBtn button {
+  background-color: var(--main-yellow);
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  color: #ff2c2c;
+  transition: 0.4s;
+}
+
+.likeBtn button:hover {
+  background-color: var(--main-colorpurple);
+  box-shadow:
+    3px 0 0 var(--main-colorpurple),
+    0 3px 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-purple),
+    0 -3px 0 var(--main-purple);
+  color: white;
+}
+
+.replyBtn {
+  color: var(--black);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.replyBtn span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.replyBtn span:last-child {
+  color: var(--main-yellow);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.replyBtn:after {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(4deg) scaleY(0);
+  z-index: 50;
+}
+
+.replyBtn:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(4deg) scaleY(2);
+}
+
+.replyBtn:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.moreFunctionBtn {
+  font-weight: bold;
+  padding: 0.6rem 0.5rem;
+  cursor: pointer;
+}
+
+.customSelect {
+  position: relative;
+  display: inline-block;
+}
+
+.customSelect .selectOptions {
+  display: none;
+  position: absolute;
+  bottom: 100%; /* 改成 bottom，使得内容在 .moreFunctionBtn 的上方 */
+  right: 0;
+  z-index: 9999;
+  transform: translateY(-25px); /* 根据需要调整距离 */
+}
+
+.postPageAd {
+  max-width: 180px;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-inline: auto;
+}
+
+.postPageAd img {
+  width: 100%;
+}
+@media (max-width: 1400px) {
+  .postPageAdArea {
+    display: none !important;
+  }
+}
+@media (max-width: 576px) {
+  .postPageAdArea {
+    display: none !important;
+  }
+  
+  .landlordInformation {
+    color: var(--white);
+    width: 100%;
+    background-color: var(--main-colorpurple);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'name author author'
+      'landTime landTime landTime';
+    align-items: center;
+    padding-inline: 1rem;
+    margin-inline: 1rem;
+  }
+  .landTime {
+    grid-area: landTime;
+    text-align: left;
+  }
+  .postHeader {
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'Title Title'
+      'Views Views';
+    width: 100%;
+    box-shadow:
+      0 -3px 0 var(--main-colorpurple),
+      -3px 0 0 var(--main-colorpurple),
+      3px 0 0 var(--main-colorpurple),
+      -3px -3px 0 var(--black),
+      3px -3px 0 var(--black),
+      0 -6px 0 var(--black),
+      6px 0 0 var(--black),
+      -6px 0 0 var(--black);
+    padding: 1.5rem;
+  }
+  .postHeader h5 {
+    display: none;
+  }
+  .postHeaderTitle {
+    grid-area: Title;
+    text-align: left;
+  }
+  .postHeaderTitle span {
+    padding: 0px !important;
+  }
+  .messageBlock {
+    display: none;
+  }
+  .postHeaderViews {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+    margin-top: 10px;
+    grid-area: Views;
+    /* width: 280px; */
+  }
+  .messageOperateBlock {
+    background-color: var(--main-orange);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      'likeBtn replyBtn replyBtn'
+      'likeBtn - -'
+      'functionBtn functionBtn functionBtn';
+    box-shadow:
+      inset 0 3px 0 rgb(255, 196, 87),
+      0 3px 0 rgb(250, 129, 0),
+      -3px 0 0 rgb(250, 129, 0),
+      3px 0 0 rgb(250, 129, 0),
+      -3px 3px 0 var(--black),
+      3px 3px 0 var(--black),
+      0 6px 0 var(--black),
+      -6px 0 0 var(--black),
+      6px 0 0 var(--black);
+    padding: 1.25rem 1rem 1rem;
+    margin-bottom: 13vh;
+  }
+  .likeBtn {
+    grid-area: likeBtn;
+    margin-bottom: 30px;
+  }
+  .replyBtn {
+    grid-area: replyBtn;
+  }
+  .moreFunctionBtn {
+    grid-area: functionBtn;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .replyBtn{
+    width: 100%;
+  }
+}

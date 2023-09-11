@@ -1,0 +1,399 @@
+.header-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: var(--main-darkpurple);
+}
+
+.logo-div {
+  max-width: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 登入按鈕彈出選項 */
+.login-btn {
+  display: none;
+  margin-left: 1rem;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.login-btn:hover {
+  background-color: var(--main-orange);
+  box-shadow:
+    0 0 0 2px var(--main-orange),
+    0 4px 0 #ff6a00,
+    4px 0 0 #ff6a00,
+    0 -4px 0 var(--main-orange),
+    -4px 0 0 var(--main-orange),
+    4px 2px 0 var(--black),
+    4px -2px 0 var(--black),
+    -4px 2px 0 var(--black),
+    -4px -2px 0 var(--black),
+    2px 4px 0 var(--black),
+    2px -4px 0 var(--black),
+    -2px 4px 0 var(--black),
+    -2px -4px 0 var(--black),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black);
+}
+
+.loginbtn-optionblock {
+  position: absolute;
+  top: 100%; 
+  left: 12%;
+  width: 100%;
+  max-width: 112px;
+  z-index: 99;
+  border-top: 12px solid transparent;  /* 添加透明邊框 */
+  border-left: 1px solid transparent;  
+  border-right: 1px solid transparent;  
+}
+
+.loginbtn-optionblock ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.loginbtn-optionblock a,
+.loginbtn-optionblock button {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.8rem;
+  animation: button-shimmer 2s infinite;
+  transition: all 0.3s ease-in-out;
+}
+
+.loginbtn-optionblock a:hover,
+.loginbtn-optionblock button:hover {
+  background-color: var(--main-orange);
+  box-shadow:
+    0 0 0 2px var(--main-orange),
+    0 4px 0 #ff6a00,
+    4px 0 0 #ff6a00,
+    0 -4px 0 var(--main-orange),
+    -4px 0 0 var(--main-orange),
+    4px 2px 0 var(--black),
+    4px -2px 0 var(--black),
+    -4px 2px 0 var(--black),
+    -4px -2px 0 var(--black),
+    2px 4px 0 var(--black),
+    2px -4px 0 var(--black),
+    -2px 4px 0 var(--black),
+    -2px -4px 0 var(--black),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black);
+  animation: button-particles 1s ease-in-out infinite;
+  transform: translateY(-2px);
+}
+
+@keyframes button-shimmer {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    background-position: right bottom;
+  }
+}
+
+@keyframes button-particles {
+  0% {
+    background-position: left top;
+  }
+
+  100% {
+    background-position: right bottom;
+  }
+}
+
+.header-btn-group {
+  max-width: 100%;
+  display: flex;
+  /* justify-content: end; */
+  align-items: center;
+}
+
+/* .seller-img-width,
+.heart-img-width,
+.Cart-img-width,
+.List-img-width {
+  width: 30px;
+} */
+
+.header-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white);
+  margin-left: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--black);
+  width: 40px;
+  height: 40px;
+  box-shadow:
+    4px 0 0 rgb(200, 200, 200),
+    -4px 0 0 white,
+    0 -4px 0 white,
+    0 4px 0 rgb(200, 200, 200);
+}
+
+/* .header-favorite-btn {
+  background: var(--white);
+  margin-right: 30px;
+  max-width: 100%;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--white);
+  box-shadow:
+    -5px 0 0 var(--white),
+    5px 0 0 var(--white),
+    0 -5px 0 var(--white),
+    0 5px 0 var(--white),
+    3px -3px 0 2px var(--white),
+    10px 0 0 #b3b3b3,
+    0 10px 0 #b3b3b3,
+    8px 3px 0 2px#B3B3B3,
+    3px 8px 0 2px #b3b3b3;
+}
+
+.header-cart-btn {
+  background: var(--white);
+  margin-right: 30px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  background: var(--white);
+  box-shadow:
+    -5px 0 0 var(--white),
+    5px 0 0 var(--white),
+    0 -5px 0 var(--white),
+    0 5px 0 var(--white),
+    3px -3px 0 2px var(--white),
+    10px 0 0 #b3b3b3,
+    0 10px 0 #b3b3b3,
+    8px 3px 0 2px#B3B3B3,
+    3px 8px 0 2px #b3b3b3;
+} */
+
+/* .header-seller-btn,
+.header-favorite-btn,
+.header-cart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.header-list-btn {
+  display: none;
+}
+
+.header-login-btn {
+  white-space: nowrap;
+  width: 140px;
+  padding-block: 7px;
+  margin-left: 1.5rem;
+  font-weight: bold;
+  background: var(--main-yellow);
+  box-shadow:
+    2px 0 0 var(--main-yellow),
+    5px 0 0 #ffa81d,
+    0 2px 0 var(--main-yellow),
+    0 5px 0 #ffa81d,
+    0 0 0 3px var(--main-yellow),
+    5px 0 0 var(--main-yellow),
+    0 1px 0 var(--main-yellow),
+    0 5px 0 var(--main-yellow),
+    0 5px 0 0 var(--main-yellow),
+    5px 0 0 0 var(--main-yellow),
+    0 -5px 0 0 var(--main-yellow),
+    -5px 0 0 0 var(--main-yellow),
+    0 -8px 0 var(--black),
+    0 8px 0 var(--black),
+    -8px 0 0 var(--black),
+    8px 0 0 var(--black),
+    3px 0 0 3px var(--black),
+    -3px 0 0 3px var(--black),
+    0 3px 0 3px var(--black),
+    0 -3px 0 3px var(--black);
+}
+
+/* 右側彈出目錄 */
+.menu-block {
+  width: 300px !important;
+  border: 0 !important;
+}
+
+.bombmenu-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.project-block {
+  display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
+  padding: 1rem 0.5rem;
+  margin: -2rem -1rem -1rem;
+}
+
+.project-block button {
+  color: white;
+  width: 45%;
+  margin: 0.4rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.nav-big-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  transition: 0.4s;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes shock {
+  0% {
+    transform: translateY(3px);
+  }
+  49% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  99% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+.nav-big-btn i {
+  animation: shock 0.5s infinite;
+}
+
+.nav-big-btn[aria-expanded='true'] {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-orange) !important;
+}
+
+.nav-big-btn:hover {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-orange) !important;
+}
+
+.nav-details {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  padding: 0.5rem 0 1rem;
+  margin-top: -1rem;
+}
+
+.nav-details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  /* margin: .5rem 0 1rem; */
+}
+
+.nav-details a {
+  display: flex;
+  width: 100%;
+  color: var(--main-darkpurple);
+  padding: 0.5rem;
+}
+
+.nav-details a:hover {
+  color: var(--white);
+}
+
+.nav-details li:hover {
+  background-color: var(--main-darkpurple);
+  border-radius: 5px;
+}
+
+.phone-bottom-btn {
+  color: var(--white);
+  background-color: var(--main-darkpurple);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-shadow:
+    inset 0 -5px 0 var(--main-purple),
+    0 -3px 0 var(--main-colorpurple);
+  padding-block: 1rem 0.75rem;
+}
+
+.phone-bottom-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* rwd版面 */
+@media screen and (max-width: 768px) {
+  .header-group {
+    padding: 0.5rem 0.5rem 0;
+  }
+
+  .header-btn {
+    width: 35px;
+    height: 35px;
+    margin-left: 1rem;
+    background: var(--main-yellow);
+    box-shadow:
+      0 3px 0 #ffa81d,
+      3px 0 0 #ffa81d,
+      0 -3px 0 var(--main-yellow),
+      -3px 0 0 var(--main-yellow),
+      0 -6px 0 var(--black),
+      0 6px 0 var(--black),
+      -6px 0 0 var(--black),
+      6px 0 0 var(--black),
+      0 0 0 3px var(--black);
+  }
+
+  /* 右側彈出目錄 */
+  .menu-block {
+    width: 60vw !important;
+  }
+
+  .project-block {
+    flex-wrap: nowrap;
+    overflow: auto;
+    background-color: var(--main-darkpurple);
+    margin: 0 -1rem;
+  }
+
+  .project-block button {
+    margin: 0 0.75rem;
+  }
+}

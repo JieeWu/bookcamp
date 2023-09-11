@@ -1,0 +1,341 @@
+/*導覽列*/
+.list {
+  display: flex;
+  list-style: none;
+  color: #ffffff;
+}
+
+
+/*導覽列超連結樣式*/
+.list a {
+  color: #ffffff;
+  text-decoration: none;
+}
+/*廣告 超出隱藏*/
+.ad {       
+  display: flex;
+  margin-left: -100px;
+  gap: 10px;
+  overflow: hidden;
+}
+/*分類的大背景*/
+.leftmenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #ff7269;
+  height: 700px;
+
+  margin-top: 20px;
+  border: 2px solid #0d0733;
+  border-radius: 20px;
+}
+/*分類的中背景*/
+.leftmenu1 {
+  flex: 1;
+  background-color: #0d0733;
+  border-radius: 15px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-top: 20px;
+  
+}
+/*分類裡面超連結的樣式*/
+.leftmenu1 ul li a {
+  display: block;
+  text-decoration: none;
+  color: #0d0733;
+}
+/*分類li裡面的背景顏色*/
+.leftulcs li {
+  list-style: none;
+  background-color: #b18cff;
+  color: #0d0733;
+  margin: 5px;
+  border-bottom: 5px solid #0d0733;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/*左邊優惠卷的上背景*/
+.leftad {
+  height: 40px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  background-color: #f3d52e;
+  border-radius: 10px 10px 0 0;
+}
+/*左邊優惠卷的背景*/
+.leftad1 {
+  width: 100%;
+  height: 500px;
+  background-color: #ff9900;
+}
+
+/*改變bootstrap手風琴樣式*/
+.language1 button {
+  background-color: #b18cff;
+  height: 10px;
+  
+}
+
+
+.language1 {
+ 
+  background: #b18cff;
+  background-color: #0d0733;
+}
+.language2 button {
+  width: 100%;
+}
+
+
+.accordion-item{
+  background-color: #0d0733;
+
+}
+/*改變bootstrap手風琴樣式*/
+.language3 button {
+  background-color: #b18cff;
+  border-radius: 1px solid #b18cff;
+  height: 10px;
+}
+/*手風琴裡面的背景*/
+.language3 {
+  background-color: #0d0733;
+}
+/*手風琴裡面的顏色*/
+.leftmenu1 .language2 a {
+  height: 10px;
+  color: #ffffff;
+}
+/* 手風琴當內容超出指定高度時，會出現垂直滾動條 */
+.language2 {
+  background-color: #b18cff;
+  max-height: 390px; /* 這個高度可以調整 */
+  overflow-y: auto;
+}
+/*分隔線*/
+hr {
+  border-top: 2px solid #ffffff; /* 修改這裡的 '2px' 和 '#f0f0f0' 可以改變線條的粗細和顏色 */
+}
+/*優惠卷樣式*/
+.oldbookcoupon {
+  flex: 1;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: flex-end; /* 將內容置於容器的最右邊 */
+  align-items: center; /* 垂直置中按鈕 */
+}
+/*優惠卷按鈕*/
+.couponbutton {
+  width: 70px;
+  height: 70px;
+  border-radius: 3px;
+  color: #ffffff;
+  background-color: #7817f3;
+}
+/*改優惠卷裡面的距離*/
+.coupontext {
+  margin-right: 10px;
+  padding: 10px;
+
+}
+/*查看更多背景樣式*/
+.more {
+  /* width: 200px; */
+  height: 50px;
+ 
+  border: 1px solid #ff6635;
+  background-color: #ff6635;
+  box-shadow:
+    -5px 0 0 #ff6635,
+    4px 0 0 #ff6635,
+    0 -2px 0 #ff6635,
+    0 5px 0 #ff6635,
+    -7px -3px 0 7px #ff6635,
+    10px 0 0 #b34825,
+    0 10px 0 #b34825,
+    4px 1px 0 2px#B34825,
+    3px 4px 0 2px #b34825;
+}
+/*查看更多超連結*/
+.more a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-left: 70px;
+  position: relative;
+  top: 10px;
+}
+/*查看更多超連結hover*/
+.more a:hover {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-left: 70px;
+  position: relative;
+  top: 10px;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 30px #fff,
+    0 0 40px #ff00de;
+}
+
+/*文字樣式*/
+.month {
+  text-align: center;
+  color: #ffffff;
+}
+/*本月推薦*/
+.recommend {
+  /* width: 1000px; */
+  height: 200px;
+  display: grid;
+  background-color: #7817f3;
+}
+.mylanguage{
+  background-color: #F3D52E;
+
+}
+
+
+/*推薦裡面的背景*/
+.monthbook {
+  width: 280px;
+  height: 200px;
+  margin: 20px;
+  background-color: #7817f3;
+  box-shadow: 2px -3px 3px #000000;
+  display: flex;
+}
+/*推薦圖片的背景*/
+.monthbook1 {
+  width: 140px;
+  height: 200px;
+  background-color: #ffffff;
+  display: flex; /* 使用 flex 布局 */
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+/*推薦圖片 寬度*/
+.monthbook1 img {
+  width: 120px;
+}
+/*推薦圖片 大標*/
+.monthbooktext {
+  width: 170px;
+  color: #ffffff;
+  text-align: center;
+}
+/*推薦 內文*/
+.monthbooktext p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 控制显示的行数 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*推薦內容按鈕*/
+.monthbooktext button {
+  width: 120px;
+  color: #ffffff;
+  background-color: #000000;
+  box-shadow:
+    -5px 0 0 var(--black),
+    4px 0 0 var(--black),
+    0 -2px 0 var(--black),
+    0 5px 0 var(--black),
+    3px -3px 0 2px var(--black),
+    10px 0 0 #333333,
+    0 10px 0 #333333,
+    4px 1px 0 2px#333333,
+    3px 4px 0 2px #333333;
+}
+
+
+
+
+
+
+/* 二手書文字*/
+.obh2 {
+  text-align: center;
+  color: #ffffff;
+}
+.obh6 {
+  color: #ffffff;
+}
+/* 當容器的寬度用完時，子元素將自動換行 */
+/* .booklist {
+  display: flex;
+  flex-wrap: wrap;
+} */
+@media screen and (max-width: 1200px) {
+  .booklist {
+    display: flex;
+    flex-wrap: wrap;
+  } 
+}
+@media screen and (max-width: 800px) {
+  .booklist {
+    display: flex;
+    flex-wrap: wrap;
+  } 
+}
+/*商品的背景和彼此的距離*/
+.oldbook {
+  width: 150px;
+  height: 250px;
+  padding: 17px;
+  margin: 10px;
+  background-color: #ffffff;
+}
+/*商品圖片的大小*/
+.oldbook img {
+  width: 100px;
+  height: 130px;
+}
+/*金額欄的背景和文字顏色*/
+.money {
+  width: 110px;
+  height: 30px;
+  color: #f3d52e;
+  background-color: #0d0733;
+}
+.oldtitle{
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 顯示兩行 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*自訂按鈕*/
+.oldbookadd {
+  height: 25px;
+  border: 0;
+  background: var(--main-brightpurple);
+  color: var(--white);
+  box-shadow:
+    0 0 0 1px var(--main-brightpurple),
+    0 5px 0 -1px var(--main-brightpurple),
+    4px 0 0 -1px var(--main-brightpurple),
+    0 0 0 1px var(--main-brightpurple),
+    0 -5px 0 -1px var(--main-brightpurple),
+    -4px 0 0 -1px var(--main-brightpurple),
+    0 0 0 3px var(--main-darkpurple),
+    0 6px 0 0 var(--main-darkpurple),
+    0 -6px 0 0 var(--main-darkpurple),
+    5px 0 0 0 var(--main-darkpurple),
+    -5px 0 0 0 var(--main-darkpurple);
+  position: relative;
+  left: 30px;
+}
+
+

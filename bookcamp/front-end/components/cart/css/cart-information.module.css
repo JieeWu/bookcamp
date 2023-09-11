@@ -1,0 +1,143 @@
+.img-size {
+  width: 100%;
+  max-width: 100px;
+}
+
+.center-index {
+  width: 100%;
+  max-width: 166px;
+  height: 166px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#pay-radio input:checked + .input-choose-style {
+  padding: 20px;
+  margin: auto;
+  border: 5px solid var(--main-brightpurple);
+  border-radius: 10%;
+}
+
+/* 基本資料框 */
+.data_frame {
+  background: var(--white);
+  box-shadow:
+    5px 0 0 var(--white),
+    -5px 0 0 var(--white),
+    0 5px 0 var(--white),
+    0 -5px 0 var(--white);
+  padding-inline: 1%;
+  padding-block: 15px;
+}
+
+/* 基本資料輸入input */
+.person-input {
+  width: 100%;
+  padding-inline: 10px;
+  padding-block: 5px;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--white) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--white) 0) top right,
+    linear-gradient(-45deg, transparent 5px, var(--white) 0) bottom right,
+    linear-gradient(45deg, transparent 5px, var(--white) 0) bottom left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(3px 0 0 var(--main-purple))
+    drop-shadow(-3px 0 0 var(--main-purple))
+    drop-shadow(0 3px 0 var(--main-purple))
+    drop-shadow(0 -3px 0 var(--main-purple));
+}
+
+.person-input:focus-visible {
+  outline: none;
+}
+
+/* 資料相同btn */
+.same-name-btn {
+  padding-inline: 20px;
+  padding-block: 10px;
+  font-size: 14px;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-brightpurple) 0) top
+      left,
+    linear-gradient(-135deg, transparent 3px, var(--main-brightpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 3px, var(--main-brightpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-brightpurple) 0) bottom
+      left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(5px 5px 0 #b998ff);
+  transition: 0.4s;
+}
+
+.same-name-btn:hover {
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-colorpurple) 0) top left,
+    linear-gradient(-135deg, transparent 3px, var(--main-colorpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 3px, var(--main-colorpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-colorpurple) 0) bottom
+      left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  scale: 0.98;
+}
+
+/* 發票-確認btn */
+.receipt-ok-btn {
+  padding-inline: 20px;
+  padding-block: 5px;
+  color: var(--white);
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-colorpurple) 0) top left,
+    linear-gradient(-135deg, transparent 3px, var(--main-colorpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 3px, var(--main-colorpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-colorpurple) 0) bottom
+      left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(3px 3px 0 var(--main-brightpurple));
+}
+
+/* 訂單資訊 */
+.cart-item-hidden {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background: var(--main-colorpurple);
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-colorpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-colorpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-colorpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-colorpurple) 0) bottom
+      left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  -webkit-filter: drop-shadow(0px 4px 0 var(--black))
+    drop-shadow(0px -4px 0 var(--black)) drop-shadow(4px 0px 0 var(--black))
+    drop-shadow(-4px 0px 0 var(--black));
+}
+
+/* 選擇門市btn */
+.selectStoreBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ededed;
+  border-radius: 10px;
+  margin-top: 1rem;
+}

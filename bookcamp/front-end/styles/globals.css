@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'VT323-Regular';
+  src: url(/fonts/VT323-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Cubic_11_1.010_R';
+  src: url(/fonts/Cubic_11_1.010_R.ttf);
+}
+
+@font-face {
+  font-family: 'zpix';
+  src: url(/fonts/zpix.ttf);
+}
+
+:root {
+  --main-purple: #512893;
+  --main-darkpurple: #0d0733;
+  --main-brightpurple: #9b6cff;
+  --main-colorpurple: #7817f3;
+  --main-yellow: #f3d52e;
+  --main-orange: #ff9900;
+  --main-darkpink: #ff7269;
+  --main-brightpink: #ff93c7;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+body {
+  min-height: 100%;
+}
+
+main {
+  min-height: calc(100vh - 115px);
+  /* overflow: hidden; */
+}
+
+.bg-white {
+  background-color: var(--white) !important;
+}
+
+.bg-black {
+  background-color: var(--black) !important;
+}
+
+.c-bg-purple {
+  background-color: var(--main-colorpurple) !important;
+}
+
+.d-bg-pink {
+  background-color: var(--main-darkpink) !important;
+}
+
+.br-bg-pink {
+  background-color: var(--main-brightpink) !important;
+}
+
+.br-bg-purple {
+  background-color: var(--main-brightpurple) !important;
+}
+
+.d-bg-purple {
+  background-color: var(--main-darkpurple) !important;
+}
+
+.m-bg-purple {
+  background-color: var(--main-purple) !important;
+}
+
+.m-bg-yellow {
+  background-color: var(--main-yellow) !important;
+}
+
+.m-bg-orange {
+  background-color: var(--main-orange) !important;
+}
+
+.text-yellow {
+  color: var(--main-yellow) !important;
+}
+
+.text-orange {
+  color: var(--main-orange) !important;
+}
+
+.text-m-purple {
+  color: var(--main-purple) !important;
+}
+
+.text-d-purple {
+  color: var(--main-darkpurple) !important;
+}
+
+.text-br-purple {
+  color: var(--main-brightpurple) !important;
+}
+
+.text-black {
+  color: var(--black) !important;
+}
+
+.line-orange {
+  border-color: var(--main-orange) !important;
+}
+
+.line-br-pink {
+  border-color: var(--main-brightpink) !important;
+}
+
+.line-br-d-purple {
+  border-color: var(--main-darkpurple) !important;
+}
+
+/*------------------- 特殊字體尺寸或樣式 ---------------------*/
+.pixel-font {
+  font-family: 'VT323-Regular';
+}
+
+.pixel-font2 {
+  font-family: 'Cubic_11_1.010_R';
+}
+
+.pixel-font-chinese {
+  font-family: 'zpix';
+}
+
+.font-s {
+  font-size: 0.8rem;
+}
+
+.font-sm {
+  font-size: 0.9rem;
+}
+
+.font-m {
+  font-size: 1.2rem;
+}
+
+.font-l {
+  font-size: 1.6rem;
+}
+
+.font-xl {
+  font-size: 2rem;
+}
+
+/*------------------- 取消預設行為 ---------------------*/
+button,
+input {
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p,
+img {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.body-bg {
+  /* background-image: url('/img/newbg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -999;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ol {
+  margin: 0 !important;
+}
+
+figure {
+  margin: 0 !important;
+}
+
+.header-height-S {
+  height: 120px;
+}
+
+.header-height {
+  height: 150px;
+}
+
+.header-height-L {
+  height: 220px;
+}
+
+/* ------------- 拉把樣式 -------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-darkpurple);
+  /* border: 2px solid var(--main-purple); */
+  /* border-radius: 20px; */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-brightpurple);
+  border: 2px solid var(--main-darkpurple);
+  box-shadow: inset -2px -2px 0 rgba(0, 0, 0, 0.322);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-purple);
+}
+
+/*------------------- 陰影樣式 ---------------------*/
+.in-shadow {
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, 0.236);
+}
+
+/*-------- 黃色彈出視窗(覆蓋bs的modal-content) --------*/
+.yellow-alert {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+}
+
+.yellow-alert .modal-header {
+  background-color: var(--main-yellow);
+  border: none;
+  border-radius: 0;
+  padding: 0.5rem 1rem;
+}
+
+.yellow-alert .modal-body {
+  background-color: var(--main-yellow);
+  border-radius: 0;
+  padding: 1rem;
+  line-height: 35px;
+  letter-spacing: 1px;
+  white-space: pre-wrap;
+}
+
+/* 取消設定  accordion部分樣式 --- order.js 使用 */
+/* .accordion-item:first-of-type .accordion-button {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.accordion-button {
+  width: 0 !important;
+}
+.accordion {
+  --bs-accordion-active-bg: white !important;
+  --bs-accordion-btn-focus-box-shadow: white !important;
+} */
+
+/*-------- rwd版面 --------*/
+@media screen and (max-width: 576px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}

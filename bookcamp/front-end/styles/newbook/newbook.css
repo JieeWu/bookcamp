@@ -1,0 +1,10 @@
+.newbook-sild {
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 145px;
+}
+
+.newbook-top {
+  margin-top: 5vh;
+}

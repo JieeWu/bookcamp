@@ -1,0 +1,169 @@
+/* 步驟容器 */
+/* .stepDiv {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.stepDiv {
+  width: 100%;
+  max-width: 180px;
+  height: 100%;
+  min-height: 80px;
+  display: flex;
+  border-radius: 70px;
+  border: 4px solid var(--black);
+  justify-content: center;
+  align-items: center;
+}
+
+/* .step {
+  background: var(--main-purple);
+  box-shadow:
+    2px 0 0 var(--main-purple),
+    5px 0 0 #5410ab,
+    0 2px 0 var(--main-purple),
+    0 5px 0 #5410ab,
+    5px 0 0 var(--main-purple),
+    0 1px 0 var(--main-purple),
+    0 5px 0 var(--main-purple),
+    0 5px 0 0 var(--main-purple),
+    5px 0 0 0 var(--main-purple),
+    0 -5px 0 0 var(--main-purple),
+    -5px 0 0 0 var(--main-purple),
+    0 -8px 0 var(--black),
+    0 8px 0 var(--black),
+    -8px 0 0 var(--black),
+    8px 0 0 var(--black),
+    3px 0 0 3px var(--black),
+    -3px 0 0 3px var(--black),
+    0 3px 0 3px var(--black),
+    0 -3px 0 3px var(--black);
+  color: var(--white);
+} */
+
+.step {
+  background: var(--main-purple);
+  box-shadow:
+    0 0 0 3px var(--main-colorpurple),
+    inset 5px 5px 0 #2c1354;
+  color: var(--white);
+}
+
+/* .stepOK {
+  background: var(--main-orange);
+  box-shadow:
+    2px 0 0 var(--main-orange),
+    5px 0 0 #b36b00,
+    0 2px 0 var(--main-orange),
+    0 5px 0 #b36b00,
+    5px 0 0 var(--main-orange),
+    0 1px 0 var(--main-orange),
+    5px 0 0 var(--main-orange),
+    0 1px 0 var(--main-orange),
+    0 5px 0 var(--main-orange),
+    0 5px 0 0 var(--main-orange),
+    5px 0 0 0 var(--main-orange),
+    0 -5px 0 0 var(--main-orange),
+    -5px 0 0 0 var(--main-orange),
+    0 -8px 0 var(--black),
+    0 8px 0 var(--black),
+    -8px 0 0 var(--black),
+    8px 0 0 var(--black),
+    3px 0 0 3px var(--black),
+    -3px 0 0 3px var(--black),
+    0 3px 0 3px var(--black),
+    0 -3px 0 3px var(--black);
+  color: var(--white);
+} */
+
+.stepOK {
+  background: var(--main-orange);
+  box-shadow:
+    0 0 0 3px var(--main-yellow),
+    inset -5px -5px 0 #ffc060;
+  color: var(--white);
+}
+
+.stepContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepMarked {
+  width: 15px;
+  position: absolute;
+  top: 25%;
+  left: -50%;
+  animation: pointRight .5s step-end infinite;
+}
+
+.stepMarkedRe {
+  width: 15px;
+  position: absolute;
+  top: 25%;
+  right: -50%;
+  transform: scaleX(-1);
+  animation: pointRightRe .5s step-end infinite;
+}
+
+@keyframes pointRight {
+  0%,100% {
+    transform: translateX(0)
+  }
+  50% {
+    transform: translateX(3px)
+  }
+}
+
+@keyframes pointRightRe {
+  0%,100% { 
+    transform: scaleX(-1) translateX(-3px);
+  }
+  50% {
+    transform: scaleX(-1) translateX(0);
+  }
+}
+
+.cart-part-line-margin {
+  font-size: 25px;
+  margin-inline: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-purple);
+}
+
+/* 進度線 */
+.cart-part-line {
+  width: 8px;
+  height: 8px;
+  background: var(--main-darkpurple);
+  box-shadow: 0 0 0 1px var(--main-purple);
+  margin-inline: 5px;
+}
+
+.partDiv {
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 576px) {
+  .stepDiv {
+    width: 80px;
+    height: 80px;
+    font-size: 14px;
+  }
+
+  .cart-part-line {
+    width: 5px;
+    height: 5px;
+  }
+}

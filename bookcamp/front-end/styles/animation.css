@@ -1,0 +1,82 @@
+.arrow-one {
+  animation: moveArrows 3s linear infinite;
+}
+
+.arrow-two {
+  animation: moveArrows 3s linear -1s infinite;
+}
+
+.arrow-three {
+  animation: moveArrows 3s linear -2s infinite;
+}
+
+/* 查看更多3個箭頭動畫 */
+@keyframes moveArrows {
+  0%,
+  24%,
+  50%,
+  74%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  49%,
+  75%,
+  99% {
+    opacity: 0;
+  }
+}
+
+.plus-shape {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  animation: rotateAnimation 2s steps(2) infinite;
+}
+
+.plus-shape::before,
+.plus-shape::after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-brightpurple);
+}
+
+.plus-shape-yellow::before,
+.plus-shape-yellow::after {
+  content: '';
+  position: absolute;
+  background-color: var(--main-yellow);
+}
+
+.plus-shape::before {
+  width: 20px;
+  height: 8px;
+  top: 9px;
+  left: 5px;
+}
+
+.plus-shape::after {
+  width: 8px;
+  height: 20px;
+  top: 3px;
+  left: 11px;
+}
+
+/* 逐格旋轉動畫 */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

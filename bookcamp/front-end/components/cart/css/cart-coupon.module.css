@@ -1,0 +1,48 @@
+.couponBg {
+  background-color: var(--main-yellow);
+  height: 600px;
+}
+
+.couponHeader {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.couponInput {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  background-color: var(--main-darkpurple);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 180px;
+}
+
+.couponInput i {
+  color: white;
+  margin-inline: 1rem;
+}
+
+.inputBox {
+  width: 100%;
+  height: 40px;
+  color: var(--white);
+  border-radius: 5px;
+  background: var(--main-darkpurple);
+}
+
+.couponBody {
+  position: relative;
+  background-color: var(--main-darkpurple);
+  border-radius: 5px;
+  margin: 0 1rem 1rem;
+  padding-inline: 1rem;
+  height: 85%;
+  overflow: auto;
+}
+
+.couponBody::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}

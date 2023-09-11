@@ -1,0 +1,151 @@
+.activityBlock {
+  min-height: 650px;
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, 0.082);
+  flex-wrap: nowrap;
+  margin-top: 4rem;
+  transition: 0.4;
+}
+
+.sideDecorativeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.activityBlock .btnGroup {
+  width: 100%;
+  position: absolute;
+  top: -5%;
+  left: 0;
+}
+
+.pageTitleLine {
+  max-width: 260px;
+}
+
+.actBtn {
+  max-width: 380px;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.actBtn:hover {
+  scale: 1.02;
+}
+
+.actBtn1 {
+  background: linear-gradient(
+    45deg,
+    var(--main-orange) 0%,
+    var(--main-orange) 45%,
+    #ffae36 45%,
+    #ffae36 100%
+  );
+}
+
+.actBtn2 {
+  background: linear-gradient(
+    45deg,
+    var(--main-yellow) 0%,
+    var(--main-yellow) 45%,
+    #f4dd5e 45%,
+    #f4dd5e 100%
+  );
+}
+
+.actBtn3 {
+  background: linear-gradient(
+    45deg,
+    var(--main-colorpurple) 0%,
+    var(--main-colorpurple) 45%,
+    #8d40f0 45%,
+    #8d40f0 100%
+  );
+}
+
+.titleText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* 倒數計時格子 */
+.outTime {
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+
+.formSelect {
+  width: auto;
+  background-color: var(--main-darkpurple);
+  color: white;
+  border: 0;
+  padding: 0.3rem 0.5rem;
+}
+
+.commodityArea {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  margin: 4.5rem 0 1rem 0;
+}
+
+.RecCitation {
+  color: var(--white);
+  font-size: 14px;
+  animation: bounce 1s steps(2) infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(1px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+/* rwd版面 */
+@media screen and (max-width: 1200px) {
+  .activityBlock {
+    margin-top: 6rem;
+  }
+
+  .formSelect {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .actBtn {
+    max-width: 380px;
+    padding: 1rem 0.5rem;
+  }
+
+  .titleText span {
+    font-size: 1rem;
+  }
+
+  .activityBlock {
+    margin-top: 7rem;
+  }
+
+  .phoneReciprocal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2.5rem 0 0 0;
+  }
+
+  .commodityArea {
+    margin: 1rem 0;
+  }
+}

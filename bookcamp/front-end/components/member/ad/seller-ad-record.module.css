@@ -1,0 +1,171 @@
+.offset {
+  margin-inline: -2rem;
+}
+
+.mainAdRecord {
+  height: 54vh;
+  margin-block: 1rem;
+  padding: 0.25rem;
+  overflow: auto;
+}
+
+/* 當前廣告區塊 */
+.adHeader {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  margin-bottom: 2px;
+  background-color: var(--main-darkpurple);
+  color: white;
+  padding: 0.8rem 1.5rem;
+}
+
+.adHeaderGrid {
+  text-align: center;
+}
+
+.adProductGrid {
+  padding: 5px;
+}
+
+.adProduct {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 1fr 1fr;
+  grid-gap: 3px;
+  /* min-height: 140px; */
+  margin-bottom: 1.5rem;
+  background-color: rgb(255, 255, 255);
+}
+
+.adProductImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.adProductDate {
+  word-break: keep-all;
+  text-align: center;
+}
+
+.adProductName,
+.adProductDate,
+.adProductClick,
+.adProductPublish {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.titleType {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.classFrame {
+  display: flex;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--main-colorpurple);
+  padding: 0.25rem 1rem;
+  margin-top: 0.5rem;
+  max-width: 100px;
+}
+
+.addBtn {
+  position: absolute;
+  right: 3%;
+  bottom: 4%;
+}
+
+@media screen and (max-width: 768px) {
+  .offset {
+    margin-inline: 0;
+  }
+
+  .adHeader {
+    display: none;
+  }
+
+  .mainAdRecord {
+    height: 100%;
+    overflow: none;
+  }
+
+  .adProduct {
+    grid-template-rows: 2fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      'title title'
+      'img quantity'
+      'total pub';
+  }
+
+  .titleType {
+    color: white;
+    background-color: var(--main-darkpurple);
+    width: 100%;
+    height: 100%;
+    padding-block: 1rem;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .classFrame {
+    margin-top: 0;
+    margin-left: 0.5rem;
+  }
+
+  .adProductImg {
+    grid-area: img;
+  }
+
+  .adProductName,
+  .adProductDate,
+  .adProductClick,
+  .adProductPublish {
+    line-height: initial;
+  }
+
+  .adProductName {
+    grid-area: title;
+    text-align: center;
+  }
+
+  .adProductDate {
+    grid-area: quantity;
+    font-size: 14px;
+  }
+
+  .adProductClick {
+    grid-area: total;
+    text-align: center;
+  }
+
+  .adProductPublish {
+    grid-area: pub;
+    text-align: center;
+  }
+
+  .titleS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: var(--main-darkpink);
+    padding: 0.25rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+  }
+
+  .addBtn {
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+  }
+}
+
+/* ---------------------------- */

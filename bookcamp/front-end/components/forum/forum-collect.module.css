@@ -1,0 +1,460 @@
+.discussionBoardTitle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.3rem;
+  font-family: 'zpix';
+  color: var(--white);
+  background:
+    linear-gradient(-45deg, transparent 13px, rgba(50, 26, 102, 1) 0) right,
+    linear-gradient(135deg, transparent 13px, rgba(50, 26, 102, 1) 0) left;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 8px 0 rgba(184, 108, 244, 1))
+    drop-shadow(0px -4px 0 rgba(184, 108, 244, 1))
+    drop-shadow(8px 0px 0 rgba(184, 108, 244, 1))
+    drop-shadow(-4px 0px 0 rgba(184, 108, 244, 1))
+    drop-shadow(8px 8px 0 rgba(114, 204, 255, 1));
+}
+
+/*----------------- input區塊 -----------------*/
+.forumInput {
+  position: relative;
+  background-color: var(--main-yellow);
+  /* border: 5px solid var(--main-darkpurple); */
+  border-radius: 50px;
+  margin: 2rem 0 0;
+  padding-inline: 1rem;
+}
+
+.forumInput input {
+  height: 50px;
+  width: 100%;
+}
+
+.forumInput input:focus-visible,
+.forumInput input:focus {
+  border: 0;
+  outline: none;
+}
+
+.searchBtn {
+  position: absolute;
+  top: 5%;
+  right: 1%;
+  background-color: var(--main-orange);
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  box-shadow: inset 0 0 0 4px rgb(255, 119, 0);
+  transition: 0.3s;
+}
+
+.searchBtn:hover {
+  background-color: var(--main-colorpurple);
+  color: white;
+  box-shadow: inset 0 0 0 4px var(--main-purple);
+  scale: 0.95;
+}
+
+/*--------------- 主題選擇區 ---------------*/
+.categoryBtn {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.categoryBtn button {
+  position: relative;
+  width: 100%;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 0.25rem;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-colorpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-colorpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-colorpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-colorpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(-3px 0 0 var(--main-brightpurple))
+    drop-shadow(3px 0 0 var(--main-brightpurple));
+  transition: 0.3s;
+}
+
+.categoryBtn button:hover {
+  color: var(--main-yellow);
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      left;
+  scale: 1.05;
+}
+
+.categoryBtn button::before {
+  position: absolute;
+  color: white;
+  left: 0%;
+  top: 23%;
+  content: '\25b7';
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.categoryBtn button::after {
+  position: absolute;
+  color: white;
+  right: 0%;
+  top: 23%;
+  content: '\25c1';
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.categoryBtn button:hover::before,
+.categoryBtn button:hover::after {
+  opacity: 1;
+}
+
+.categoryBtn button:hover::before {
+  left: 5%;
+}
+
+.categoryBtn button:hover::after {
+  right: 5%;
+}
+
+/*----------- 發文按鈕區 ----------*/
+.postBtnOutLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0 2rem;
+}
+
+.postBtnBlock {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--main-darkpurple);
+  box-shadow:
+    0px 4px 0px 0px #9b6cff,
+    -4px -4px 0px 0px #9b6cff,
+    4px -4px 0px 0px #9b6cff,
+    4px 0px 0px 0px #9b6cff,
+    -4px 0px 0px 0px #9b6cff,
+    0px -4px 0px 0px #9b6cff,
+    -8px 0px 0px 0px #72ccff,
+    8px 0px 0px 0px #72ccff,
+    4px 8px 0px 0px #72ccff,
+    8px 4px 0px 0px #72ccff,
+    -8px 4px 0px 0px #72ccff,
+    -4px 8px 0px 0px #72ccff;
+  padding: 1rem;
+  margin-inline: 2rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.postBtnBlock span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+
+.postBtnBlock span:last-child {
+  color: var(--white);
+  font-weight: bold;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.postBtnBlock:after {
+  content: '';
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background-color: var(--main-colorpurple);
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(4deg) scaleY(0);
+  z-index: 50;
+}
+
+.postBtnBlock:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(4deg) scaleY(2);
+}
+
+.postBtnBlock:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.postDecorateS {
+  width: 100%;
+  max-width: 20px;
+  height: 100%;
+  max-height: 20px;
+  background-color: var(--main-darkpurple);
+  box-shadow:
+    0px 4px 0px 0px #9b6cff,
+    -4px -4px 0px 0px #9b6cff,
+    4px -4px 0px 0px #9b6cff,
+    4px 0px 0px 0px #9b6cff,
+    -4px 0px 0px 0px #9b6cff,
+    0px -4px 0px 0px #9b6cff,
+    -8px 0px 0px 0px #72ccff,
+    8px 0px 0px 0px #72ccff,
+    4px 8px 0px 0px #72ccff,
+    8px 4px 0px 0px #72ccff,
+    -8px 4px 0px 0px #72ccff,
+    -4px 8px 0px 0px #72ccff;
+  margin-inline: 2rem;
+}
+
+.postDecorate {
+  width: 100%;
+  max-width: 40px;
+  height: 100%;
+  max-height: 40px;
+  background-color: var(--main-darkpurple);
+  box-shadow:
+    0px 4px 0px 0px #9b6cff,
+    -4px -4px 0px 0px #9b6cff,
+    4px -4px 0px 0px #9b6cff,
+    4px 0px 0px 0px #9b6cff,
+    -4px 0px 0px 0px #9b6cff,
+    0px -4px 0px 0px #9b6cff,
+    -8px 0px 0px 0px #72ccff,
+    8px 0px 0px 0px #72ccff,
+    4px 8px 0px 0px #72ccff,
+    8px 4px 0px 0px #72ccff,
+    -8px 4px 0px 0px #72ccff,
+    -4px 8px 0px 0px #72ccff;
+}
+
+.postBtn {
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes shock {
+  0%,
+  100% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.postBtn i:nth-child(1) {
+  animation: shock 0.5s steps(2) infinite;
+}
+
+@keyframes shockRe {
+  0%,
+  100% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+}
+
+.postBtn i:nth-child(3) {
+  animation: shockRe 0.5s steps(2) infinite;
+}
+
+/* 文章標題區 */
+.alHeader {
+  display: grid;
+  grid-template-columns: 1.15fr 7fr 1.5fr 2fr 1fr;
+  grid-gap: 2px;
+  place-items: center;
+  background-color: var(--main-yellow);
+  box-shadow:
+    0 5px 0px var(--main-yellow),
+    5px 5px 0px #ba9500,
+    -5px 5px 0px #ba9500,
+    0 10px 0px #ba9500;
+  color: var(--main-darkpurple);
+  padding: 0.5rem 0.5rem 0.25rem;
+  font-weight: bold;
+}
+
+.alHeader button {
+  background-color: var(--main-darkpurple);
+  color: var(--main-yellow);
+  padding: 0.25rem 0.5rem;
+  box-shadow:
+    2px 0 0 var(--main-darkpurple),
+    -2px 0 0 var(--main-darkpurple),
+    0 2px 0 var(--main-darkpurple),
+    0 -2px 0 var(--main-darkpurple);
+}
+
+.alSelect {
+  width: 100%;
+  background-color: var(--main-darkpurple);
+  color: var(--main-yellow);
+  padding: 0.25rem 0.5rem;
+  border: 0;
+}
+
+.alHeaderGrid {
+  text-align: center;
+  border-right: 2px solid var(--main-darkpurple);
+  width: 100%;
+}
+
+.alProductGrid {
+  padding: 5px;
+}
+
+.alProduct {
+  display: grid;
+  grid-template-columns: 1.1fr 7fr 1.5fr 2fr 1fr;
+  grid-template-areas: 'title texts pop time collect - -';
+  margin-bottom: 1.5rem;
+  margin-left: -0.25rem;
+  transition: 0.3s;
+}
+
+.alProduct:hover {
+  scale: 0.99;
+}
+
+.alTilteTblock {
+  grid-area: title;
+  height: 100%;
+  max-height: 80px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(-45deg, transparent 10px, rgba(50, 26, 102, 1) 0) right,
+    linear-gradient(135deg, transparent 10px, rgba(50, 26, 102, 1) 0) left;
+  background-size: 51% 100%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(0px 5px 0 rgba(184, 108, 244, 1))
+    drop-shadow(0px -4px 0 rgba(184, 108, 244, 1))
+    drop-shadow(5px 0px 0 rgba(184, 108, 244, 1))
+    drop-shadow(-4px 0px 0 rgba(184, 108, 244, 1))
+    drop-shadow(6px 6px 0 rgba(114, 204, 255, 1));
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.alText {
+  grid-area: texts;
+  margin-left: 1rem;
+  padding-inline: 1.5rem;
+}
+
+.alPopularity {
+  grid-area: pop;
+  justify-content: center;
+}
+
+.alTime {
+  grid-area: time;
+  text-align: center;
+  font-size: 14px;
+  padding-inline: 1rem;
+}
+
+.alText,
+.alPopularity,
+.alTime {
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: var(--main-brightpurple);
+  margin-top: 0.25rem;
+  box-shadow:
+    3px 0 0 var(--main-colorpurple),
+    0 3px 0 #bc9cff,
+    0 -3px 0 #bc9cff;
+}
+
+.alCollect {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: collect;
+}
+
+.collect {
+  color: #ff4141;
+}
+
+.alAd {
+  position: absolute;
+  top: 0;
+  right: 2%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.alAd::before {
+  border-style: solid;
+  border-width: 4px;
+  border-image-slice: 2;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6'><path d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23000' /></svg>");
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-image-width: 0 1 1 0;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  opacity: 0.2;
+}
+
+.alAd img {
+  width: 100%;
+}
+
+.alEmptyDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.alEmptyDiv > a {
+  color: var(--white);
+  background: var(--main-colorpurple);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+

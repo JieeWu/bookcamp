@@ -1,0 +1,201 @@
+
+/* 收藏按鈕位置 */
+/* .commodityLove {
+  position: absolute;
+  top: -45%;
+  right: 5%;
+} */
+
+
+
+.commodityCard a {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-block: 0.5rem;
+}
+
+.commodityImg {
+  max-width: 185px;
+}
+
+.commodityCard h6 {
+  display: inline-block;
+  white-space: nowrap;
+  width: fit-content; /* 設為內容寬度 */
+  animation: returnToCenter 0.01s forwards paused;
+}
+
+.commodityCard:hover h6 {
+  animation: slideOut 5s linear infinite;
+}
+
+@keyframes slideOut {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  49.99% {
+    transform: translateX(-100%); /* 從左測滑出 */
+  }
+  50% {
+    transform: translateX(200px); /* 從右測滑入 */
+  }
+}
+
+@keyframes returnToCenter {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* 二手書商品底板 */
+.usedbookCard {
+  max-height: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.usedbookCard a {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.usedbookCard img {
+  width: 100%;
+  max-width: 220px;
+}
+
+/* ----------------------- */
+/* 價格區塊 */
+.priceArea {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 1rem 0 0.5rem;
+  margin-block: 0.5rem;
+  color: white;
+}
+
+/* 商品加入購物車按鈕 */
+.addButton {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6%;
+  background: var(--main-yellow);
+  color: var(--black);
+  font-weight: bold;
+  box-shadow:
+    0 0 0 1px var(--main-yellow),
+    0 5px 0 -1px var(--main-yellow),
+    4px 0 0 -1px var(--main-yellow),
+    0 0 0 1px var(--main-yellow),
+    0 -5px 0 -1px var(--main-yellow),
+    -4px 0 0 -1px var(--main-yellow),
+    0 0 0 3px var(--black),
+    0 6px 0 0 var(--black),
+    0 -6px 0 0 var(--black),
+    5px 0 0 0 var(--black),
+    -5px 0 0 0 var(--black);
+}
+
+/* ----------------------- */
+/* 熱銷榜商品底板 */
+.hotlistCard {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 450px;
+  flex-direction: column;
+  margin-inline: 1.2rem;
+  background-color: var(--main-brightpurple);
+  transition: transform 0.5s ease;
+}
+
+
+
+
+.hotlistCard:hover {
+  background-color: var(--main-colorpurple);
+  transform: scale(1.05);
+}
+
+.hotlistCard a {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  top: -10%;
+  right: 0;
+}
+
+.hotlistCard img {
+  max-width: 300px;
+}
+.btitle{
+    display: -webkit-box; /* 舊版本的 Webkit 才需要這樣的顯示值 */
+    -webkit-line-clamp: 2; /* 限制行數為2行 */
+    -webkit-box-orient: vertical; /* 確保文字是垂直排列的 */
+    overflow: hidden; /* 確保超出的文字被隱藏 */
+    text-overflow: ellipsis; /* 如果文本超過兩行，會顯示... */
+}
+
+/* 銷售量底板 */
+/* .SaleBlock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 130px;
+  border: 3px solid var(--black);
+  border-radius: 5px;
+  color: var(--black);
+} */
+
+/* .SaleBlock::before,
+.SaleBlock::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+
+.SaleBlock::before {
+  bottom: 10%;
+  left: 5%;
+}
+
+.SaleBlock::after {
+  top: 10%;
+  right: 5%;
+} */
+
+.abcd > * { 
+  margin-top: -20PX;
+ }
+/* rwd版面 */
+@media screen and (max-width: 1200px) {
+  .hotlistCard {
+    min-width: 250px;
+    height: 400px;
+  }
+
+  .hotlistCard img {
+    width: 250px;
+  }
+
+  .hotlistCard p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* 限制顯示的行數 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

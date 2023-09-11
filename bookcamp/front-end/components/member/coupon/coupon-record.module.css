@@ -1,0 +1,172 @@
+.offset {
+  margin-inline: -2rem;
+}
+
+.inOffset {
+  margin-inline: -1.3rem;
+}
+
+.cRecordHeader {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  margin-bottom: 2px;
+  background-color: var(--main-darkpurple);
+  color: white;
+  padding: 0.8rem 1.5rem;
+}
+
+.cHeaderGrid {
+  text-align: center;
+}
+
+.cProductGrid {
+  padding: 5px;
+}
+
+.cProduct {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2px;
+  margin-bottom: 1.5rem;
+  height: 100px;
+  background-color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.cProduct:hover {
+  scale: 1.01;
+}
+
+.cProductTitle,
+.cProductOrder,
+.cProductState,
+.cProductEndDate,
+.cProductDate {
+  text-align: center;
+  margin: auto;
+}
+
+.cProductOrder button {
+  padding: 0.1rem 0.5rem;
+}
+
+.cProductState {
+  color: var(--white);
+  /* line-height: 80px; */
+  width: 100%;
+  height: 100%;
+}
+
+.cProductState .stateText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-block: auto;
+}
+
+.statusContent {
+  border: 3px dotted white;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transform: rotate(4deg);
+}
+
+/* .orderView {
+    width: 75%;
+    color: white;
+    background-color: var(--main-colorpurple);
+    border-radius: 5px;
+    box-shadow: inset -4px -4px 0 rgba(0, 0, 0, 0.181);
+  } */
+
+.coupon_cart_item_body {
+  margin-bottom: 1rem;
+  background-color: var(--white);
+  box-shadow:
+    inset 0 -3px #b3b3b3,
+    0 2px 0 var(--black),
+    0 -2px 0 var(--black),
+    -10px 0 0 var(--black),
+    10px 0 0 var(--black);
+}
+
+.coupon_orderWidth {
+  height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .offset {
+    margin-inline: 0;
+  }
+
+  .cRecordHeader {
+    display: none;
+  }
+
+  .cProduct {
+    height: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    grid-template-areas:
+      'title title title'
+      'price endtime quantity'
+      'total total total';
+  }
+
+  .cProductTitle {
+    grid-area: title;
+    background-color: var(--main-darkpurple);
+    color: white;
+    line-height: 50px;
+    height: 100%;
+  }
+
+  .cProductPrice,
+  .cProductOrder,
+  .cProductState,
+  .cProductEndDate,
+  .cProductDate {
+    line-height: initial;
+  }
+
+  .cProductOrder {
+    grid-area: price;
+    text-align: center;
+  }
+
+  .cProductEndDate {
+    grid-area: endtime;
+    text-align: center;
+  }
+
+  .cProductDate {
+    grid-area: quantity;
+    text-align: center;
+  }
+
+  .cProductState {
+    grid-area: total;
+    text-align: center;
+  }
+
+  .cProductState .stateText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleS {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: var(--main-darkpink);
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 50px;
+  }
+}

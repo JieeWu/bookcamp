@@ -1,0 +1,339 @@
+.switchCoupon {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  height: 45px;
+}
+
+.cartCoupon {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 45px;
+}
+
+.cartCouponBody {
+  padding: 0.5rem 0 3.5rem;
+  margin-top: 1rem;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.cartCouponBody::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.stateCoupon {
+  background-color: var(--main-darkpurple);
+}
+
+.inputCoupon {
+  display: flex;
+  /* margin-right: 1.5rem; */
+}
+
+.fastInputBtn {
+  background-color: var(--main-colorpurple);
+  color: white;
+  border-radius: 10px;
+  padding-inline: 1rem;
+  margin-right: 1rem;
+  box-shadow: inset 0 -3px 0 var(--main-brightpurple);
+  transition: 0.3s;
+}
+
+.fastInputBtn:hover {
+  background-color: var(--main-darkpurple);
+  box-shadow: inset 0 3px 0 var(--main-colorpurple);
+}
+
+.inputCoupon input {
+  color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+  width: 100%;
+  background-color: var(--main-darkpurple);
+}
+
+/* .coppon-body {
+  width: 100%;
+} */
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  animation: moveUpDown 1s steps(1) infinite;
+  filter: drop-shadow(0 8px 0 rgba(0, 0, 0, 0.343));
+}
+
+@keyframes moveUpDown {
+  0%,
+  100% {
+    transform: translateY(0.5px);
+  }
+  50% {
+    transform: translateY(-0.5px);
+  }
+}
+
+.unavailable {
+  filter: saturate(0%) brightness(60%);
+}
+
+.couponName {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 140px;
+  color: white;
+}
+
+.couponName:hover span {
+  background-color: var(--black);
+  scale: 1.03;
+}
+
+.couponUseBtn {
+  background-color: var(--main-colorpurple);
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.couponUseBtn:hover {
+  background-color: var(--main-purple);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.couponUseBtnText {
+  background-color: var(--main-darkpurple);
+  border: 3px dotted var(--white);
+  padding: 1.5rem;
+  border-radius: 5px;
+}
+
+.commodityImg {
+  width: 100%;
+  max-width: 140px;
+  height: 100%;
+  max-height: 120px;
+  background-size: cover;
+  background-position: center;
+}
+
+.couponName span {
+  position: absolute;
+  background-color: var(--main-orange);
+  padding: 5px 1rem;
+  border-radius: 5px;
+  bottom: 15%;
+  transition: 0.4s;
+}
+
+/* 切換按鈕 */
+.checkbox {
+  position: relative;
+  color: white;
+  margin: 0.5rem;
+}
+
+.cartCheckbox {
+  width: 100%;
+  position: relative;
+  color: white;
+  margin-top: 14px;
+}
+
+.checkbox .toggle {
+  width: 155px;
+  height: 40px;
+  position: absolute;
+  left: -8px;
+  background: var(--main-brightpurple);
+  transition: 0.4s;
+}
+
+.cartCheckbox .toggle {
+  width: 50%;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  background: var(--main-brightpurple);
+  transition: 0.4s;
+}
+
+.checkbox .slide {
+  width: 300px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cartCheckbox .slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.checkbox .slide .text {
+  z-index: 100;
+}
+
+.cartCheckbox .slide .text {
+  z-index: 100;
+}
+
+.state {
+  display: none;
+}
+
+.state:checked + .checkbox .slide .toggle {
+  transform: translateX(160px);
+  background: var(--main-brightpurple);
+}
+
+.state:checked + .cartCheckbox .slide .toggle {
+  transform: translateX(100%);
+  background: var(--main-brightpurple);
+}
+
+/* ----------------------------- */
+
+/* 使用條件底部 */
+.InformationFrame {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-block: 0.5rem;
+  padding-inline: 0.5rem;
+}
+
+.InformationCoupon {
+  border-radius: 15px;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  margin-block: 3px;
+  background-color: var(--main-purple);
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* 領取按鈕 */
+.receiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 140px;
+  color: white;
+}
+
+.receiveStyle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4rem;
+  color: var(--black);
+  width: 95%;
+  height: 90%;
+  border: 2px solid var(--black);
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 0 0.019rem var(--black);
+}
+
+.receiveStyle:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  background-color: var(--main-orange);
+  box-shadow: 0 0 0 0 var(--black);
+}
+
+.receiveStyle:not(hover) {
+  transition: all 0.5s;
+}
+
+.receiveNotification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem 0 1rem;
+}
+
+.receiveNotification i {
+  font-size: 4rem;
+}
+
+.receiveNotification span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 1rem 0 2rem;
+}
+
+.receiveNotification button {
+  padding: 0;
+  color: white;
+}
+
+/* ------------------- */
+
+/* 折價金額 */
+.amount {
+  color: var(--main-colorpurple);
+  font-size: 2rem;
+}
+
+/* rwd版面 */
+@media screen and (max-width: 768px) {
+  .InformationCoupon {
+    width: 100%;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 1rem;
+    margin-inline: 3px;
+    background-color: var(--main-purple);
+  }
+
+  .InformationFrame {
+    margin-block: 0;
+    padding-inline: 0;
+  }
+
+  .mdReceiveBtn {
+    position: absolute;
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+      3px 0 0 var(--main-yellow),
+      -3px 0 0 var(--main-yellow),
+      0 -3px 0 var(--main-yellow),
+      0 3px 0 var(--main-yellow);
+    opacity: 0;
+    z-index: 22;
+  }
+
+  .mdReceiveBtn:hover {
+    opacity: 1;
+  }
+
+  .amount-l {
+    font-size: 2rem;
+  }
+
+  .coupon h5 {
+    font-size: 1.3rem;
+  }
+}

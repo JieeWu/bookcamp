@@ -1,0 +1,60 @@
+.usedMainBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.usedbookBlock {
+  color: white;
+  min-height: 480px;
+  background-color: #819751;
+  box-shadow: 1px 0 0 #819751, 5px 0 0 #62743c, 0 1px 0 #819751, 0 5px 0 #62743c,
+    -1px 0 0 #819751, 0 -1px 0 #819751, 0 -5px 0 0 #62743c, -5px 0 0 0 #62743c,
+    0 0 0 3px #62743c;
+}
+
+.usedCommodityBlock {
+  display: flex;
+  overflow: auto;
+  padding-top: 1.5rem;
+}
+
+.usedText {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.usedbookBlock button {
+  color: white;
+  max-width: 300px;
+  padding: 1rem;
+  filter: drop-shadow(5px 5px 0 rgba(0, 0, 0, 0.328));
+}
+
+.usedImg {
+  background-image: url(/img/test/airp.jpg);
+  background-size: cover;
+  background-position: right;
+}
+
+@media screen and (max-width: 1399px) {
+  .usedbookBlock {
+    min-height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .usedbookBlock button {
+    padding: .5rem;
+    margin-block: 1rem;
+  }
+
+  .usedCommodityBlock {
+    background-color: var(--main-darkpurple);
+  }
+
+  .usedImg {
+    height: 200px;
+  }
+}

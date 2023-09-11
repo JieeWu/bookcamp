@@ -1,0 +1,69 @@
+
+/* 左側選單 */
+.backgroundLift{
+    background: 
+    linear-gradient(135deg,transparent 0px 10px,#000000 10px 100%)0px 0px,
+    linear-gradient(-135deg,transparent 0px 10px,#000000 10px 100%)100% 0px,
+    linear-gradient(-45deg,transparent 0px 10px,#000000 10px 100%)100% 100%,
+    linear-gradient(45deg,transparent 0px 10px,#000000 10px 100%)0px 100%;
+    ;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+  
+      width: 260px;
+      height: 595px;
+      display: flex;
+      justify-content: center; 
+      align-items: center; 
+      margin-left: 50px;
+      margin-top: 20px;
+  }
+
+  .genre{
+    background: 
+    linear-gradient(135deg,transparent 0px 10px,#ff7269 10px 100%)0px 0px,
+    linear-gradient(-135deg,transparent 0px 10px,#ff7269 10px 100%)100% 0px,
+    linear-gradient(-45deg,transparent 0px 10px,#ff7269 10px 100%)100% 100%,
+    linear-gradient(45deg,transparent 0px 10px,#ff7269 10px 100%)0px 100%;
+    ;
+    background-repeat: no-repeat;
+    background-size: 60% 60%;
+    
+      width: 240px;
+      height: 575px;
+      font-size: 16px; 
+ } 
+
+ .genre h6{
+    color: #ffffff;
+    font-size: 18px;
+    margin: 10px 0 10px 20px;
+  }
+  .genre a{
+      text-decoration: none;
+      color: #ffffff;
+    } 
+    .genre > ul{
+    
+      justify-content: center; 
+      align-items: center; 
+      margin: 15px;
+      border-radius: 15px;
+      background-color: #0d0733;
+  
+  }
+    .genre > ul > li{
+      text-decoration: none;
+      color: #000000;
+      list-style-type:none;
+      margin: auto;
+      height: 37px;
+      width: 150px;
+      display: flex;
+      align-items: center;
+      border-top: 1px solid #ffffff;
+      background-color: #0d0733;
+  }
+  .genre > ul > li:first-child {
+    border-top: none;
+  }

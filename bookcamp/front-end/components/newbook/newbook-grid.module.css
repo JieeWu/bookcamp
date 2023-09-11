@@ -1,0 +1,61 @@
+
+/* 整體版面-grid-all */
+.allbody{
+ /* background-color: palegoldenrod; */
+ display: grid;
+ grid-template-columns:350px 1200px 350px;
+ grid-template-rows: 90px 300px 430px 500px auto;
+ gap: 10px;
+}
+
+/* 上排導覽列-grid-all1 */
+.navgrone{
+    border: 1px solid black;
+    grid-column: 1/4;
+    grid-row: 1/2;
+}
+/* dm輪播圖-grid-all2 */
+.dms{
+    /* border: 1px solid green; */
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+
+
+/* 左側欄位-grid-all3 */
+.asideleft{
+    /* border: 1px solid palevioletred; */
+    grid-column: 1/2;
+    grid-row: 3/6;
+
+    display: grid;
+    grid-template-rows: auto auto;
+}
+    /* 書籍類別 */
+    .asideleft1{
+    /* border: 1px solid palevioletred; */
+
+        grid-row: 1/2;
+    }
+
+    /* 優惠券 */
+    .asideleft2{
+    /* border: 1px solid palevioletred; */
+        grid-row: 2/3;
+    }
+
+/* 中間內容 */
+.mainbody{
+    /* border: 1px solid red; */
+    grid-column: 2/3;
+    grid-row: 3/6;
+}
+
+/* 右邊內容-grid-all4 */
+.asideright{ 
+    /* border: 1px solid orange; */
+    grid-column: 3/4;
+    grid-row: 3/6;
+
+}

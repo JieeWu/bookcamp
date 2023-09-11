@@ -1,0 +1,376 @@
+.floatCoupon {
+  position: fixed;
+  right: -200px;
+  top: 20%;
+  transition: right 0.5s ease;
+  z-index: 2;
+}
+
+.floatCoupon.active {
+  right: 1%;
+}
+
+.pageCouponBlock {
+  position: relative;
+}
+
+.floatCouponTitle {
+  color: white;
+  font-family: 'zpix';
+  text-align: center;
+  text-shadow:
+    2px 2px 0 var(--main-brightpink),
+    -2px -2px 0 var(--main-brightpurple);
+  filter: drop-shadow(1px 1px 0 var(--black))
+    drop-shadow(-1px -1px 0 var(--black)) drop-shadow(-1px 1px 0 var(--black))
+    drop-shadow(1px -1px 0 var(--black));
+}
+
+.floatCouponShadow {
+  box-shadow:
+    2px 8px 0 rgb(62, 51, 22),
+    -2px 8px 0 rgb(62, 51, 22),
+    0 11px 0 black,
+    5px 8px 0 black,
+    -5px 8px 0 black;
+  margin-top: 1.5rem;
+}
+
+.frameDecoration {
+  position: relative;
+}
+
+.frameDecorationTop,
+.frameDecorationBottom {
+  content: '';
+  position: absolute;
+  left: -3.5%;
+  display: flex;
+  height: 60px;
+  width: 108%;
+  border-radius: 15px;
+  background: linear-gradient(
+    45deg,
+    var(--main-orange) 0%,
+    var(--main-orange) 45%,
+    rgb(255, 185, 92) 45%,
+    rgb(255, 185, 92) 60%,
+    var(--main-orange) 60%,
+    var(--main-orange) 80%,
+    rgb(255, 185, 92) 80%,
+    rgb(255, 185, 92) 85%,
+    var(--main-orange) 100%
+  );
+  border-style: solid;
+  border-width: 3px;
+  border-image-slice: 4;
+  border-image-width: 2;
+  border-image-outset: 0;
+  border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><path d='M2 2h2v2H2zM4 0h2v2H4zM10 4h2v2h-2zM0 4h2v2H0zM6 0h2v2H6zM8 2h2v2H8zM8 8h2v2H8zM6 10h2v2H6zM0 6h2v2H0zM10 6h2v2h-2zM4 10h2v2H4zM2 8h2v2H2z' fill='black'/></svg>");
+  z-index: 100;
+}
+
+.frameDecorationTop::before,
+.frameDecorationTop::after,
+.frameDecorationBottom::after,
+.frameDecorationBottom::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  display: flex;
+  background-color: var(--main-yellow);
+}
+
+.frameDecorationTop::before {
+  top: 20%;
+  right: 5%;
+}
+
+.frameDecorationTop::after {
+  top: 20%;
+  left: 5%;
+}
+
+.frameDecorationBottom::before {
+  bottom: 20%;
+  left: 5%;
+}
+
+.frameDecorationBottom::after {
+  bottom: 20%;
+  right: 5%;
+}
+
+.frameDecorationTop {
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 50%, 30% 100%, 0 100%);
+  top: 9%;
+}
+
+.frameDecorationBottom {
+  clip-path: polygon(70% 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 50%);
+  bottom: 0%;
+}
+
+.floatCouponBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 10vw;
+  height: 400px;
+  background-color: var(--main-darkpurple);
+  box-shadow: inset 0 0 0 3px rgb(48, 9, 110);
+  overflow: auto;
+  padding-block: 1.5rem;
+}
+
+.floatCouponBlock::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.couponBody {
+  background-color: white;
+  width: 80%;
+  /* height: 100%; */
+  min-height: 135px;
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+  color: white;
+  filter: drop-shadow(0 5px 0 rgb(84, 84, 84));
+  margin-bottom: 0.5rem;
+}
+
+/* 電視背景的雜訊動畫 */
+.couponInformation {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    var(--black) 0%,
+    var(--black) 45%,
+    #1d1d1d 45%,
+    #1d1d1d 90%,
+    var(--black) 90%,
+    var(--black) 100%
+  );
+  background-size: 25% 100%;
+  padding: 0.5rem 0;
+  margin-bottom: 0.5rem;
+  font-family: 'zpix';
+  animation: slideUpDown 3s steps(10) infinite;
+}
+
+@keyframes slideUpDown {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -20vw;
+  }
+}
+
+.couponInformation span {
+  font-size: 14px;
+  margin-bottom: 0.3rem;
+  animation:
+    breathing 2s infinite,
+    blink 4s infinite;
+}
+
+.couponInformation h5 {
+  animation:
+    breathing 2s infinite,
+    blink 4s infinite;
+}
+
+@keyframes blink {
+  0%,
+  57%,
+  61%,
+  65%,
+  69%,
+  100% {
+    opacity: 1;
+  }
+  58%,
+  60%,
+  66%,
+  68% {
+    opacity: 0;
+  }
+}
+
+@keyframes breathing {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.couponBody button,
+.couponBody a {
+  text-align: center;
+  background-color: var(--main-colorpurple);
+  font-size: 14px;
+  padding: 0.3rem 0;
+  margin: 0 0.3rem 0.3rem;
+  color: white;
+  transition:
+    transform 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.couponBody button:hover,
+.couponBody a:hover {
+  background-color: var(--main-purple);
+  transform: scale(0.95);
+}
+
+.usedState {
+  text-align: center;
+  background-color: #515151;
+  font-size: 14px;
+  padding: 0.3rem 0;
+  margin: 0 0.3rem 0.3rem;
+  color: white;
+  box-shadow:
+    0 -3px 0 #8a8a8a,
+    -3px 0 0 #8a8a8a,
+    0 3px 0 #515151,
+    3px 0 0 #515151,
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+}
+
+.floatCouponBlock::before {
+  content: '';
+  position: absolute;
+  left: 3%;
+  top: 10%;
+  border-left: 5px rgb(161, 107, 244) dashed;
+  height: 150px;
+  animation: ReboxAnimation 10s linear infinite;
+}
+
+.floatCouponBlock::after {
+  content: '';
+  position: absolute;
+  right: 3%;
+  bottom: 10%;
+  border-left: 5px rgb(161, 107, 244) dashed;
+  height: 150px;
+  animation: boxAnimation 10s linear infinite;
+}
+
+/* 左右2邊再跑的線條動畫 */
+@keyframes boxAnimation {
+  0%,
+  100% {
+    height: 0px;
+    transform: translateY(0);
+  }
+  25% {
+    height: 350px;
+    transform: translateY(0);
+  }
+  49.99% {
+    height: 0px;
+    transform: translateY(-350px);
+  }
+  50% {
+    height: 0px;
+    transform: translateY(0);
+  }
+  75% {
+    height: 350px;
+    transform: translateY(0);
+  }
+
+  99% {
+    height: 0px;
+    transform: translateY(-350px);
+  }
+}
+
+@keyframes ReboxAnimation {
+  0%,
+  100% {
+    height: 0px;
+    transform: translateY(0);
+  }
+  25% {
+    height: 390px;
+    transform: translateY(0);
+  }
+  49.99% {
+    height: 0px;
+    transform: translateY(390px);
+  }
+  50% {
+    height: 0px;
+    transform: translateY(0);
+  }
+  75% {
+    height: 390px;
+    transform: translateY(0);
+  }
+
+  99% {
+    height: 0px;
+    transform: translateY(390px);
+  }
+}
+
+/* 查看更多 */
+.CMoreBtn {
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: -11%;
+  z-index: 100;
+}
+
+.CMoreBtn span {
+  display: flex;
+  background-color: var(--main-darkpink);
+  padding: 0.5rem 1rem;
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-darkpink) 0) top left,
+    linear-gradient(-135deg, transparent 3px, var(--main-darkpink) 0) top right,
+    linear-gradient(-45deg, transparent 3px, var(--main-darkpink) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-darkpink) 0) bottom left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 2px 0 var(--main-brightpink))
+    drop-shadow(-2px -2px 0 rgb(255, 66, 116));
+  transition: transform 0.3s ease-in-out;
+}
+
+.CMoreBtn span:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 1500px) {
+  .floatCouponBlock {
+    min-width: 13vw;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .floatCoupon {
+    display: none;
+  }
+}

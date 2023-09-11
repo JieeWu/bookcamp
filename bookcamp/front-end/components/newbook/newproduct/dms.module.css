@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .carousel-container {
+    max-width: 1200px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    transition: all 0.5s;
+  }
+  
+  .carousel-slide img {
+    width: 1200px;
+    height: 300px;
+  }
+  .btn {
+    position: absolute;
+    /* top: 50%; */
+    transform: translateY(-50%); /* 確保按鈕垂直居中 */
+    width: 1200px;
+  }
+  
+  .btn a#prevBtn {
+    position: absolute;
+    left: 0;
+  }
+  
+  .btn a#nextBtn {
+    position: absolute;
+    right: 0;
+  }
+  
+  .btn a {
+    margin: 0 10px; /* 根據需要調整，確保按鈕不太靠近圖片邊緣 */
+    z-index: 1; /* 確保按鈕位於圖片的上方 */
+    background-color: rgba(255, 255, 255, 0.5); /* 加點背景色使其更易看到，可以根據你的設計調整 */
+    padding: 5px 10px; /* 為按鈕添加些許填充 */
+    transition: background-color 0.3s ease; /* 過渡效果 */
+    padding: 5px 15px; /* 為了讓背景更明顯，加點內邊距 */
+    border-radius: 5px; /* 可以使按鈕背景有圓角，看起來更好看 */
+  }
+  
+  .btn a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* 點綴黑色，20%不透明度 */
+  }

@@ -1,0 +1,225 @@
+.fix-data-file {
+  display: flex;
+  flex-direction: column;
+  margin-block: 0.5rem;
+}
+
+.fix-data-file label {
+  padding-bottom: 0.5rem;
+}
+
+.fix-data-file input {
+  background-color: var(--main-darkpurple);
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  border: 0;
+  padding: 0.75rem 1rem;
+  color: white;
+}
+
+.fix-data-file input:focus,
+.fix-data-file input:focus-visible,
+.fix-data-file input:disabled {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  outline: none;
+}
+
+.fix-btn-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.all-submit-btn {
+  background-color: var(--main-yellow);
+  font-weight: bold;
+  transition: 0.4s;
+}
+
+.all-submit-btn:hover {
+  scale: 1.02;
+  background-color: var(--main-orange);
+  font-size: 18px;
+}
+
+.password-illustrate {
+  background: linear-gradient(
+    45deg,
+    var(--main-brightpurple) 0%,
+    var(--main-brightpurple) 25%,
+    #a47aff 25%,
+    #a47aff 35%,
+    var(--main-brightpurple) 35%,
+    var(--main-brightpurple) 45%,
+    #a47aff 45%,
+    #a47aff 70%,
+    var(--main-brightpurple) 70%,
+    var(--main-brightpurple) 100%
+  );
+  color: white;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  max-height: 450px;
+  margin: 3rem auto 0;
+}
+
+.password-illustrate ul {
+  padding: 2rem;
+}
+
+.password-illustrate li {
+  margin-bottom: 1rem;
+}
+
+/* .form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  } */
+
+.notice {
+  font-size: 12px;
+}
+
+.invalid {
+  border-color: red;
+}
+
+.invalid:focus {
+  border-color: red;
+  box-shadow: 0 0 0.25rem rgba(255, 0, 0, 0.5);
+}
+
+.error {
+  font-size: 12px;
+  color: red;
+}
+
+.hr-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.35);
+  margin: 8px 0px;
+  font-size: 12px;
+}
+.hr-sect:before,
+.hr-sect:after {
+  content: '';
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.35);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 8px;
+}
+
+/*------------- 更改後css -----------*/
+.register-block {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 2rem;
+}
+
+.register-block::after {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  z-index: -1;
+  background-color: var(--main-brightpurple);
+  width: 600px;
+  height: 500px;
+  box-shadow:
+    0 -3px 0 var(--main-brightpurple),
+    -3px 0 0 var(--main-brightpurple),
+    0 3px 0 var(--main-colorpurple),
+    3px 0 0 var(--main-colorpurple),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+}
+
+.register-block::before {
+  content: '';
+  position: absolute;
+  bottom: 8%;
+  right: 20%;
+  z-index: -1;
+  background-color: var(--main-darkpink);
+  width: 600px;
+  height: 400px;
+  box-shadow:
+    0 -3px 0 var(--main-darkpink),
+    -3px 0 0 var(--main-darkpink),
+    0 3px 0 #dd5147,
+    3px 0 0 #dd5147,
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+}
+
+.register-main-block {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  filter: drop-shadow(-15px 0 0 rgba(0, 0, 0, 0.278))
+    drop-shadow(15px 0 0 rgba(0, 0, 0, 0.278));
+}
+
+.register-header {
+  display: flex;
+  color: var(--black);
+}
+
+.register-header h4 {
+  font-weight: bold;
+}
+
+.register-input {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-weight: bold;
+}
+
+.register-input input,
+.register-input input:focus,
+.register-input input:active,
+.register-input input:valid {
+  background-color: var(--main-darkpurple);
+  border: 0;
+  padding: 0.5rem;
+  color: white;
+}
+
+.register-btn {
+  background-color: var(--main-colorpurple);
+  color: white;
+  padding: 0.5rem;
+  transition: 0.4s;
+}
+
+.register-btn:hover {
+  background-color: var(--main-purple);
+  scale: 0.98;
+}

@@ -1,0 +1,594 @@
+/*----------- member 中間底版 --------------*/
+.card-board-top {
+  display: flex;
+  width: 100%;
+  padding: 1.2rem;
+  color: white;
+  box-shadow: inset 0 -4px 0 rgba(255, 255, 255, 0.233);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+
+.member-titles {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.card-board-body {
+  /* position: relative; */
+  min-height: 60vh;
+  /* overflow: auto; */
+  padding-inline: 2rem;
+}
+
+/*----------- member 側邊 --------------*/
+.member-information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 1.5rem 0.5rem;
+}
+
+.management-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 300px;
+  height: calc(100vh - 147px);
+  background:
+    linear-gradient(135deg, transparent 0, var(--main-purple) 0) top left,
+    linear-gradient(-135deg, transparent 4px, var(--main-purple) 0) top right,
+    linear-gradient(-45deg, transparent 4px, var(--main-purple) 0) bottom right,
+    linear-gradient(45deg, transparent 0, var(--main-purple) 0) bottom left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  filter: drop-shadow(5px 5px 0 var(--main-colorpurple));
+  padding-inline: 0;
+  position: sticky;
+  top: 145px;
+}
+
+.member-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  background-color: var(--main-darkpurple);
+  padding-block: 1rem;
+  overflow: auto;
+}
+
+.member-main-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 85%;
+  padding: 0.5rem 1.5rem;
+  filter: drop-shadow(3px 3px 0 var(--main-brightpink));
+  transition: 0.4s;
+  margin-bottom: 1.2rem;
+}
+
+@keyframes shock {
+  0% {
+    transform: translateY(3px);
+  }
+  49% {
+    transform: translateY(3px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  99% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+.member-main-btn i {
+  animation: shock 0.5s infinite;
+}
+
+.member-main-btn[aria-expanded='true'] {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-orange),
+    0 -3px 0 var(--main-orange),
+    0 3px 0 var(--main-orange);
+}
+
+.member-main-btn:hover {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+}
+
+.pixel-purple {
+  box-shadow:
+    3px 0 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-colorpurple),
+    0 -3px 0 var(--main-colorpurple),
+    0 3px 0 var(--main-colorpurple);
+}
+
+.pixel-purple:hover {
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-orange),
+    0 -3px 0 var(--main-orange),
+    0 3px 0 var(--main-orange);
+}
+
+.member-details {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  margin-top: -0.5rem;
+  padding: 0 1rem;
+}
+
+.member-details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.member-details a {
+  display: flex;
+  width: 100%;
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+}
+
+.member-details li:hover {
+  background-color: var(--main-darkpink);
+  border-radius: 5px;
+}
+
+.management-block .footer {
+  background-color: var(--main-purple);
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+/*---------- 會員區輸入框 ----------*/
+.input-type {
+  align-items: center;
+  /* height: 100%; */
+  color: white;
+  border: none;
+  background-color: var(--main-darkpurple);
+  background:
+    linear-gradient(135deg, transparent 3px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 3px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 3px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 3px, var(--main-darkpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+}
+
+/*--------- 紫色細項背景 ----------*/
+.class-frame {
+  display: flex;
+  border-radius: 50px;
+  color: white;
+  background-color: var(--main-colorpurple);
+  padding: 0.25rem 1rem;
+  max-width: 100px;
+}
+
+/*--------- rwd ----------*/
+@media screen and (max-width: 768px) {
+  .mobile-phone {
+    padding-inline: 0;
+  }
+
+  .card-board-body {
+    min-height: 60vh;
+    height: 100%;
+    padding-inline: 1rem;
+  }
+
+  .class-frame {
+    margin-left: 0.5rem;
+  }
+}
+
+/* member-public */
+
+.text-color-white {
+  color: white;
+}
+
+.text-color-black {
+  color: black;
+}
+
+.card-day {
+  gap: 100px;
+}
+
+/*----------------------*/
+
+/* member-card */
+
+.member-card {
+  display: flex;
+  min-height: 67vh;
+}
+
+.member-information-block {
+  position: relative;
+  margin-inline: 0.75rem;
+  height: 70%;
+  width: 100%;
+  padding: 3rem 1.5rem 1.5rem;
+}
+
+.member-daily-check {
+  margin-inline: 0.75rem;
+  height: 100%;
+  color: white;
+}
+
+.edit-img-block {
+  position: absolute;
+  width: 100%;
+  max-width: 230px;
+  height: 100%;
+  max-height: 230px;
+  top: -33%;
+  left: calc(50% - 115px);
+  z-index: 50;
+  transition: 0.4s;
+}
+
+.edit-img-block:hover {
+  scale: 1.03;
+}
+
+.avatar-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 230px;
+  height: 100%;
+  max-height: 230px;
+  border-radius: 50%;
+  border: 5px solid var(--black);
+  background-color: var(--white);
+  box-shadow: 0 0 0 5px var(--main-brightpurple);
+  overflow: hidden;
+}
+
+.avatar-block img {
+  width: 110%;
+  background-color: var(--white);
+  position: relative;
+  left: -5%;
+  cursor: pointer;
+}
+
+.upload-image-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 3%;
+  right: 0%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--main-darkpurple);
+  border: 5px solid var(--black);
+  box-shadow: 0 0 0 5px var(--main-brightpurple);
+  z-index: 51;
+  cursor: pointer;
+}
+
+.member-card-block {
+  padding: 3rem 2rem 1.5rem;
+  width: 100%;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-darkpurple) 0) top left,
+    linear-gradient(-135deg, transparent 5px, var(--main-darkpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-darkpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  filter: drop-shadow(-5px -5px 0 var(--main-purple));
+}
+
+.basic-information {
+  padding: 1.5rem;
+  width: 100%;
+  background:
+    linear-gradient(135deg, transparent 5px, var(--main-brightpurple) 0) top
+      left,
+    linear-gradient(-135deg, transparent 5px, var(--main-brightpurple) 0) top
+      right,
+    linear-gradient(-45deg, transparent 5px, var(--main-brightpurple) 0) bottom
+      right,
+    linear-gradient(45deg, transparent 5px, var(--main-brightpurple) 0) bottom
+      left;
+  background-size: 75% 75%;
+  background-repeat: no-repeat;
+  color: var(--white);
+  filter: drop-shadow(5px 5px 0 var(--main-purple));
+}
+
+.member-card-info {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.member-card-email {
+  word-break: break-all;
+}
+
+.member-avatar {
+  width: 220px;
+  height: 220px;
+  margin-top: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s; /* 添加过渡效果 */
+}
+
+.member-avatar:hover {
+  transform: scale(1.2); /* 鼠標懸停時放大 20% */
+  transition: transform 0.3s ease; /* 添加過渡效果，使放大動畫平滑 */
+}
+
+/* ------------------------------------- */
+
+/*  not login page  */
+
+.not-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+}
+
+.not-login-img {
+  width: 200px;
+}
+
+.not-login-text {
+  color: black;
+}
+
+/* ------------------   */
+
+/*  register page  */
+.register-star {
+  color: red;
+}
+
+/* 性別選擇器 */
+.gender-selector-block {
+  width: 100%;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+}
+
+.gender-selector-block .input-container {
+  position: relative;
+  width: 100%;
+  margin-inline: 0.5rem;
+}
+
+.gender-selector-block .input-container .radio-button {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+
+.gender-selector-block .input-container .radio-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--main-brightpurple);
+  border-radius: 5px;
+  transition: transform 300ms ease;
+  margin-block: 0.5rem;
+}
+
+.gender-selector-block .input-container {
+  fill: var(--main-brightpurple);
+}
+
+.gender-selector-block .input-container .radio-tile-label {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-left: 0.5rem;
+}
+
+.gender-selector-block .input-container .radio-button:checked + .radio-tile {
+  background-color: var(--main-darkpurple);
+  border: 2px solid var(--main-colorpurple);
+  color: white;
+  transform: scale(1.1, 1.1);
+}
+
+.gender-selector-block
+  .input-container
+  .radio-button:checked
+  + .radio-tile
+  .icon
+  svg {
+  fill: white;
+  background-color: #079ad9;
+}
+
+.gender-selector-block
+  .input-container
+  .radio-button:checked
+  + .radio-tile
+  .radio-tile-label {
+  color: white;
+}
+
+/* ------------------------*/
+
+/* 全局样式 */
+
+.container {
+  text-align: center;
+  border-radius: 20px;
+}
+
+.title {
+  margin: 2rem;
+}
+
+.calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5rem 1rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--main-darkpurple);
+  box-shadow: inset 6px 6px 0 rgba(218, 163, 255, 0.232);
+}
+
+.calendar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: var(--main-brightpurple);
+  box-shadow: inset 0 5px 0 var(--main-purple);
+}
+
+.calendar::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: var(--main-brightpurple);
+  box-shadow: inset 0 -5px 0 var(--main-purple);
+}
+
+.day {
+  padding: 0.5rem;
+  text-align: center;
+  width: calc(100% / 7); /* 每周七天，每天的宽度占比 */
+  font-family: 'zpix';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.signed {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--main-colorpurple); /* 已簽到样式 */
+  border-radius: 50px;
+  border: 5px solid var(--main-brightpurple);
+  box-shadow: inset 0 6px 0 rgba(0, 0, 0, 0.321);
+  margin: 0.4rem 0.2rem;
+}
+
+.signed::after {
+  content: '簽到';
+  border: 3px dashed #ffd000;
+  color: #ffd000;
+  border-radius: 10px;
+  padding: 0.25rem 0.5rem;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  filter: drop-shadow(2px 2px 0 black);
+  z-index: 60;
+}
+
+.future {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: var(--main-brightpurple); /* 已簽到样式 */
+  border-radius: 50px;
+  border: 5px solid var(--main-purple);
+  box-shadow: inset 0 -5px 0 rgba(255, 255, 255, 0.321);
+  margin: 0.4rem 0.2rem;
+}
+
+.expired {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background-color: #9d9d9d; /* 已簽到样式 */
+  border-radius: 50px;
+  border: 5px solid #7b7b7b;
+  box-shadow: inset 0 6px 0 rgba(0, 0, 0, 0.321);
+  margin: 0.4rem 0.2rem;
+}
+
+.expired::after {
+  content: '沒簽';
+  border: 3px dashed #ffffff;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 0.25rem 0.5rem;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  filter: drop-shadow(2px 2px 0 black);
+  z-index: 60;
+}
+
+.day-check-dtn {
+  width: 100%;
+  margin-inline: 1rem;
+  transition: 0.3s;
+}
+
+.day-check-dtn:hover {
+  scale: 0.98;
+  background-color: var(--main-orange);
+  color: white;
+}

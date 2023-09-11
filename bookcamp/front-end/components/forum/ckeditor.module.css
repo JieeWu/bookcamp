@@ -1,0 +1,37 @@
+.questionSelect,
+.questionSelectTwo {
+  color: white;
+  background: #0e0e32;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border: 0;
+}
+
+@media (max-width: 576px) {
+  .postPage {
+    display: grid !important;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'postTitle postTest';
+  }
+  .postPage h5 i {
+    display: none;
+  }
+  .postPage h5 {
+    grid-area: postTitle;
+    font-size: 16px;
+  }
+  .postQuestion {
+    grid-area: postTest;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'question question2';
+  }
+  .questionSelect {
+    grid-area: question;
+  }
+  .questionSelectTwo {
+    grid-area: question2;
+  }
+}

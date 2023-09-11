@@ -1,0 +1,272 @@
+.fHeader {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.fHeaderUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: 1rem;
+}
+
+.fHeaderDown {
+  display: flex;
+  align-items: center;
+  padding-inline: 0.7rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* 搜尋列 */
+.search {
+  position: relative;
+}
+
+.search input[type='text'] {
+  width: 300px;
+  padding: 8px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--white);
+}
+
+.search button[type='submit'] {
+  background-color: var(--main-darkpurple);
+  box-shadow: 0px 0px 0px 3px white inset;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 30px;
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: 0.5s ease;
+}
+
+.search button[type='submit']:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+  background-color: var(--main-colorpurple);
+}
+
+.adBtn {
+  width: 100%;
+  background: linear-gradient(
+    20deg,
+    var(--main-brightpurple) 0%,
+    var(--main-brightpurple) 5%,
+    #b491ff 5%,
+    #b491ff 10%,
+    var(--main-brightpurple) 10%,
+    var(--main-brightpurple) 15%,
+    #b491ff 15%,
+    #b491ff 20%,
+    var(--main-brightpurple) 20%,
+    var(--main-brightpurple) 25%,
+    #b491ff 25%,
+    #b491ff 30%,
+    var(--main-brightpurple) 30%,
+    var(--main-brightpurple) 35%,
+    #b491ff 35%,
+    #b491ff 40%,
+    var(--main-brightpurple) 40%,
+    var(--main-brightpurple) 45%,
+    #b491ff 45%,
+    #b491ff 50%,
+    var(--main-brightpurple) 50%,
+    var(--main-brightpurple) 55%,
+    #b491ff 55%,
+    #b491ff 60%,
+    var(--main-brightpurple) 60%,
+    var(--main-brightpurple) 65%,
+    #b491ff 65%,
+    #b491ff 70%,
+    var(--main-brightpurple) 70%,
+    var(--main-brightpurple) 75%,
+    #b491ff 75%,
+    #b491ff 80%,
+    var(--main-brightpurple) 80%,
+    var(--main-brightpurple) 85%,
+    #b491ff 85%,
+    #b491ff 90%,
+    var(--main-brightpurple) 90%,
+    var(--main-brightpurple) 95%,
+    #b491ff 95%,
+    #b491ff 100%
+  );
+  margin-block: 0.8rem;
+  margin-left: 0.5rem;
+  overflow: auto;
+  box-shadow:
+    inset 0 5px 5px #1000253e,
+    inset 0 -5px 5px #1000253e,
+    0 -3px 0 var(--main-colorpurple),
+    -3px 0 0 var(--main-colorpurple),
+    0 3px 0 var(--main-purple),
+    3px 0 0 var(--main-purple),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    0 0 0 3px var(--black);
+  background-position: 0 0; /* 初始背景位置 */
+  /* filter: drop-shadow(0 2px 0 #451c9d) drop-shadow(0 4px 0 var(--black)); */
+  animation: slideUpDown 3s steps(10) infinite;
+}
+
+@keyframes slideUpDown {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 80vw 0;
+  }
+}
+
+/* 方塊按鈕 */
+.blockBtn {
+  width: 45px;
+  height: 45px;
+  margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.blockBtn:hover {
+  scale: 0.94;
+  font-size: 25px;
+}
+
+.titleUl {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 700px;
+  color: var(--white);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.titleUl li {
+  background-color: var(--white);
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+  border-radius: 50px;
+  white-space: nowrap;
+  padding-block: 0.5rem;
+  animation: breathe 2s steps(3) infinite;
+  transition: 0.4s;
+}
+
+.titleUl li:nth-child(1) {
+  animation-delay: -1s;
+}
+
+.titleUl li:nth-child(2) {
+  animation-delay: -0.5s;
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    background-color: #ffffff19;
+  }
+  50% {
+    background-color: #ffffff3d;
+  }
+}
+
+.titleUl li:hover {
+  background-color: #ffffff;
+  color: var(--main-darkpurple);
+  animation: none;
+  scale: 0.95;
+}
+
+.adBtn ul {
+  display: flex;
+  /* flex-wrap: wrap; */
+  color: white;
+  white-space: nowrap;
+  justify-content: space-between;
+  padding-inline: 1rem;
+}
+
+.adBtn ul li {
+  position: relative;
+  background-color: var(--main-darkpink);
+  border: 4px solid black;
+  border-radius: 50px;
+  padding: 5px 25px;
+  margin: 0.5rem;
+  transition: 0.3s;
+}
+
+.adBtn ul li a {
+  display: flex;
+  padding-left: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.adBtn ul li:hover {
+  background-color: var(--main-yellow);
+  color: black;
+  border: 4px solid black;
+  border-radius: 50px;
+  margin-block: 0.5rem;
+  scale: 1.05;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateX(0deg);
+  }
+
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+.adBtn ul li a:hover::before {
+  content: '';
+  position: absolute;
+  background-image: url(/img/icon-pixel/diamond.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: block;
+  width: 17px;
+  height: 17px;
+  top: 20%;
+  left: 10%;
+  animation: rotate 0.5s steps(5) infinite;
+}
+
+/* rwd版面 */
+@media screen and (max-width: 768px) {
+  .fHeader {
+    display: none;
+  }
+
+  .search input[type='text'] {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 50px;
+  }
+
+  .blockBtn {
+    width: 30px;
+    height: 30px;
+    margin: 0.5rem;
+  }
+}

@@ -1,0 +1,46 @@
+.hotBlock {
+  display: flex;
+  width: 100%;
+  box-shadow: inset 0 -20px 0 rgba(255, 255, 255, 0.082);
+  /* margin-top: 4rem; */
+  padding: 4rem 0 3rem 0;
+  overflow: hidden;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  /* margin-top: 6rem; */
+}
+
+/* 修改Slider樣式 */
+.customSlider {
+  display: flex !important;
+  width: 100%;
+}
+
+.customSlider>div {
+  width: 92% !important;
+  overflow: visible !important;
+}
+
+/* .customSlider>div>div>div {
+  width: 350px !important;
+} */
+
+
+.customSlider ul {
+  display: none !important;
+}
+
+/* rwd版面 */
+@media screen and (max-width: 1200px) {
+  .side {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+  }
+}

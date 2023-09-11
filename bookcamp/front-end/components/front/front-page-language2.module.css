@@ -1,0 +1,232 @@
+.languageBlock {
+  height: auto;
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, 0.082);
+  flex-wrap: nowrap;
+  margin-top: 4rem;
+}
+
+.decorateSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  background-color: var(--main-darkpurple);
+  box-shadow:
+    0 -6px 0 #3f2264,
+    0 6px 0 #3f2264,
+    -6px 0 0 #3f2264,
+    6px 0 0 #3f2264,
+    0 0 0 3px #3f2264;
+  margin-block: 1rem;
+  padding-inline: 0.75rem;
+}
+
+.yellowSame {
+  animation-delay: -1s;
+  animation:
+    yblink 1s steps(1) infinite,
+    rotateAnimation 2s steps(2) infinite;
+}
+
+@keyframes yblink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sideDecorativeBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.commodityArea {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.longMoreBtn {
+  height: 85%;
+  align-items: center;
+  margin-left: 0.25rem;
+  background-color: var(--main-brightpurple);
+  transition: 0.4s;
+}
+
+.longMoreBtn:hover {
+  height: 100%;
+  background-color: var(--main-purple);
+}
+
+/* .bookGenreBtnGroup {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-block: 1.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+} */
+
+.bookGenreBtnGroup {
+  display: flex;
+  justify-content: flex-start;
+  /* margin-block: 1.5rem; */
+  padding-block: 1rem;
+  overflow: scroll; /* 或者使用 auto */
+  width: 100%; /* 確保容器寬度充滿父容器 */
+  white-space: nowrap; /* 確保按鈕不換行 */
+}
+
+.bookGenreBtnGroup::-webkit-scrollbar {
+  display: none;
+}
+
+.bookGenreBtnGroup button {
+  color: white;
+  width: 100px;
+  margin-inline: 0.75rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.bookGenreBtnGroup button:hover {
+  background-color: var(--main-brightpurple);
+  scale: 1.05;
+}
+
+.pixelBorderYellow {
+  background-color: var(--main-colorpurple);
+  box-shadow:
+    0 0 0 3px var(--main-colorpurple),
+    0 6px 0 var(--main-purple),
+    6px 0 0 var(--main-purple),
+    0 -6px 0 var(--main-colorpurple),
+    -6px 0 0 var(--main-colorpurple),
+    6px 3px 0 var(--black),
+    6px -3px 0 var(--black),
+    -6px 3px 0 var(--black),
+    -6px -3px 0 var(--black),
+    3px 6px 0 var(--black),
+    3px -6px 0 var(--black),
+    -3px 6px 0 var(--black),
+    -3px -6px 0 var(--black),
+    9px 0 0 var(--black),
+    -9px 0 0 var(--black),
+    0 9px 0 var(--black),
+    0 -9px 0 var(--black);
+  transition: 0.3s;
+}
+
+.pixelBorderYellow:hover {
+  background-color: var(--main-brightpurple);
+  box-shadow:
+    0 0 0 3px var(--main-brightpurple),
+    0 6px 0 var(--main-colorpurple),
+    6px 0 0 var(--main-colorpurple),
+    0 -6px 0 var(--main-brightpurple),
+    -6px 0 0 var(--main-brightpurple),
+    6px 3px 0 var(--black),
+    6px -3px 0 var(--black),
+    -6px 3px 0 var(--black),
+    -6px -3px 0 var(--black),
+    3px 6px 0 var(--black),
+    3px -6px 0 var(--black),
+    -3px 6px 0 var(--black),
+    -3px -6px 0 var(--black),
+    9px 0 0 var(--black),
+    -9px 0 0 var(--black),
+    0 9px 0 var(--black),
+    0 -9px 0 var(--black);
+}
+
+.languageAd {
+  position: relative;
+  width: 100%;
+  max-height: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.languageAd::before {
+  border-style: solid;
+  border-width: 4px;
+  border-image-slice: 2;
+  border-image-width: 1;
+  border-image-outset: 0;
+  border-image-source: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='6' height='6'><path d='M0 2h2v2H0zM2 0h2v2H2zM4 2h2v2H4zM2 4h2v2H2z' fill='%23000' /></svg>");
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-image-width: 0 1 1 0;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  opacity: 0.2;
+}
+
+.languageAd img {
+  width: 100%;
+  background-size: cover;
+}
+
+.classBtnBlock {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  /* position: absolute; */
+  /* bottom: -8%; */
+}
+
+.moreBtnPositionL {
+  top: -85%;
+  right: 15%;
+}
+
+.moreBtnPosition {
+  top: -70%;
+  right: 0%;
+}
+
+/* 首頁查看更多書類按鈕 */
+.classMoreBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 45px;
+  color: var(--white);
+  padding: 0.75rem;
+  margin-block: 0.25rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .sideDecorativeBlock {
+    padding: 4rem 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .languageBlock {
+    margin-top: 1rem;
+  }
+
+  .languageAd {
+    margin-top: 1rem;
+  }
+
+  .classMoreBtn {
+    max-width: 500px;
+    flex-direction: row;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,148 @@
+.bookListBlock {
+  color: white;
+  margin: 3rem 0 2rem;
+  background-color: #ac332a;
+  box-shadow:
+    3px 0 0 #ac332a,
+    0 3px 0 #ac332a,
+    0 -3px 0 #ac332a,
+    -3px 0 0 #ac332a,
+    0 -6px 0 var(--black),
+    0 6px 0 var(--black),
+    6px 0 0 var(--black),
+    -6px 0 0 var(--black),
+    0 0 0 3px var(--black);
+  height: 700px;
+  max-height: 700px;
+}
+
+.bookListTilte {
+  padding: 1rem;
+  background-color: var(--main-darkpink);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow:
+    inset 0 -3px 0 #ffa19b,
+    0 -3px 0 var(--main-darkpink),
+    -3px 0 0 var(--main-darkpink),
+    3px 0 0 var(--main-darkpink);
+}
+
+.bookListOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  max-height: 90%;
+  background-color: var(--main-darkpurple);
+  padding-block: 1rem;
+  margin: 0 0 0.5rem;
+  overflow: auto;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.bookListOptions::-webkit-scrollbar {
+  width: 0;
+  background-color: transparent;
+}
+
+.listContent {
+  width: 100%;
+}
+
+.bookListDetails {
+  width: 100%;
+  font-weight: bold;
+  background-color: transparent;
+  border: 0;
+  margin-top: -2rem;
+  padding-bottom: 0;
+}
+
+.bookListDetails ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0.5rem 0 1rem;
+}
+
+.bookListDetails button {
+  display: flex;
+  width: 100%;
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+.bookListDetails li {
+  border-bottom: 2px dotted var(--main-brightpurple);
+}
+
+.bookListDetails li:hover {
+  background-color: var(--main-darkpink);
+  border-radius: 5px;
+}
+
+.bookMainBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 85%;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--main-colorpurple);
+  box-shadow:
+    -3px 0 0 var(--main-colorpurple),
+    0 -3px 0 var(--main-colorpurple),
+    3px 0 0 var(--main-purple),
+    0 3px 0 var(--main-purple),
+    0 6px 0 var(--black),
+    0 -6px 0 var(--black),
+    -6px 0 0 var(--black),
+    6px 0 0 var(--black),
+    0 0 0 3px var(--black);
+  transition: 0.4s;
+  margin-bottom: 1.2rem;
+}
+
+.bookMainBtn i {
+  animation: shock 0.5s infinite;
+}
+
+.bookMainBtn[aria-expanded='true'] {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-yellow),
+    0 -3px 0 var(--main-yellow),
+    0 3px 0 var(--main-orange);
+}
+
+.bookMainBtn:hover {
+  font-weight: bold;
+  color: var(--main-darkpurple);
+  background-color: var(--main-yellow) !important;
+  box-shadow:
+    3px 0 0 var(--main-orange),
+    -3px 0 0 var(--main-yellow),
+    0 -3px 0 var(--main-yellow),
+    0 3px 0 var(--main-orange);
+}
+
+.resetbutton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;          /* 讓文字顏色和周圍的文字一致 */
+  cursor: pointer;
+  text-decoration: none;   /* 確保沒有下劃線 */
+  outline: none;           /* 當按鈕被選中時移除藍色邊框 */
+  -webkit-appearance: none; /*  Safari 和 Chrome 的样式重置 */
+  -moz-appearance: none;    /*  Firefox 的样式重置 */
+}
