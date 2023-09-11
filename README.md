@@ -1,54 +1,54 @@
 # 書營-bookcamp 滑至最下頁面展示
-此專案我所負責的部份為 "討論區"
-主要功能：基本CRUD、RWD 及透過 ngrok & socket.io 實作線上即時聊天
+此專案我所負責的部份為 "討論區" <br>
+主要功能：基本CRUD、RWD 及透過 ngrok & socket.io 實作線上即時聊天 <br>
 
 # 執行專案
-Windows用戶：npm i 
-Mac用戶: sudo npm i 
-資料夾 front.end & back.end 皆要做此動作
-npm run dev --啟動伺服器
+Windows用戶：npm i <br>
+Mac用戶: sudo npm i <br>
+資料夾 front.end & back.end 皆要做此動作 <br>
+npm run dev --啟動伺服器 <br>
 # 建立.env檔
 #database
-DB_PORT= #資料庫port (預設為:3306 若有更改則必須填入)
-DB_HOST= #資料庫ip (本地為:localhost || 127.0.0.1)
-DB_USER= #資料庫帳號
-DB_PASS= #資料庫密碼
-DB_NAME= #資料庫名稱
+DB_PORT= #資料庫port (預設為:3306 若有更改則必須填入) <br>
+DB_HOST= #資料庫ip (本地為:localhost || 127.0.0.1) <br>
+DB_USER= #資料庫帳號 <br>
+DB_PASS= #資料庫密碼 <br>
+DB_NAME= #資料庫名稱 <br>
 
 #瀏覽器設定
-WEB_PORT=3002  #此為後端的port 調整需與前端的3002一同更改
+WEB_PORT=3002  #此為後端的port 調整需與前端的3002一同更改 <br>
 
 #金鑰
-JWT_SECRET= #任意輸入即可
+JWT_SECRET= #任意輸入即可 <br>
 OTP_SECRET= #同上
 
 #SMTP
-SMTP_TO_EMAIL=
+SMTP_TO_EMAIL= <br>
 SMTP_TO_PASSWORD=
 
 #LINE LOGIN  
-LINE_LOGIN_CHANNEL_ID=
-LINE_LOGIN_CHANNEL_SECRET=
+LINE_LOGIN_CHANNEL_ID= <br>
+LINE_LOGIN_CHANNEL_SECRET= <br>
 LINE_LOGIN_CALLBACK_URL=
 
 #串接linepay 請查看linepay官方文件
-LINEPAY_CHANNEL_ID=
-LINEPAY_CHANNEL_SECRET_KEY=
-LINEPAY_VERSION=
+LINEPAY_CHANNEL_ID= <br>
+LINEPAY_CHANNEL_SECRET_KEY= <br>
+LINEPAY_VERSION= <br>
 LINEPAY_SITE=
 
 
 #串接linepay 本地端參數
-LINEPAY_RETURN_HOST=
-LINEPAY_RETURN_CONFIRM_URL=
-LINEPAY_RETURN_CANCEL_URL=
+LINEPAY_RETURN_HOST= <br>
+LINEPAY_RETURN_CONFIRM_URL= <br>
+LINEPAY_RETURN_CANCEL_URL= <br>
 
 #串接藍星 請查看newebpay官方文件
-BLUEPAY_MerchantID=
-BLUEPAY_HashKey=
-BLUEPAY_HashIV=
-BLUEPAY_ReturnURL=
-BLUEPAY_NotifyURL=
+BLUEPAY_MerchantID= <br>
+BLUEPAY_HashKey= <br>
+BLUEPAY_HashIV= <br>
+BLUEPAY_ReturnURL= <br>
+BLUEPAY_NotifyURL= <br>
 BLUEPAY_ClientBackURL=
 # 頁面展示
 
