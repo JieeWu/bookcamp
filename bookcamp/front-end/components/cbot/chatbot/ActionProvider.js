@@ -56,7 +56,7 @@ f() {
 g() {
   const gMessage = this.createChatBotMessage(
     <>
-      <img src="http://localhost:3002/public/img/10.jpg" alt="Description" style={{ width: '170px', height: '100px' }} />
+      <img src="http://18.177.136.227:3002/public/img/10.jpg" alt="Description" style={{ width: '170px', height: '100px' }} />
     </>
   );
   this.updateChatbotState(gMessage);

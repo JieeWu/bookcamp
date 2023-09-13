@@ -10,7 +10,7 @@ export default function Category(props) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:3002/forum/select/category',
+          'http://18.177.136.227:3002/forum/select/category',
         )
         console.log(response)
         const data = response.data
@@ -37,7 +37,7 @@ export default function Category(props) {
     // 將pid參數進行URL編碼（URL encoding），這樣特殊字符會被轉換為URL安全的形式。
     pid = encodeURIComponent(pid)
     const res = await axios.get(
-      `http://localhost:3002/forum/select/category/${pid}`,
+      `http://18.177.136.227:3002/forum/select/category/${pid}`,
     )
     const data = res.data.rows
     const [data2] = res.data.totalCountResult

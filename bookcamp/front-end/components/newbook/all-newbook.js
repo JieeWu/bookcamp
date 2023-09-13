@@ -33,7 +33,7 @@ export default function AllNewBook() {
   const handleAddCart = (e) => {
     try {
       axios
-        .post('http://localhost:3002/share/addcart/add', e, {
+        .post('http://18.177.136.227:3002/share/addcart/add', e, {
           withCredentials: true,
         })
         .then((res) => {
@@ -75,7 +75,7 @@ const handleAlert = (e) => {
   //價錢
   const fetchSortedBooks = async (order ='', page = currentPage) => {
     try {
-      const res = await axios.get(`http://localhost:3002/price/books`, {
+      const res = await axios.get(`http://18.177.136.227:3002/price/books`, {
         params: { sortOrder: order, page: page },
       });
       setOldbook(res.data.books);
@@ -88,7 +88,7 @@ const handleAlert = (e) => {
     //最新按鈕
     const fetchBooksByDate = async (page = currentPage) => {
       try {
-        const res = await axios.get("http://localhost:3002/bookdate", {
+        const res = await axios.get("http://18.177.136.227:3002/bookdate", {
           params: { page: page },
         });
         setOldbook(res.data.activity);
@@ -103,13 +103,13 @@ const handleAlert = (e) => {
       let endpoint; 
       // 根據不同的路由參數來設定endpoint
       if (query && router.isReady) {
-        endpoint = `http://localhost:3002/hotsearch?page=${currentPage}`;
+        endpoint = `http://18.177.136.227:3002/hotsearch?page=${currentPage}`;
       } else if (b_genre_id) {
-        endpoint = `http://localhost:3002/obgenre/${b_genre_id}?page=${currentPage}`;
+        endpoint = `http://18.177.136.227:3002/obgenre/${b_genre_id}?page=${currentPage}`;
       } else if (book_language) {
-        endpoint = `http://localhost:3002/obgenre/language/${book_language}?page=${currentPage}`;
+        endpoint = `http://18.177.136.227:3002/obgenre/language/${book_language}?page=${currentPage}`;
       } else {
-        endpoint = `http://localhost:3002/perpage?page=${currentPage}`;
+        endpoint = `http://18.177.136.227:3002/perpage?page=${currentPage}`;
       }
 
       try {
@@ -149,7 +149,7 @@ const handleAlert = (e) => {
   const handleSearch = async (searchTerm) => {
     console.log("handleSearch called with:", searchTerm);
     try {
-      const response = await axios.get('http://localhost:3002/hotsearch', {
+      const response = await axios.get('http://18.177.136.227:3002/hotsearch', {
         params: { term: searchTerm },
       });
       setOldbook(response.data);
@@ -198,7 +198,7 @@ const handleAlert = (e) => {
                       <Link href={'/newbook/' + v.book_id}>
                         <img
                           className={styles.commodityImg}
-                          src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+                          src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
                         />
                       </Link>
                       <div className='mt-auto position-relative'>

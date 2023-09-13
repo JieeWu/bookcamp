@@ -48,7 +48,7 @@ export default function Cart() {
     const data = async () => {
       try {
         await axios
-          .get('http://localhost:3002/cart/check', {
+          .get('http://18.177.136.227:3002/cart/check', {
             withCredentials: true,
           })
           .then((res) => {
@@ -202,7 +202,7 @@ export default function Cart() {
   const seeAddItem = () => {
     try {
       axios
-        .get('http://localhost:3002/share/addcart')
+        .get('http://18.177.136.227:3002/share/addcart')
         .then((res) => {
           setCartAddItem(res.data.bookadd1)
         })

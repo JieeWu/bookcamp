@@ -15,13 +15,13 @@ export default function CommodityPagepush({
   blurb,
   book_id,
 }) {
-  const url = 'http://localhost:3002/img/oldbookimgs/'
+  const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
 
   // 加入購物車按鈕
   const handleAddCart = (e) => {
     try {
       axios
-        .post('http://localhost:3002/share/addcart/add', e, {
+        .post('http://18.177.136.227:3002/share/addcart/add', e, {
           withCredentials: true,
         })
         .then((res) => {

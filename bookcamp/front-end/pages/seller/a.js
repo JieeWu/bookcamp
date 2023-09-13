@@ -19,7 +19,7 @@ function UploadPage() {
       formData.append('file', file)
 
       const response = await axios.post(
-        'http://localhost:3002/upload',
+        'http://18.177.136.227:3002/upload',
         formData,
         {
           headers: {

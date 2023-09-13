@@ -18,7 +18,7 @@ export default function HotList(props) {
     const data = async () => {
       try {
         await axios
-          .get('http://localhost:3002/share/hotList')
+          .get('http://18.177.136.227:3002/share/hotList')
           .then((res) => {
             setHotList(res.data.hot)
           })

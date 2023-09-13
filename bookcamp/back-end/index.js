@@ -34,6 +34,7 @@ const io = new Server(httpServer, {
     origin: [
       'http://127.0.0.1:3000',
       'http://localhost:3000',
+      'http://18.177.136.227:3000',
       'https://newbookcamp.ngrok.app/',
     ], // 允许来自这个域的请求
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // 允许的请求方法
@@ -54,18 +55,18 @@ io.on('connection', (socket) => {
       ':',
       data.message,
       ':',
-      data.avatar,
+      data.avatar
     )
     io.emit('message', data) // 广播消息给所有连接的客户端
   })
   socket.on('sendImage', (imageData) => {
     try {
       // 直接將圖片數據發送到前端
-      io.emit('receiveImage', imageData);
+      io.emit('receiveImage', imageData)
     } catch (error) {
-      console.error('Error sending image:', error);
+      console.error('Error sending image:', error)
     }
-  });
+  })
 
   socket.on('chat', (message) => {
     io.emit('message', message)
@@ -96,7 +97,7 @@ app.use(
     },
     resave: false,
     saveUninitialized: false,
-  }),
+  })
 )
 
 /* 首頁 */

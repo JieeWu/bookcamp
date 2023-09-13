@@ -16,7 +16,7 @@ export default function CollectButton({ oldBookId }) {
     const checkCollectStatus = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3002/searchcollect`,
+          `http://18.177.136.227:3002/searchcollect`,
           {
             withCredentials: true,
           },
@@ -52,7 +52,7 @@ export default function CollectButton({ oldBookId }) {
         'Content-Type': 'application/json',
       }
       const response = await axios.post(
-        'http://localhost:3002/collect/oldcollect',
+        'http://18.177.136.227:3002/collect/oldcollect',
         { book_id: oldBookId },
         {
           headers,
@@ -87,7 +87,7 @@ export default function CollectButton({ oldBookId }) {
     try {
       setIsUnCollecting(true) // 取消收藏
       const response = await axios.delete(
-        'http://localhost:3002/collect/oldcollect',
+        'http://18.177.136.227:3002/collect/oldcollect',
         {
           data: { book_id: oldBookId },
           withCredentials: true,

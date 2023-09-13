@@ -24,8 +24,8 @@ export default function Oldbook() {
     const fetchBooksByGenre = async () => {
       try {
         const res = b_genre_id
-          ? await axios.get(`http://localhost:3002/obgenre/${b_genre_id}`)
-          : await axios.get('http://localhost:3002/oldbook')
+          ? await axios.get(`http://18.177.136.227:3002/obgenre/${b_genre_id}`)
+          : await axios.get('http://18.177.136.227:3002/oldbook')
         setOldbook(res.data.oldbook)
       } catch (ex) {}
     }
@@ -39,7 +39,7 @@ export default function Oldbook() {
   //搜尋
   const handleSearch = async (searchTerm) => {
     try {
-      const response = await axios.get('http://localhost:3002/hotsearch', {
+      const response = await axios.get('http://18.177.136.227:3002/hotsearch', {
         params: { term: searchTerm },
       })
       setOldbook(response.data)
@@ -121,7 +121,7 @@ export default function Oldbook() {
                           <Link href={'/oldbook/' + v.book_id}>
                             <img
                               className={styles.commodityImg}
-                              src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+                              src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
                             />
                           </Link>
                           <div className='mt-auto position-relative'>

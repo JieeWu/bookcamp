@@ -5,13 +5,13 @@ export default function Sellbook() {
     <>
       <div className='row Management3'>
       <div className='col-4 '>
-          <img src='http://localhost:3002/public/img/oldbookimgs/01.jpg' alt='123' width='100px' className='orwd' />
+          <img src='http://18.177.136.227:3002/public/img/oldbookimgs/01.jpg' alt='123' width='100px' className='orwd' />
           <div className='book orwd '>
             被討厭的勇氣
           </div>
         </div>
 
-        <img className='orwd1' src='http://localhost:3002/public/img/oldbookimgs/01.jpg' alt='123' width='10px'  />
+        <img className='orwd1' src='http://18.177.136.227:3002/public/img/oldbookimgs/01.jpg' alt='123' width='10px'  />
         <div className='book col-12 orwd1 col-md-1 orwd1 odk3'>被討厭的勇氣</div>
         <div className='col-md-1 col-12 price1 '>100</div>
         <div className='col-md-1 col-12 state3 '>待出貨</div>

@@ -12,7 +12,7 @@ export default function AdRecord() {
           client_id: 33, // 到時要換成實際的會員id
         }
         const response = await axios.post(
-          `http://localhost:3002/advertise/ad_record`,
+          `http://18.177.136.227:3002/advertise/ad_record`,
           param,
         )
         setAdRecord(response.data.data)
@@ -41,7 +41,7 @@ export default function AdRecord() {
             >
               <div className={`${styles.adProductGrid} ${styles.adProductImg}`}>
                 <img
-                  src={`http://localhost:3002/public/img/ad/${v.ad_img_url}`}
+                  src={`http://18.177.136.227:3002/public/img/ad/${v.ad_img_url}`}
                   width='100%'
                   alt=''
                 />

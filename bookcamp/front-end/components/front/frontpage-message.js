@@ -195,7 +195,7 @@ export default function FrontPageMessage(props) {
     setShowEmojis(false)
   }
   useEffect(() => {
-    const newSocket = io.connect('http://localhost:3002')
+    const newSocket = io.connect('http://18.177.136.227:3002')
     setSocket(newSocket)
 
     newSocket.on('message', (message) => {

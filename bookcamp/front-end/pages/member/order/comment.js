@@ -19,7 +19,7 @@ export default function Comment() {
   const sentComment = async (e) => {
     try {
       await axios
-        .put(`http://localhost:3002/member/user-order/comment/${router.query.id}`, { rating, comment }, {
+        .put(`http://18.177.136.227:3002/member/user-order/comment/${router.query.id}`, { rating, comment }, {
           headers: { 'Content-Type': 'application/json' },
         })
         .then(() => {

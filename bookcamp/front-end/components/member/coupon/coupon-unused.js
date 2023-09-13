@@ -27,7 +27,7 @@ export default function CouponUnused({
           client_id: client_id, // 到時要換成實際的會員id
         }
         const response = await axios.post(
-          `http://localhost:3002/coupon/received`,
+          `http://18.177.136.227:3002/coupon/received`,
           param,
         )
         setCoupons(response.data.data)
@@ -132,7 +132,7 @@ export default function CouponUnused({
                           ) : (
                             <img
                               className={styles.commodityImg}
-                              src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+                              src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
                               alt='Commodity'
                             />
                           )}

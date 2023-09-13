@@ -27,7 +27,7 @@ export default function CouponInput({ setStatus, status, setCoupons }) {
   const handleSearch = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:3002/coupon/coupon_code/search',
+        'http://18.177.136.227:3002/coupon/coupon_code/search',
         {
           coupon_code: couponCode,
           type: status,

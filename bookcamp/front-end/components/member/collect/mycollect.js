@@ -13,7 +13,7 @@ export default function Mycollect() {
     e.stopPropagation()
     try {
       axios
-        .post('http://localhost:3002/share/addcart/add', book, {
+        .post('http://18.177.136.227:3002/share/addcart/add', book, {
           withCredentials: true,
         })
         .then((res) => {
@@ -45,7 +45,7 @@ export default function Mycollect() {
   useEffect(() => {
     const fetchstoreData = async () => {
       try {
-        const res = await axios.get(`http://localhost:3002/searchcollect`, {
+        const res = await axios.get(`http://18.177.136.227:3002/searchcollect`, {
           withCredentials: true,
         })
         setbookData(res.data.collectBook)
@@ -80,7 +80,7 @@ export default function Mycollect() {
                     className={`${styles.colProductGrid} ${styles.colProductImg}`}
                   >
                     <img
-                      src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+                      src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
                       width='100%'
                       alt=''
                     />

@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import styles from './post-page.module.css'
 export default function AvatarData(props) {
-  const avatarUrl = 'http://localhost:3002/img/member/'
+  const avatarUrl = 'http://18.177.136.227:3002/img/member/'
 
   useEffect(() => {
     console.log(props.data)

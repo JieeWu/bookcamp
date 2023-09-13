@@ -8,14 +8,14 @@ export default function OrderDetailComment({ setRating, setComment, rating, comm
     const router = useRouter();
     const [book, setBook] = useState([]);
 
-    const url = 'http://localhost:3002/img/oldbookimgs/'
+    const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
 
     //抓取資料
     useEffect(() => {
         const data = async () => {
             try {
                 await axios
-                    .get(`http://localhost:3002/member/user-order/comment/${router.query.id}`)
+                    .get(`http://18.177.136.227:3002/member/user-order/comment/${router.query.id}`)
                     .then((res) => {
                         setBook(res.data.detail)
                         setRating(res.data.checkStar[0].book_star)

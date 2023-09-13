@@ -9,10 +9,10 @@ export default function Editor(props) {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          'http://localhost:3002/forum/select/category',
+          'http://18.177.136.227:3002/forum/select/category',
         )
         const res2 = await axios.get(
-          'http://localhost:3002/forum/select/question',
+          'http://18.177.136.227:3002/forum/select/question',
         )
         const data = res.data
         const data2 = res2.data

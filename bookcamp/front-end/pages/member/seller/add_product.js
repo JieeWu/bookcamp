@@ -220,7 +220,7 @@ export default function Addproduct() {
         formDataForImage.append('file', file)
 
         const imageResponse = await axios.post(
-          'http://localhost:3002/oldbookupload',
+          'http://18.177.136.227:3002/oldbookupload',
           formDataForImage,
           {
             headers: {
@@ -238,7 +238,7 @@ export default function Addproduct() {
       }
       // 提交其他資料
       const response = await axios.post(
-        'http://localhost:3002/selleroldbook',
+        'http://18.177.136.227:3002/selleroldbook',
         updatedFormData,
 
       )

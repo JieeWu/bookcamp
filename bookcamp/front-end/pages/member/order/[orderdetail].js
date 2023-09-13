@@ -15,7 +15,7 @@ export default function OrderDetail() {
     const [delivery, setdelivery] = useState([])
     const [receipt, setReceipt] = useState([])
 
-    const url = 'http://localhost:3002/img/oldbookimgs/'
+    const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
 
 
     //抓取資料
@@ -23,7 +23,7 @@ export default function OrderDetail() {
         const data = async () => {
             try {
                 await axios
-                    .get(`http://localhost:3002/member/user-order/${router.query.orderdetail}`, {
+                    .get(`http://18.177.136.227:3002/member/user-order/${router.query.orderdetail}`, {
                         withCredentials: true,
                     })
                     .then((res) => {

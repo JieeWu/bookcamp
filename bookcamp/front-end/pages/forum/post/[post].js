@@ -61,7 +61,7 @@ export default function Test() {
       }
       const getForum = async () => {
         await axios
-          .post('http://localhost:3002/forum/getEdit', [data], {
+          .post('http://18.177.136.227:3002/forum/getEdit', [data], {
             withCredentials: true,
           })
           .then((res) => {

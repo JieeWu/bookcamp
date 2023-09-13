@@ -7,7 +7,7 @@ export default function SearchPost(props) {
   const fetchData = async () => {
     try {
       await axios
-        .post('http://localhost:3002/forum/select/search', [search])
+        .post('http://18.177.136.227:3002/forum/select/search', [search])
         .then((res) => {
           // console.log(res.data)
           props.setPost(res.data)

@@ -36,7 +36,7 @@ export default function FrontPageActivity(props) {
     const data = async () => {
       try {
         await axios
-          .get('http://localhost:3002/share/activity')
+          .get('http://18.177.136.227:3002/share/activity')
           .then((res) => {
             setActivity(res.data.activity)
           })
@@ -55,7 +55,7 @@ export default function FrontPageActivity(props) {
     try {
       await axios
         .post(
-          'http://localhost:3002/share/activity',
+          'http://18.177.136.227:3002/share/activity',
           { data },
           {
             headers: { 'Content-Type': 'application/json' },

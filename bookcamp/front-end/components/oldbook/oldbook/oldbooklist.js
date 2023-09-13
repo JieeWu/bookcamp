@@ -9,7 +9,7 @@ export default function Oldbooklist() {
     useEffect(() => {
       const fechAlloldbook = async () => {
         try {
-          const res = await axios.get('http://localhost:3002/oldbook')
+          const res = await axios.get('http://18.177.136.227:3002/oldbook')
           setOldbook(res.data.oldbook)
           console.log(res.data.oldbook)
         } catch (ex) {}

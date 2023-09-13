@@ -21,7 +21,7 @@ export default function FBLogin() {
     if (authJWT.isAuth) return
 
     const res = await axios.post(
-      'http://localhost:3002/api/facebook-login/jwt',
+      'http://18.177.136.227:3002/api/facebook-login/jwt',
       providerData,
       {
         withCredentials: true, // 注意: 必要的，儲存 cookie 在瀏覽器中
@@ -42,7 +42,7 @@ export default function FBLogin() {
 
   const checkLogin = async () => {
     const res = await axios.get(
-      'http://localhost:3002/api/auth-jwt/check-login',
+      'http://18.177.136.227:3002/api/auth-jwt/check-login',
       {
         withCredentials: true, // 從瀏覽器獲取cookie
       },
@@ -57,7 +57,7 @@ export default function FBLogin() {
 
     // 伺服器logout
     const res = await axios.post(
-      'http://localhost:3002/api/auth-jwt/logout-ssl-proxy',
+      'http://18.177.136.227:3002/api/auth-jwt/logout-ssl-proxy',
       {},
       {
         withCredentials: true, // save cookie in browser

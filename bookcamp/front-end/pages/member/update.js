@@ -30,7 +30,7 @@ export default function MemberPage() {
     const fetchMemberData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3002/member/users/${client_id}`,
+          `http://18.177.136.227:3002/member/users/${client_id}`,
         )
         const memberData = response.data
 
@@ -70,7 +70,7 @@ export default function MemberPage() {
     console.log(formData)
     try {
       const response = await axios.put(
-        `http://localhost:3002/member/users/${client_id}`,
+        `http://18.177.136.227:3002/member/users/${client_id}`,
         formData,
       )
 

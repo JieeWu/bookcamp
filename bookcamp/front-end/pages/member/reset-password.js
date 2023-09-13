@@ -36,7 +36,7 @@ export default function ResetPassword() {
 
     try {
       const response = await axios.post(
-        `http://localhost:3002/member/users/reset-password/${authJWT.userData.client_id}`,
+        `http://18.177.136.227:3002/member/users/reset-password/${authJWT.userData.client_id}`,
         formData,
       )
       console.log(response.data)
@@ -58,7 +58,7 @@ export default function ResetPassword() {
           })
 
           const res = await axios.post(
-            'http://localhost:3002/member/auth-jwt/logout',
+            'http://18.177.136.227:3002/member/auth-jwt/logout',
             {},
             {
               withCredentials: true, // save cookie in browser

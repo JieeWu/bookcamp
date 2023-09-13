@@ -18,7 +18,7 @@ export default function CouponRecord() {
           client_id: authJWT.userData.client_id, // 到時要換成實際的會員id
         }
         const response = await axios.post(
-          `http://localhost:3002/coupon/history`,
+          `http://18.177.136.227:3002/coupon/history`,
           param,
         )
         setCRecord(response.data.data)

@@ -14,7 +14,7 @@ export default function AdNow() {
           client_id: 33,
         }
         const response = await axios.post(
-          'http://localhost:3002/advertise/ad_list',
+          'http://18.177.136.227:3002/advertise/ad_list',
           param,
         )
         setAdvertises(response.data.data)
@@ -35,7 +35,7 @@ export default function AdNow() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3002/advertise/status_change',
+        'http://18.177.136.227:3002/advertise/status_change',
         {
           ad_id: ad_id,
           client_id: 33,

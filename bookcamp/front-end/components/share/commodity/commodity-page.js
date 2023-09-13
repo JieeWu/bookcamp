@@ -21,7 +21,7 @@ export default function CommodityPage({
   imgStyle,
 }) {
   // 抓後端的圖片
-  const url = 'http://localhost:3002/img/oldbookimgs/'
+  const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
   //偵測路由
   const router = useRouter()
   // 使用會員
@@ -34,7 +34,7 @@ export default function CommodityPage({
   const handleAddCart = (e) => {
     try {
       axios
-        .post('http://localhost:3002/share/addcart/add', e, {
+        .post('http://18.177.136.227:3002/share/addcart/add', e, {
           withCredentials: true,
         })
         .then((res) => {

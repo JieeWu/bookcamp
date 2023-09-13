@@ -11,7 +11,7 @@ export default function ProductComment() {
     const data = async () => {
       try {
         await axios
-          .get(`http://localhost:3002/oldbook/bookComment/${book_id}`)
+          .get(`http://18.177.136.227:3002/oldbook/bookComment/${book_id}`)
           .then((res) => {
             const newComment = res.data.comment.filter((v) => {
               if (v.book_star != null) {

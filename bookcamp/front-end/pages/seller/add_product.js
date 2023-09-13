@@ -21,7 +21,7 @@
 //         formDataForImage.append('file', file);
 
 //         const imageResponse = await axios.post(
-//           'http://localhost:3002/upload',
+//           'http://18.177.136.227:3002/upload',
 //           formDataForImage,
 //           {
 //             headers: {
@@ -41,7 +41,7 @@
 
 //       // 提交其他資料
 //       const response = await axios.post(
-//         'http://localhost:3002/selleroldbook',
+//         'http://18.177.136.227:3002/selleroldbook',
 //         updatedFormData
 //       );
 //       if (response.status === 200) {

@@ -13,7 +13,7 @@ export const Collectll = ({ children }) => {
     const data = async () => {
       try {
         await axios
-          .get('http://localhost:3002/searchcollect/collect', {
+          .get('http://18.177.136.227:3002/searchcollect/collect', {
             withCredentials: true,
           })
           .then((res) => {

@@ -29,7 +29,7 @@ export default function Order() {
   useEffect(() => {
     const dataTest = async () => {
       try {
-        const res = await axios.get('http://localhost:3002/order')
+        const res = await axios.get('http://18.177.136.227:3002/order')
         setOrder(res.data.pageOrder.newOrder)
         setOrderPage(res.data.pageOrder)
         setCoupon(res.data.bookcoupon)
@@ -50,7 +50,7 @@ export default function Order() {
   useEffect(() => {
     const usp = new URLSearchParams(router.query)
     axios
-      .get(`http://localhost:3002/order?${usp.toString()}`)
+      .get(`http://18.177.136.227:3002/order?${usp.toString()}`)
       .then((res) => {
         const data = res.data.pageOrder
         setOrderPage(data)

@@ -40,7 +40,7 @@ export const AuthProviderJWT = ({ children }) => {
   // 檢查會員認證用
   const checkAuth = async () => {
     const res = await axios.get(
-      'http://localhost:3002/member/auth-jwt/check-login',
+      'http://18.177.136.227:3002/member/auth-jwt/check-login',
       {
         withCredentials: true,
       },

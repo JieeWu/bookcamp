@@ -14,7 +14,7 @@ export default function chatRoom() {
   const [receivedImage, setReceivedImage] = useState(null)
   const [isProcess, setIsProcess] = useState(false)
   const [imageId, setImageId] = useState('')
-  const avatarUrl = 'http://localhost:3002/img/member/'
+  const avatarUrl = 'http://18.177.136.227:3002/img/member/'
   const emojis = [
     '😀',
     '😂',
@@ -199,7 +199,7 @@ export default function chatRoom() {
     setShowEmojis(false)
   }
   useEffect(() => {
-    const newSocket = io.connect('http://localhost:3002')
+    const newSocket = io.connect('http://18.177.136.227:3002')
     setSocket(newSocket)
     newSocket.on('receiveImage', (receivedImage) => {
       setChat((prevChat) => [

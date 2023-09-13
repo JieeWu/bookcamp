@@ -28,7 +28,7 @@ export default function ForumReplyButton(props) {
   const deletePost = async () => {
     try {
       await axios
-        .delete('http://localhost:3002/forum/delete/post', {
+        .delete('http://18.177.136.227:3002/forum/delete/post', {
           params: { id: router.query.post_id },
         })
         .then((res) => {

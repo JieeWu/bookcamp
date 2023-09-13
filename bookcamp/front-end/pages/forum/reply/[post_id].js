@@ -24,7 +24,7 @@ export default function Reply() {
   // ref={messageAreaRef}
   const like = async () => {
     await axios
-      .put('http://localhost:3002/forum/post/like', [router.query.post_id])
+      .put('http://18.177.136.227:3002/forum/post/like', [router.query.post_id])
       .then((res) => {
         if (res.data.changedRows) {
           Swal.fire({
@@ -38,7 +38,7 @@ export default function Reply() {
       })
   }
   const dislike = async () => {
-    await axios.put('http://localhost:3002/forum/post/dislike', [
+    await axios.put('http://18.177.136.227:3002/forum/post/dislike', [
       router.query.post_id,
     ])
   }
@@ -55,7 +55,7 @@ export default function Reply() {
           return ''
         }
         const result = await axios.get(
-          `http://localhost:3002/forum/post/${post_id}?status=${status}`,
+          `http://18.177.136.227:3002/forum/post/${post_id}?status=${status}`,
         )
 
         // console.log(result);
@@ -110,7 +110,7 @@ export default function Reply() {
                             </div>
                             <div className='col-xxl-2'>
                               <div className={styles.postPageAd}>
-                                {/* <img src='http://localhost:3002/public/img/ad/200x600_ad_3.jpg' /> */}
+                                {/* <img src='http://18.177.136.227:3002/public/img/ad/200x600_ad_3.jpg' /> */}
                                 <img src='/img/all-ad/200x600_ad_5.jpg' />
                               </div>
                             </div>

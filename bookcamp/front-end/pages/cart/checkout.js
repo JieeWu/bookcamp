@@ -39,7 +39,7 @@ export default function Checkout2() {
     const data = async () => {
       try {
         await axios
-          .get('http://localhost:3002/cart/checkout', {
+          .get('http://18.177.136.227:3002/cart/checkout', {
             withCredentials: true,
           })
           .then((res) => {
@@ -263,7 +263,7 @@ export default function Checkout2() {
       const linepay = async () => {
         try {
           await axios
-            .post('http://localhost:3002/pay/linepay', orderCH, {
+            .post('http://18.177.136.227:3002/pay/linepay', orderCH, {
               headers: {
                 'content-type': 'application/json',
               },
@@ -283,7 +283,7 @@ export default function Checkout2() {
       const bluepay = async () => {
         try {
           await axios
-            .post('http://localhost:3002/pay/BluePay/list', orderCH, {
+            .post('http://18.177.136.227:3002/pay/BluePay/list', orderCH, {
               headers: {
                 'content-type': 'application/json',
               },
@@ -304,7 +304,7 @@ export default function Checkout2() {
       const bank = async () => {
         try {
           await axios
-            .post('http://localhost:3002/pay/bankAnd711/bank', orderCH, {
+            .post('http://18.177.136.227:3002/pay/bankAnd711/bank', orderCH, {
               headers: {
                 'content-type': 'application/json',
               },
@@ -324,7 +324,7 @@ export default function Checkout2() {
       const seven711 = async () => {
         try {
           await axios
-            .post('http://localhost:3002/pay/bankAnd711/seven711', orderCH, {
+            .post('http://18.177.136.227:3002/pay/bankAnd711/seven711', orderCH, {
               headers: {
                 'content-type': 'application/json',
               },

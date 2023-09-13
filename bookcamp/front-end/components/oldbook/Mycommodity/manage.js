@@ -26,7 +26,7 @@ export default function Manage(props) {
       if (result.isConfirmed) {
         try {
           const res = await axios.delete(
-            `http://localhost:3002/selleroldbook/${bookId}`
+            `http://18.177.136.227:3002/selleroldbook/${bookId}`
           );
           console.log(res.data);
           
@@ -50,7 +50,7 @@ export default function Manage(props) {
     const fetchstoreDate = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3002/oldmanageRouter/my-store`,
+          `http://18.177.136.227:3002/oldmanageRouter/my-store`,
         )
         setbookData(res.data.oldbook)
         setState(res.data.bookstatus)
@@ -70,7 +70,7 @@ export default function Manage(props) {
         <div className='row Management3' key={i}>
           <div className='col-4 '>
             <img
-              src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+              src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
               alt='123'
               width='100px'
               className='orwd'
@@ -79,7 +79,7 @@ export default function Manage(props) {
           </div>
           <img
             className='orwd1'
-            src={`http://localhost:3002/public/img/oldbookimgs/${v.book_img_id}`}
+            src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.book_img_id}`}
             alt='123'
             width='10px'
           />

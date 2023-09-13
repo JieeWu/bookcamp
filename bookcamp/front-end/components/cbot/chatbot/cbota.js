@@ -13,7 +13,7 @@ function LinkComponent(props) {
       return; // 退出函數，不進行任何其他操作
     }
     try {
-      const response = await axios.delete('http://localhost:3002/collect/Alloldcollect', {
+      const response = await axios.delete('http://18.177.136.227:3002/collect/Alloldcollect', {
         withCredentials: true
       });
 

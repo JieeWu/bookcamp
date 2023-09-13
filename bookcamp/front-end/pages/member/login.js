@@ -41,7 +41,7 @@ export default function UserTestJWT() {
     if (authJWT.isAuth) return
 
     const res = await axios.post(
-      'http://localhost:3002/member/google-login/jwt',
+      'http://18.177.136.227:3002/member/google-login/jwt',
       providerData,
       {
         withCredentials: true, // 注意: 必要的，儲存 cookie 在瀏覽器中
@@ -70,7 +70,7 @@ export default function UserTestJWT() {
 
   const checkLogin = async () => {
     const res = await axios.get(
-      'http://localhost:3002/member/auth-jwt/check-login',
+      'http://18.177.136.227:3002/member/auth-jwt/check-login',
       {
         withCredentials: true, // 從瀏覽器獲取cookie
       },
@@ -100,7 +100,7 @@ export default function UserTestJWT() {
 
     try {
       const res = await axios.post(
-        'http://localhost:3002/member/auth-jwt/login',
+        'http://18.177.136.227:3002/member/auth-jwt/login',
         {
           email: email,
           passwd: passwd,
@@ -155,7 +155,7 @@ export default function UserTestJWT() {
     const line_uid = authJWT.userData.line_uid
 
     const res = await axios.get(
-      `http://localhost:3002/member/line-login/logout?line_uid=${line_uid}`,
+      `http://18.177.136.227:3002/member/line-login/logout?line_uid=${line_uid}`,
       {
         withCredentials: true, // 注意: 必要的
       },
@@ -206,7 +206,7 @@ export default function UserTestJWT() {
   const goLineLogin = async () => {
     // 向後端(express/node)伺服器要求line登入的網址
     const res = await axios.get(
-      'http://localhost:3002/member/line-login/login',
+      'http://18.177.136.227:3002/member/line-login/login',
       {
         withCredentials: true,
       },
@@ -227,7 +227,7 @@ export default function UserTestJWT() {
         ...router.query,
       }).toString()
 
-      const cbUrl = `http://localhost:3002/member/line-login/callback?${qs}`
+      const cbUrl = `http://18.177.136.227:3002/member/line-login/callback?${qs}`
 
       // 發送至後端伺服器得到line會員資料
       callbackLineLogin(cbUrl)
@@ -399,7 +399,7 @@ export default function UserTestJWT() {
           </div>
           <div className='decorative-color-block-purple'>
             <div className='decorative-color-block-purple-in'>
-              <img src='http://localhost:3002/public/img/書營標準字.png' />
+              <img src='http://18.177.136.227:3002/public/img/書營標準字.png' />
             </div>
           </div>
           <div className='decorative-color-block-pink'>

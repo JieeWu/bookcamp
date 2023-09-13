@@ -8,7 +8,7 @@ export default function CommodityPageUsed({ rwd }) {
       <div className={`${rwd} p-2`}>
         <div className={`${styles.usedbookCard} boder-pixel bg-white`}>
           <Link href="/oldbook?query=女性能量療法：永保青春健康的自助寶典">
-            <img src='http://localhost:3002/public/img/oldbookimgs/43.webp' />
+            <img src='http://18.177.136.227:3002/public/img/oldbookimgs/43.webp' />
           </Link>
           <div className='m-auto p-3'>
             <div className={`${styles.SaleBlock} m-bg-yellow w-100 p-2 font-s`}>

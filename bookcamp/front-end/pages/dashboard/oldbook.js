@@ -19,7 +19,7 @@ export default function Oldbooks() {
   useEffect(() => {
     const fechAlloldbook = async () => {
       try {
-        const res = await axios.get('http://localhost:3002/oldbook')
+        const res = await axios.get('http://18.177.136.227:3002/oldbook')
         //如果後端是物件就要寫.data.oldbook 如果是陣列直接.data
         setOldbook(res.data.oldbook)
         setClient(res.data.client)
@@ -36,7 +36,7 @@ export default function Oldbooks() {
   //後端也要寫
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3002/oldbook + ${id}`)
+      await axios.delete(`http://18.177.136.227:3002/oldbook + ${id}`)
       window.location.reload()
     } catch (err) {
       console.log(err)

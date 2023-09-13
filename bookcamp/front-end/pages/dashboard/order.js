@@ -26,7 +26,7 @@ export default function Order() {
     useEffect(() => {
         const dataTest = async () => {
             try {
-                const res = await axios.get('http://localhost:3002/order')
+                const res = await axios.get('http://18.177.136.227:3002/order')
                 setCoupon(res.data.bookcoupon)
                 sedivelivery(res.data.bookdelivery)
                 setStatus(res.data.bookorderstatus)

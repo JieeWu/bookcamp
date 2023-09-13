@@ -7,7 +7,7 @@ export default function CommodityPageUsed1({ rwd }) {
       <div className={`${rwd} p-2`}>
         <div className={`${styles.usedbookCard} boder-pixel bg-white`}>
           <Link href='/oldbook?query=原子習慣'>
-            <img src='http://localhost:3002/public/img/oldbookimgs/36.webp' />
+            <img src='http://18.177.136.227:3002/public/img/oldbookimgs/36.webp' />
           </Link>
           <div className='m-auto p-3'>
             <div className={`${styles.SaleBlock} m-bg-yellow w-100 p-2 font-s`}>
