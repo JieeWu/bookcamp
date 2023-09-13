@@ -33,7 +33,7 @@ export default function CollectBtn({ book_id }) {
       let click = e.currentTarget.value
       await axios
         .post(
-          `http://18.177.136.227:3002/searchcollect/love`,
+          `http://3.113.3.149:3002/searchcollect/love`,
           { click },
           {
             withCredentials: true,

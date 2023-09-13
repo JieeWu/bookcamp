@@ -25,7 +25,7 @@ export default function Editproduct() {
     if (newBookId) {
       const fetchProductData = async () => {
         try {
-          const res = await axios.get(`http://18.177.136.227:3002/selleroldbook/${newBookId}`)
+          const res = await axios.get(`http://3.113.3.149:3002/selleroldbook/${newBookId}`)
           const productData = res.data;
     
           setFormData(productData);
@@ -120,7 +120,7 @@ export default function Editproduct() {
         formDataForImage.append('file', file)
 
         const imageResponse = await axios.post(
-          'http://18.177.136.227:3002/oldbookupload',
+          'http://3.113.3.149:3002/oldbookupload',
           formDataForImage,
           {
             headers: {
@@ -144,7 +144,7 @@ export default function Editproduct() {
 
       // 提交其他資料
       const response = await axios.put(
-        `http://18.177.136.227:3002/selleroldbook/${bookId}`,
+        `http://3.113.3.149:3002/selleroldbook/${bookId}`,
         updatedFormData,
        
       )

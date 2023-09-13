@@ -143,7 +143,7 @@ export default function MainNavbar() {
                           className='pixel-border-yellow m-bg-yellow w-100 fw-bold py-1'
                           onClick={async () => {
                             const res = await axios.post(
-                              'http://18.177.136.227:3002/member/auth-jwt/logout',
+                              'http://3.113.3.149:3002/member/auth-jwt/logout',
                               {},
                               {
                                 withCredentials: true, // save cookie in browser

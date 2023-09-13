@@ -18,7 +18,7 @@ const MemberCard = () => {
       try {
         if (authJWT.userData && authJWT.userData.client_id) {
           const response = await axios.get(
-            `http://18.177.136.227:3002/member/avatar/${authJWT.userData.client_id}`,
+            `http://3.113.3.149:3002/member/avatar/${authJWT.userData.client_id}`,
           )
           setAvatar(response.data.avatar)
         }
@@ -39,7 +39,7 @@ const MemberCard = () => {
       formData.append('avatar', avatar) // 將檔案加入formData
 
       const response = await axios.post(
-        `http://18.177.136.227:3002/member/avatar/${authJWT.userData.client_id}`,
+        `http://3.113.3.149:3002/member/avatar/${authJWT.userData.client_id}`,
         formData,
       )
 
@@ -58,7 +58,7 @@ const MemberCard = () => {
   const deleteOldAvatar = async () => {
     try {
       const response = await axios.delete(
-        `http://18.177.136.227:3002/member/avatar/${authJWT.userData.client_id}`,
+        `http://3.113.3.149:3002/member/avatar/${authJWT.userData.client_id}`,
       )
       console.log(response.data)
     } catch (error) {
@@ -78,12 +78,12 @@ const MemberCard = () => {
                   <label htmlFor='avatar'>
                     {avatar === null ? (
                       <img
-                        src={`http://18.177.136.227:3002/public/img/member/default.png`}
+                        src={`http://3.113.3.149:3002/public/img/member/default.png`}
                         alt='avatar'
                       />
                     ) : (
                       <img
-                        src={`http://18.177.136.227:3002/public/img/member/${avatar}`}
+                        src={`http://3.113.3.149:3002/public/img/member/${avatar}`}
                         alt='avatar'
                       />
                     )}

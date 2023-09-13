@@ -33,7 +33,7 @@ export default function Checkout3() {
     const data = async () => {
       try {
         await axios
-          .post('http://18.177.136.227:3002/cart/finish', localorder, {
+          .post('http://3.113.3.149:3002/cart/finish', localorder, {
             headers: {
               'content-type': 'application/json',
             },
@@ -99,7 +99,7 @@ export default function Checkout3() {
           coupon_record_id: allData.couponRecordId,
         }
         const response = await axios.post(
-          `http://18.177.136.227:3002/coupon/record/update`,
+          `http://3.113.3.149:3002/coupon/record/update`,
           param,
         )
       } catch (error) {

@@ -12,7 +12,7 @@ export default function FocusBooks() {
           <div className='col-4'>
             <div className='position-relative'>
               <div className={styles.focusBook}>
-              <img src="http://18.177.136.227:3002/public/img/oldbookimgs/jo12m8jE.png" />
+              <img src="http://3.113.3.149:3002/public/img/oldbookimgs/jo12m8jE.png" />
               </div>
               <div className={styles.imgSpace}></div>
               <div className={`${styles.goBtnPosition} more-btn`}>
@@ -34,7 +34,7 @@ export default function FocusBooks() {
           <div className='col-4'>
             <div className='position-relative'>
               <div className={styles.focusBook}>
-                <img src='http://18.177.136.227:3002/public/img/oldbookimgs/31.png' />
+                <img src='http://3.113.3.149:3002/public/img/oldbookimgs/31.png' />
               </div>
               <div className={styles.imgSpace}></div>
               <div className={`${styles.goBtnPosition} more-btn`}>
@@ -55,7 +55,7 @@ export default function FocusBooks() {
           <div className='col-4'>
             <div className='position-relative'>
               <div className={styles.focusBook}>
-                <img src="http://18.177.136.227:3002/public/img/oldbookimgs/getI141mage.png" />
+                <img src="http://3.113.3.149:3002/public/img/oldbookimgs/getI141mage.png" />
               </div>
               <div className={styles.imgSpace}></div>
               <div className={`${styles.goBtnPosition} more-btn`}>

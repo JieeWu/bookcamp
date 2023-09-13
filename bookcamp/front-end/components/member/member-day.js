@@ -8,7 +8,7 @@ export default function Home() {
   const [signedDate, setSignedDate] = useState(null);
   const [signedDatesList, setSignedDatesList] = useState([]);
 
-  const SIGN_API = 'http://18.177.136.227:3002/member/sign';
+  const SIGN_API = 'http://3.113.3.149:3002/member/sign';
 
   useEffect(() => {
     const fetchSignedDates = async () => {

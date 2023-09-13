@@ -7,13 +7,13 @@ import styles from '@/styles/oldbook/oldbooklist.module.css'
 export default function OrderDetailComment({ setRating, setComment, rating, comment }) {
     const router = useRouter();
     const [book, setBook] = useState([]);
-    const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
+    const url = 'http://3.113.3.149:3002/img/oldbookimgs/'
     //抓取資料
     useEffect(() => {
         const data = async () => {
             try {
                 await axios
-                    .get(`http://18.177.136.227:3002/member/user-order/detail/comment/${router.query.id}`, {
+                    .get(`http://3.113.3.149:3002/member/user-order/detail/comment/${router.query.id}`, {
                         withCredentials: true,
                     })
                     .then((res) => {

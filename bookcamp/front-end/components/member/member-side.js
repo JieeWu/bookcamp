@@ -19,7 +19,7 @@ export default function MemberSide() {
     localStorage.removeItem('birthdayNotified');
 
     const res = await axios.post(
-      'http://18.177.136.227:3002/member/auth-jwt/logout',
+      'http://3.113.3.149:3002/member/auth-jwt/logout',
       {},
       {
         withCredentials: true, // save cookie in browser
@@ -57,14 +57,14 @@ export default function MemberSide() {
             /> */}
             {avatar === null ? (
               <img
-                src={`http://18.177.136.227:3002/public/img/member/default.png`}
+                src={`http://3.113.3.149:3002/public/img/member/default.png`}
                 alt='avatar'
                 width='100%'
               />
             ) : (
               <Link href='/member'>
                 <img
-                  src={`http://18.177.136.227:3002/public/img/member/${avatar}`}
+                  src={`http://3.113.3.149:3002/public/img/member/${avatar}`}
                   alt='avatar'
                   width='100%'
                 />

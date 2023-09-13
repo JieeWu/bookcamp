@@ -535,12 +535,12 @@ align-items: center;
 
   @keyframes changeImage {
     0%, 33% {
-      background-image: url('http://18.177.136.227:3002/public/img/ad/200x600_ad_6.jpg');
+      background-image: url('http://3.113.3.149:3002/public/img/ad/200x600_ad_6.jpg');
     }
     34%, 66% {
-      background-image: url('http://18.177.136.227:3002/public/img/ad/200x600_ad_1.jpg');
+      background-image: url('http://3.113.3.149:3002/public/img/ad/200x600_ad_1.jpg');
     }
     67%, 100% {
-      background-image: url('http://18.177.136.227:3002/public/img/ad/200x600_ad_7.jpg');
+      background-image: url('http://3.113.3.149:3002/public/img/ad/200x600_ad_7.jpg');
     }
   }

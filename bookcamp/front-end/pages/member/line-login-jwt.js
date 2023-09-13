@@ -23,7 +23,7 @@ export default function LineLoginJWT() {
     const line_uid = authJWT.userData.line_uid
 
     const res = await axios.get(
-      `http://18.177.136.227:3002/member/line-login/logout?line_uid=${line_uid}`,
+      `http://3.113.3.149:3002/member/line-login/logout?line_uid=${line_uid}`,
       {
         withCredentials: true, // 注意: 必要的
       },
@@ -66,7 +66,7 @@ export default function LineLoginJWT() {
   const goLineLogin = () => {
     // 向後端(express/node)伺服器要求line登入的網址
     axios
-      .get('http://18.177.136.227:3002/member/line-login/login', {
+      .get('http://3.113.3.149:3002/member/line-login/login', {
         withCredentials: true,
       })
       .then((res) => {
@@ -87,7 +87,7 @@ export default function LineLoginJWT() {
         ...router.query,
       }).toString()
 
-      const cbUrl = `http://18.177.136.227:3002/member/line-login/callback?${qs}`
+      const cbUrl = `http://3.113.3.149:3002/member/line-login/callback?${qs}`
 
       // 發送至後端伺服器得到line會員資料
       callbackLineLogin(cbUrl)

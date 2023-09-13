@@ -13,7 +13,7 @@ export default function FrontPageAd(props) {
     const fetchData = async () => {
       try {
         await axios
-          .get(`http://18.177.136.227:3002/advertise/ad_size`)
+          .get(`http://3.113.3.149:3002/advertise/ad_size`)
           .then((res) => {
             setAdvertises(res.data.adData.data)
             setBook(res.data.book.book_id)
@@ -84,19 +84,19 @@ export default function FrontPageAd(props) {
                             >
                               <picture className='d-block w-100'>
                                 <source
-                                  srcSet={`http://18.177.136.227:3002/public/img/ad/${v.ad_img_urls.find(
+                                  srcSet={`http://3.113.3.149:3002/public/img/ad/${v.ad_img_urls.find(
                                     (url) => url.includes('1200x300'),
                                   )}`}
                                   media='(min-width: 768px)'
                                 />
                                 <source
-                                  srcSet={`http://18.177.136.227:3002/public/img/ad/${v.ad_img_urls.find(
+                                  srcSet={`http://3.113.3.149:3002/public/img/ad/${v.ad_img_urls.find(
                                     (url) => url.includes('800x300'),
                                   )}`}
                                   media='(min-width: 540px)'
                                 />
                                 <img
-                                  src={`http://18.177.136.227:3002/public/img/ad/${v.ad_img_urls.find(
+                                  src={`http://3.113.3.149:3002/public/img/ad/${v.ad_img_urls.find(
                                     (url) => url.includes('300x300'),
                                   )}`}
                                   alt=''

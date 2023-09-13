@@ -14,7 +14,7 @@ export default function ForumPost(props) {
     const post_id = e.target.id
 
     const data = axios
-      .post('http://18.177.136.227:3002/forum/collect', [
+      .post('http://3.113.3.149:3002/forum/collect', [
         { client_id: client_id, post_id: post_id },
       ])
       .then((res) => {
@@ -42,7 +42,7 @@ export default function ForumPost(props) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          'http://18.177.136.227:3002/forum/select/post',
+          'http://3.113.3.149:3002/forum/select/post',
           {
             headers: { 'Content-Type': 'application/json' },
             params: { page: pid ? pid : '' },
@@ -129,7 +129,7 @@ export default function ForumPost(props) {
         </>
       )}
       <div className={styles.alAd}>
-        <img src='http://18.177.136.227:3002/public/img/ad/200x600_ad_2.jpg' />
+        <img src='http://3.113.3.149:3002/public/img/ad/200x600_ad_2.jpg' />
       </div>
       <style jsx>
         {`

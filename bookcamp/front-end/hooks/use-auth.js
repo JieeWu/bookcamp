@@ -35,7 +35,7 @@ export const AuthProvider = ({ children }) => {
 
   // 檢查會員認證用
   const checkAuth = async () => {
-    const res = await axios.get('http://18.177.136.227:3002/api/auth/check-login', {
+    const res = await axios.get('http://3.113.3.149:3002/api/auth/check-login', {
       withCredentials: true,
     })
 

@@ -38,7 +38,7 @@ export default function MainHeader() {
     localStorage.removeItem('birthdayNotified')
 
     const res = await axios.post(
-      'http://18.177.136.227:3002/member/auth-jwt/logout',
+      'http://3.113.3.149:3002/member/auth-jwt/logout',
       {},
       {
         withCredentials: true, // save cookie in browser
@@ -67,7 +67,7 @@ export default function MainHeader() {
       try {
         if (authJWT.userData && authJWT.userData.client_id) {
           const response = await axios.get(
-            `http://18.177.136.227:3002/member/avatar/${authJWT.userData.client_id}`,
+            `http://3.113.3.149:3002/member/avatar/${authJWT.userData.client_id}`,
           )
           setAvatar(response.data.avatar)
         }
@@ -112,12 +112,12 @@ export default function MainHeader() {
                 <div className='header-member-avatar m-0'>
                   {avatar === null ? (
                     <img
-                      src={`http://18.177.136.227:3002/public/img/member/default.png`}
+                      src={`http://3.113.3.149:3002/public/img/member/default.png`}
                       alt='avatar'
                     />
                   ) : (
                     <img
-                      src={`http://18.177.136.227:3002/public/img/member/${avatar}`}
+                      src={`http://3.113.3.149:3002/public/img/member/${avatar}`}
                       alt='avatar'
                     />
                   )}

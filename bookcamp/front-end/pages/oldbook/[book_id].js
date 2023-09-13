@@ -38,7 +38,7 @@ const { authJWT } = useAuthJWT()
         try {
           const res = await axios.get(
             //這段是裡面有賣這本書的會員資料和書的資料...
-            `http://18.177.136.227:3002/oldbook/${book_id}`,
+            `http://3.113.3.149:3002/oldbook/${book_id}`,
           )
           //時間格式化
           if (res.data && res.data.obData && Array.isArray(res.data.obData)) {
@@ -74,7 +74,7 @@ const { authJWT } = useAuthJWT()
             {/* <div className='oldbookname3'>
 <div className='image-container1'>
 <img
-// src={`http://18.177.136.227:3002/public/img/Rectangle213.png`}
+// src={`http://3.113.3.149:3002/public/img/Rectangle213.png`}
 />
 </div>
 </div> */}
@@ -108,8 +108,8 @@ const { authJWT } = useAuthJWT()
               <div className='oldbookname3'>
                 <div className='image-container1'>
                   <img
-                    // src={`http://18.177.136.227:3002/public/img/oldbookimgs/${bookData.book_img_id}`}
-                    src={`http://18.177.136.227:3002/public/img/Rectangle213.png`}
+                    // src={`http://3.113.3.149:3002/public/img/oldbookimgs/${bookData.book_img_id}`}
+                    src={`http://3.113.3.149:3002/public/img/Rectangle213.png`}
                   />
                 </div>
               </div>

@@ -25,7 +25,7 @@ export default function NewBookTopAd() {
         loop={true}
       >
         <SwiperSlide className={styles.swiperSlide}>
-          {/* <img src='http://18.177.136.227:3002/public/img/ad/800x300_ad_1.jpg' /> */}
+          {/* <img src='http://3.113.3.149:3002/public/img/ad/800x300_ad_1.jpg' /> */}
           <img src='/img/all-ad/800x300_ad_1.jpg' />
         </SwiperSlide>
         <SwiperSlide className={styles.swiperSlide}>

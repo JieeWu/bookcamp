@@ -12,11 +12,11 @@ export default function CartPartStep({ icon, name, isActive }) {
   const currentLocation = [
     <img
       className={styles.stepMarked}
-      src='http://18.177.136.227:3002/public/img/decorate/diamond.svg'
+      src='http://3.113.3.149:3002/public/img/decorate/diamond.svg'
     />,
     <img
       className={styles.stepMarkedRe}
-      src='http://18.177.136.227:3002/public/img/decorate/diamond.svg'
+      src='http://3.113.3.149:3002/public/img/decorate/diamond.svg'
     />,
   ]
 

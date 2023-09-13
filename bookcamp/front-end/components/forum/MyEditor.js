@@ -42,7 +42,7 @@ function MyEditor(props) {
     placeholder: '请输入内容...',
     MENU_CONF: {
       uploadImage: {
-        server: 'http://18.177.136.227:3002/forum/try-upload',
+        server: 'http://3.113.3.149:3002/forum/try-upload',
         fieldName: 'avatar',
       },
     },

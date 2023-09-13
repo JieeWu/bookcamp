@@ -30,7 +30,7 @@ export default function Mycommodity() {
     //拿數據
     const fetchAllData = async () => {
       try {
-        const response = await axios.get('http://18.177.136.227:3002/oldmanageRouter/my-store', {
+        const response = await axios.get('http://3.113.3.149:3002/oldmanageRouter/my-store', {
           params: { term: '' }, // 空關鍵字表示搜尋所有資料
         })
         setBookData(response.data.oldbook)
@@ -47,7 +47,7 @@ export default function Mycommodity() {
   //搜尋
   const handleSearch = async () => {
     try {
-      const reponse = await axios.get('http://18.177.136.227:3002/search', {
+      const reponse = await axios.get('http://3.113.3.149:3002/search', {
         params: { term: searchTerm },
       })
       setBookData(reponse.data)

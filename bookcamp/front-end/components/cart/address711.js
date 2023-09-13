@@ -77,7 +77,7 @@ export default function Address711({ deliveryData, setAddress }) {
     try {
       await axios
         .post(
-          'http://18.177.136.227:3002/delivery',
+          `http://3.113.3.149:3002/delivery`,
           { mychoose },
           {
             headers: {
@@ -112,7 +112,7 @@ export default function Address711({ deliveryData, setAddress }) {
   useEffect(() => {
     try {
       axios
-        .post('http://18.177.136.227:3002/delivery/address', list, {
+        .post(`http://3.113.3.149:3002/delivery/address`, list, {
           Headers: {
             'Content-Type': 'application/json',
           },

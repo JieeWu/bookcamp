@@ -23,7 +23,7 @@ export default function MemberOrder() {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/member/user-order', {
+          .get('http://3.113.3.149:3002/member/user-order', {
             withCredentials: true,
           })
           .then((res) => {

@@ -45,7 +45,7 @@ export default function BookDetail() {
   const handleAddCart = (e) => {
     try {
       axios
-        .post('http://18.177.136.227:3002/share/addcart/add', e, {
+        .post('http://3.113.3.149:3002/share/addcart/add', e, {
           withCredentials: true,
         })
         .then((res) => {
@@ -89,8 +89,8 @@ export default function BookDetail() {
       const fetchBookData = async () => {
         try {
           const [bookDetailsRes, bookPushRes] = await Promise.all([
-            axios.get(`http://18.177.136.227:3002/oldbook/${book_id}`),
-            axios.get('http://18.177.136.227:3002/bookpush'),
+            axios.get(`http://3.113.3.149:3002/oldbook/${book_id}`),
+            axios.get('http://3.113.3.149:3002/bookpush'),
           ])
 
           // 格式化
@@ -173,8 +173,8 @@ export default function BookDetail() {
               <div className={styles.oldbookname3}>
                 <div className={styles.imagecontainer1}>
                   <img
-                    src={`http://18.177.136.227:3002/public/img/oldbookimgs/${bookData.book_img_id}`}
-                    // src={`http://18.177.136.227:3002/public/img/Rectangle213.png`}
+                    src={`http://3.113.3.149:3002/public/img/oldbookimgs/${bookData.book_img_id}`}
+                    // src={`http://3.113.3.149:3002/public/img/Rectangle213.png`}
                   />
                 </div>
               </div>

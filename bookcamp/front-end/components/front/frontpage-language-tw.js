@@ -11,7 +11,7 @@ export default function FrontPageLanguageTw(props) {
   //   const fetchData = async () => {
   //     try {
   //       const response = await axios.post(
-  //         `http://18.177.136.227:3002/advertise/ad_size`,
+  //         `http://3.113.3.149:3002/advertise/ad_size`,
   //       )
   //       setAdLanguage(response.data.data)
   //     } catch (error) {

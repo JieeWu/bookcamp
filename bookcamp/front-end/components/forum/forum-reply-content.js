@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
 export default function ForumPostContent(props) {
   const messageAreaRef = useRef(null)
 
-  const avatarUrl = 'http://18.177.136.227:3002/img/member/'
+  const avatarUrl = 'http://3.113.3.149:3002/img/member/'
   const { authJWT, setAuthJWT } = useAuthJWT()
   const router = useRouter()
   const [inputContent, setInputContent] = useState('')
@@ -34,7 +34,7 @@ export default function ForumPostContent(props) {
     try {
       if (data.content != '') {
         await axios
-          .post('http://18.177.136.227:3002/forum/reply/message2', [data], {
+          .post('http://3.113.3.149:3002/forum/reply/message2', [data], {
             withCredentials: true,
           })
           .then((res) => {
@@ -76,7 +76,7 @@ export default function ForumPostContent(props) {
       setHidden(!hidden)
       const postId = router.query.post_id
       await axios
-        .post('http://18.177.136.227:3002/forum/reply/message', [postId])
+        .post('http://3.113.3.149:3002/forum/reply/message', [postId])
         .then((res) => {
           const [data] = res.data
           data.forEach((item) => {

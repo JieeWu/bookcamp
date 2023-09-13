@@ -32,7 +32,7 @@ export default function CkeditorButton(props) {
       })
     } else {
       await axios
-        .post('http://18.177.136.227:3002/forum/api/insertData', props.data, {
+        .post('http://3.113.3.149:3002/forum/api/insertData', props.data, {
           headers: {
             'Content-Type': 'application/json',
           },
@@ -63,7 +63,7 @@ export default function CkeditorButton(props) {
   //編輯貼文
   const editPost = async () => {
     await axios
-      .put('http://18.177.136.227:3002/forum/putEdit', props.data, {
+      .put('http://3.113.3.149:3002/forum/putEdit', props.data, {
         headers: { 'Content-Type': 'application/json' },
         withCredentials: true,
       })
@@ -93,7 +93,7 @@ export default function CkeditorButton(props) {
   const replyEditPost = async () => {
     await axios
       .put(
-        'http://18.177.136.227:3002/forum/putReplyEdit',
+        'http://3.113.3.149:3002/forum/putReplyEdit',
         { data: props.data, forum_reply_id: router.query.rid },
         {
           headers: { 'Content-Type': 'application/json' },
@@ -125,7 +125,7 @@ export default function CkeditorButton(props) {
     try {
       await axios
         .post(
-          'http://18.177.136.227:3002/forum/reply/post',
+          'http://3.113.3.149:3002/forum/reply/post',
           {
             data: props.data,
             pid: router.query.post,

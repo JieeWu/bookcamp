@@ -30,7 +30,7 @@ import Store from '@/components/oldbook/PersonalStore/store'
 //       const fetchstoreDate = async () => {
 //         try {
 //           const res = await axios.get(
-//             `http://18.177.136.227:3002/store/${client_id}`,
+//             `http://3.113.3.149:3002/store/${client_id}`,
 //           )
 //           //時間格式化
 
@@ -73,7 +73,7 @@ import Store from '@/components/oldbook/PersonalStore/store'
 //                   <Link href={'/oldbook/' + v.old_book_id}>
 //                     <img
 //                       className={styles.commodityImg}
-//                       src={`http://18.177.136.227:3002/public/img/oldbookimgs/${v.old_book_img_id}`}
+//                       src={`http://3.113.3.149:3002/public/img/oldbookimgs/${v.old_book_img_id}`}
 //                     />
 //                   </Link>
 //                   <div className='mt-auto position-relative'>

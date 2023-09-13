@@ -22,7 +22,7 @@ export default function Home({next}) {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/share/TWlanguage')
+          .get('http://3.113.3.149:3002/share/TWlanguage')
           .then((res) => {
             setTW(res.data.TWbook)
           })
@@ -40,7 +40,7 @@ export default function Home({next}) {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/share/TWlanguage/bookCategory')
+          .get('http://3.113.3.149:3002/share/TWlanguage/bookCategory')
           .then((res) => {
             setTwCategory(res.data)
           })
@@ -52,7 +52,7 @@ export default function Home({next}) {
   }, [])
   const twCategoryData = async (e) => {
     await axios
-      .post('http://18.177.136.227:3002/share/TWlanguage/bookCategory', [
+      .post('http://3.113.3.149:3002/share/TWlanguage/bookCategory', [
         e.target.id,
       ])
       .then((res) => {
@@ -73,7 +73,7 @@ export default function Home({next}) {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/share/ENlanguage')
+          .get('http://3.113.3.149:3002/share/ENlanguage')
           .then((res) => {
             setEN(res.data.TWbook)
           })
@@ -91,7 +91,7 @@ export default function Home({next}) {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/share/ENlanguage/bookCategory')
+          .get('http://3.113.3.149:3002/share/ENlanguage/bookCategory')
           .then((res) => {
             setEnCategory(res.data)
           })
@@ -103,7 +103,7 @@ export default function Home({next}) {
   }, [])
   const enCategoryData = async (e) => {
     await axios
-      .post('http://18.177.136.227:3002/share/ENlanguage/bookCategory', [
+      .post('http://3.113.3.149:3002/share/ENlanguage/bookCategory', [
         e.target.id,
       ])
       .then((res) => {
@@ -123,7 +123,7 @@ export default function Home({next}) {
     }
     try {
       const response = await axios.post(
-        'http://18.177.136.227:3002/coupon/auto_distribution',
+        'http://3.113.3.149:3002/coupon/auto_distribution',
         param,
       )
       console.log(response, 'response')
@@ -165,7 +165,7 @@ export default function Home({next}) {
       try {
         if (authJWT.userData && authJWT.userData.client_id) {
           const response = await axios.get(
-            `http://18.177.136.227:3002/member/avatar/${authJWT.userData.client_id}`,
+            `http://3.113.3.149:3002/member/avatar/${authJWT.userData.client_id}`,
           )
           setAvatar(response.data.avatar)
         }

@@ -18,7 +18,7 @@ export const CartAllItem = ({ children }) => {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/cart/check', {
+          .get('http://3.113.3.149:3002/cart/check', {
             withCredentials: true,
           })
           .then((res) => {

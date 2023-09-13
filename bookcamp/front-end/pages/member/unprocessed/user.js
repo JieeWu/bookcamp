@@ -12,7 +12,7 @@ export default function UserTestIndex() {
       <h1>會員登出入測試頁(session-cookie)</h1>
       <button
         onClick={async () => {
-          const res = await axios.get('http://18.177.136.227:3002/member/users')
+          const res = await axios.get('http://3.113.3.149:3002/member/users')
           console.log(res.data)
         }}
       >
@@ -20,7 +20,7 @@ export default function UserTestIndex() {
       </button>
       <button
         onClick={async () => {
-          const res = await axios.get('http://18.177.136.227:3002/member/users/1')
+          const res = await axios.get('http://3.113.3.149:3002/member/users/1')
           console.log(res.data)
         }}
       >
@@ -28,7 +28,7 @@ export default function UserTestIndex() {
       </button>
       <button
         onClick={async () => {
-          const res = await axios.post('http://18.177.136.227:3002/member/users', {
+          const res = await axios.post('http://3.113.3.149:3002/member/users', {
             name: '金妮12132',
             email: 'ginny11132@test.com',
             username: 'ginny132',
@@ -42,7 +42,7 @@ export default function UserTestIndex() {
       </button>
       <button
         onClick={async () => {
-          const res = await axios.put('http://18.177.136.227:3002/member/users/3', {
+          const res = await axios.put('http://3.113.3.149:3002/member/users/3', {
             name: '金妮妮',
             email: 'ginny123@test.com',
             username: 'ginny123',
@@ -58,7 +58,7 @@ export default function UserTestIndex() {
       <button
         onClick={async () => {
           const res = await axios.post(
-            'http://18.177.136.227:3002/member/auth/login',
+            'http://3.113.3.149:3002/member/auth/login',
             {
               username: 'ginny132',
               password: '12345',
@@ -77,7 +77,7 @@ export default function UserTestIndex() {
             })
           }
 
-          // const res = await fetch('http://18.177.136.227:3002/member/auth/login', {
+          // const res = await fetch('http://3.113.3.149:3002/member/auth/login', {
           //   method: 'POST',
           //   credentials: 'include',
           //   headers: {
@@ -97,7 +97,7 @@ export default function UserTestIndex() {
       <button
         onClick={async () => {
           const res = await axios.post(
-            'http://18.177.136.227:3002/member/auth/logout',
+            'http://3.113.3.149:3002/member/auth/logout',
             {},
             {
               withCredentials: true, // save cookie in browser
@@ -124,7 +124,7 @@ export default function UserTestIndex() {
       <button
         onClick={async () => {
           const res = await axios.get(
-            'http://18.177.136.227:3002/member/auth/check-login',
+            'http://3.113.3.149:3002/member/auth/check-login',
             {
               withCredentials: true, // save cookie in browser
             },
@@ -138,7 +138,7 @@ export default function UserTestIndex() {
       <button
         onClick={async () => {
           const res = await axios.get(
-            'http://18.177.136.227:3002/member/auth/private',
+            'http://3.113.3.149:3002/member/auth/private',
             {
               withCredentials: true, // save cookie in browser
             },

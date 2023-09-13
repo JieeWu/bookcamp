@@ -41,7 +41,7 @@ const Register = () => {
     console.log(formData)
     try {
       const response = await axios.post(
-        'http://18.177.136.227:3002/member/users/register',
+        'http://3.113.3.149:3002/member/users/register',
         dataToSend,
       )
       console.log(response.data)

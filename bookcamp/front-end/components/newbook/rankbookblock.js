@@ -12,7 +12,7 @@ export default function RankBookBlock() {
     const data = async () => {
       try {
         await axios
-          .get('http://18.177.136.227:3002/share/hotList')
+          .get('http://3.113.3.149:3002/share/hotList')
           .then((res) => {
             setHotList(res.data.hot)
           })

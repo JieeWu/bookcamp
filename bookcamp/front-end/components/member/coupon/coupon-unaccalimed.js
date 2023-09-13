@@ -21,7 +21,7 @@ export default function CouponUnaccalimed({ coupons, setCoupons }) {
     console.log(param)
     try {
       const response = await axios.post(
-        'http://18.177.136.227:3002/coupon/record/create',
+        'http://3.113.3.149:3002/coupon/record/create',
         param,
       )
       setText('領取成功 !')
@@ -38,7 +38,7 @@ export default function CouponUnaccalimed({ coupons, setCoupons }) {
         client_id: authJWT.userData.client_id,
       }
       const response = await axios.post(
-        `http://18.177.136.227:3002/coupon/list`,
+        `http://3.113.3.149:3002/coupon/list`,
         param,
       )
       console.log(response.data.data)

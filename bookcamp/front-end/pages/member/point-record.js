@@ -16,7 +16,7 @@ export default function MemberPage() {
     const fetchPointRecord = async () => {
       try {
         const response = await axios.get(
-          `http://18.177.136.227:3002/member/sign/${authJWT.userData.client_id}`,
+          `http://3.113.3.149:3002/member/sign/${authJWT.userData.client_id}`,
         )
         console.log('point', response.data)
         setPointRecord(response.data.signedDates)

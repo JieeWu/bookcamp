@@ -134,7 +134,7 @@ export default function UserTestJWT() {
                 className='col pixel-border-purple login-next'
                 onClick={async () => {
                   const res = await axios.post(
-                    'http://18.177.136.227:3002/member/auth-jwt/login',
+                    'http://3.113.3.149:3002/member/auth-jwt/login',
                     {
                       email: email,
                       passwd: passwd,
@@ -195,7 +195,7 @@ export default function UserTestJWT() {
           </div>
           <div className='decorative-color-block-purple'>
             <div className='decorative-color-block-purple-in'>
-              <img src='http://18.177.136.227:3002/public/img/書營標準字.png' />
+              <img src='http://3.113.3.149:3002/public/img/書營標準字.png' />
             </div>
           </div>
           <div className='decorative-color-block-br-purple'></div>

@@ -34,7 +34,7 @@ export default function ForgetPassword() {
     }
 
     const res = await axios.post(
-      'http://18.177.136.227:3002/member/reset-password/otp',
+      'http://3.113.3.149:3002/member/reset-password/otp',
       {
         email,
       },
@@ -54,7 +54,7 @@ export default function ForgetPassword() {
 
   const resetPassword = async () => {
     const res = await axios.post(
-      'http://18.177.136.227:3002/member/reset-password/reset',
+      'http://3.113.3.149:3002/member/reset-password/reset',
       {
         email,
         token,

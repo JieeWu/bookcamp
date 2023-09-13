@@ -12,7 +12,7 @@ import styles from './css/cart-item.module.css'
 
 export default function CartBook({ item,check, selectCheck }) {
 
-  const url = 'http://18.177.136.227:3002/img/oldbookimgs/'
+  const url = `http://3.113.3.149:3002/img/oldbookimgs/`
 
   // 購物車狀態
   const { cartItem, setCartItem } = CartContext()
@@ -29,7 +29,7 @@ export default function CartBook({ item,check, selectCheck }) {
     try {
       await axios
         .put(
-          `http://18.177.136.227:3002/cart/check`,
+          `http://3.113.3.149:3002/cart/check`,
           { cart_id: id, book_count: updated.book_count },
           {
             headers: { 'Content-Type': 'application/json' },
@@ -62,7 +62,7 @@ export default function CartBook({ item,check, selectCheck }) {
     try {
       await axios
         .put(
-          `http://18.177.136.227:3002/cart/check`,
+          `http://3.113.3.149:3002/cart/check`,
           { cart_id: id, book_count: updated.book_count },
           {
             headers: { 'Content-Type': 'application/json' },
@@ -96,7 +96,7 @@ export default function CartBook({ item,check, selectCheck }) {
 
       if (result.isConfirmed) {
         await axios
-          .delete(`http://18.177.136.227:3002/cart/check`, {
+          .delete(`http://3.113.3.149:3002/cart/check`, {
             params: { id: id },
             withCredentials: true,
           })

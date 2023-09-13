@@ -27,7 +27,7 @@ export default function FloatCoupon() {
     try {
       await axios
         .post(
-          'http://18.177.136.227:3002/coupon/record/create',
+          'http://3.113.3.149:3002/coupon/record/create',
           {
             client_id: authJWT.userData.client_id,
             coupon_id: coupon.coupon_id,
@@ -57,14 +57,14 @@ export default function FloatCoupon() {
 
         if (authJWT.isAuth !== false) {
           response = await axios.get(
-            'http://18.177.136.227:3002/coupon/frontCoupon',
+            'http://3.113.3.149:3002/coupon/frontCoupon',
             {
               withCredentials: true,
             },
           )
         } else {
           response = await axios.post(
-            'http://18.177.136.227:3002/coupon/nologin-list',
+            'http://3.113.3.149:3002/coupon/nologin-list',
           )
         }
 
