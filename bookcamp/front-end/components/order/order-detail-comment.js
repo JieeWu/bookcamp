@@ -35,9 +35,9 @@ export default function OrderDetailComment({ setRating, setComment, rating, comm
             <div className={`row rounded-4 pixel-font-chinese ${styleitem.modalheader_comment} ${styleitem.modalbody}`}>
                 {/* 明細 */}
                 <div className='col-6'>
-                    {book.map((item) => {
+                    {book.map((item,i) => {
                         return (
-                            <div className='row'>
+                            <div className='row' key={i}>
                                 <div className='col-6 p-4'>
                                     <span className={`${styleitem.detailWidth}`}>
                                         <img src={url + `${item.book_img_id}`} className='w-100' />

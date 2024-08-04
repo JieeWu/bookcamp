@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { RiMoneyDollarCircleLine } from 'react-icons/Ri'
+import { RiMoneyDollarCircleLine } from 'react-icons/ri'
 
 export default function Oldbooklist() {
     const [oldbook, setOldbook] = useState([])

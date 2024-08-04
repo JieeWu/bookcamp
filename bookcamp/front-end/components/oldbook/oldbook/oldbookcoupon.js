@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { RiCoupon3Line } from 'react-icons/Ri'
+import { RiCoupon3Line } from 'react-icons/ri'
 
 export default function Oldbookcoupon() {
   const couponClass = ['滿千折扣', '滿百折扣', '生日禮卷', '滿萬折扣']
